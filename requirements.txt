@@ -1,0 +1,7 @@
+# Private candidate for the eventual public Lab A–F environment.
+# No GPU, paid service, credential, or private account is required.
+numpy>=2.0,<3
+pandas>=2.2,<3
+scikit-learn>=1.5,<2
+jupyterlab>=4.2,<5
+nbformat>=5.10,<6

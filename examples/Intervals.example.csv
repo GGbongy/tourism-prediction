@@ -1,0 +1,241 @@
+Date,destination,point,lower80,upper80,lower95,upper95,model_label
+2023M08,Canada,10000.0,9500.0,10500.0,9100.0,10900.0,fictional_schema_example
+2023M08,Chile,10750.0,10240.0,11260.0,9835.0,11665.0,fictional_schema_example
+2023M08,Mexico,11500.0,10980.0,12020.0,10570.0,12430.0,fictional_schema_example
+2023M08,Taiwan China,12250.0,11720.0,12780.0,11305.0,13195.0,fictional_schema_example
+2023M08,Hong Kong China,13000.0,12460.0,13540.0,12040.0,13960.0,fictional_schema_example
+2023M08,Japan,13750.0,13200.0,14300.0,12775.0,14725.0,fictional_schema_example
+2023M08,South Korea,14500.0,13940.0,15060.0,13510.0,15490.0,fictional_schema_example
+2023M08,Macao China,15250.0,14680.0,15820.0,14245.0,16255.0,fictional_schema_example
+2023M08,Maldives,16000.0,15420.0,16580.0,14980.0,17020.0,fictional_schema_example
+2023M08,Cambodia,16750.0,16160.0,17340.0,15715.0,17785.0,fictional_schema_example
+2023M08,Indonesia,17500.0,16900.0,18100.0,16450.0,18550.0,fictional_schema_example
+2023M08,Singapore,18250.0,17640.0,18860.0,17185.0,19315.0,fictional_schema_example
+2023M08,New Zealand,19000.0,18380.0,19620.0,17920.0,20080.0,fictional_schema_example
+2023M08,USA,19750.0,19120.0,20380.0,18655.0,20845.0,fictional_schema_example
+2023M08,Thailand,20500.0,19860.0,21140.0,19390.0,21610.0,fictional_schema_example
+2023M08,Turkey,21250.0,20600.0,21900.0,20125.0,22375.0,fictional_schema_example
+2023M08,Australia,22000.0,21340.0,22660.0,20860.0,23140.0,fictional_schema_example
+2023M08,Hawaii,22750.0,22080.0,23420.0,21595.0,23905.0,fictional_schema_example
+2023M08,Austria,23500.0,22820.0,24180.0,22330.0,24670.0,fictional_schema_example
+2023M08,Czech,24250.0,23560.0,24940.0,23065.0,25435.0,fictional_schema_example
+2023M09,Canada,10125.0,9625.0,10625.0,9225.0,11025.0,fictional_schema_example
+2023M09,Chile,10875.0,10365.0,11385.0,9960.0,11790.0,fictional_schema_example
+2023M09,Mexico,11625.0,11105.0,12145.0,10695.0,12555.0,fictional_schema_example
+2023M09,Taiwan China,12375.0,11845.0,12905.0,11430.0,13320.0,fictional_schema_example
+2023M09,Hong Kong China,13125.0,12585.0,13665.0,12165.0,14085.0,fictional_schema_example
+2023M09,Japan,13875.0,13325.0,14425.0,12900.0,14850.0,fictional_schema_example
+2023M09,South Korea,14625.0,14065.0,15185.0,13635.0,15615.0,fictional_schema_example
+2023M09,Macao China,15375.0,14805.0,15945.0,14370.0,16380.0,fictional_schema_example
+2023M09,Maldives,16125.0,15545.0,16705.0,15105.0,17145.0,fictional_schema_example
+2023M09,Cambodia,16875.0,16285.0,17465.0,15840.0,17910.0,fictional_schema_example
+2023M09,Indonesia,17625.0,17025.0,18225.0,16575.0,18675.0,fictional_schema_example
+2023M09,Singapore,18375.0,17765.0,18985.0,17310.0,19440.0,fictional_schema_example
+2023M09,New Zealand,19125.0,18505.0,19745.0,18045.0,20205.0,fictional_schema_example
+2023M09,USA,19875.0,19245.0,20505.0,18780.0,20970.0,fictional_schema_example
+2023M09,Thailand,20625.0,19985.0,21265.0,19515.0,21735.0,fictional_schema_example
+2023M09,Turkey,21375.0,20725.0,22025.0,20250.0,22500.0,fictional_schema_example
+2023M09,Australia,22125.0,21465.0,22785.0,20985.0,23265.0,fictional_schema_example
+2023M09,Hawaii,22875.0,22205.0,23545.0,21720.0,24030.0,fictional_schema_example
+2023M09,Austria,23625.0,22945.0,24305.0,22455.0,24795.0,fictional_schema_example
+2023M09,Czech,24375.0,23685.0,25065.0,23190.0,25560.0,fictional_schema_example
+2023M10,Canada,10250.0,9750.0,10750.0,9350.0,11150.0,fictional_schema_example
+2023M10,Chile,11000.0,10490.0,11510.0,10085.0,11915.0,fictional_schema_example
+2023M10,Mexico,11750.0,11230.0,12270.0,10820.0,12680.0,fictional_schema_example
+2023M10,Taiwan China,12500.0,11970.0,13030.0,11555.0,13445.0,fictional_schema_example
+2023M10,Hong Kong China,13250.0,12710.0,13790.0,12290.0,14210.0,fictional_schema_example
+2023M10,Japan,14000.0,13450.0,14550.0,13025.0,14975.0,fictional_schema_example
+2023M10,South Korea,14750.0,14190.0,15310.0,13760.0,15740.0,fictional_schema_example
+2023M10,Macao China,15500.0,14930.0,16070.0,14495.0,16505.0,fictional_schema_example
+2023M10,Maldives,16250.0,15670.0,16830.0,15230.0,17270.0,fictional_schema_example
+2023M10,Cambodia,17000.0,16410.0,17590.0,15965.0,18035.0,fictional_schema_example
+2023M10,Indonesia,17750.0,17150.0,18350.0,16700.0,18800.0,fictional_schema_example
+2023M10,Singapore,18500.0,17890.0,19110.0,17435.0,19565.0,fictional_schema_example
+2023M10,New Zealand,19250.0,18630.0,19870.0,18170.0,20330.0,fictional_schema_example
+2023M10,USA,20000.0,19370.0,20630.0,18905.0,21095.0,fictional_schema_example
+2023M10,Thailand,20750.0,20110.0,21390.0,19640.0,21860.0,fictional_schema_example
+2023M10,Turkey,21500.0,20850.0,22150.0,20375.0,22625.0,fictional_schema_example
+2023M10,Australia,22250.0,21590.0,22910.0,21110.0,23390.0,fictional_schema_example
+2023M10,Hawaii,23000.0,22330.0,23670.0,21845.0,24155.0,fictional_schema_example
+2023M10,Austria,23750.0,23070.0,24430.0,22580.0,24920.0,fictional_schema_example
+2023M10,Czech,24500.0,23810.0,25190.0,23315.0,25685.0,fictional_schema_example
+2023M11,Canada,10375.0,9875.0,10875.0,9475.0,11275.0,fictional_schema_example
+2023M11,Chile,11125.0,10615.0,11635.0,10210.0,12040.0,fictional_schema_example
+2023M11,Mexico,11875.0,11355.0,12395.0,10945.0,12805.0,fictional_schema_example
+2023M11,Taiwan China,12625.0,12095.0,13155.0,11680.0,13570.0,fictional_schema_example
+2023M11,Hong Kong China,13375.0,12835.0,13915.0,12415.0,14335.0,fictional_schema_example
+2023M11,Japan,14125.0,13575.0,14675.0,13150.0,15100.0,fictional_schema_example
+2023M11,South Korea,14875.0,14315.0,15435.0,13885.0,15865.0,fictional_schema_example
+2023M11,Macao China,15625.0,15055.0,16195.0,14620.0,16630.0,fictional_schema_example
+2023M11,Maldives,16375.0,15795.0,16955.0,15355.0,17395.0,fictional_schema_example
+2023M11,Cambodia,17125.0,16535.0,17715.0,16090.0,18160.0,fictional_schema_example
+2023M11,Indonesia,17875.0,17275.0,18475.0,16825.0,18925.0,fictional_schema_example
+2023M11,Singapore,18625.0,18015.0,19235.0,17560.0,19690.0,fictional_schema_example
+2023M11,New Zealand,19375.0,18755.0,19995.0,18295.0,20455.0,fictional_schema_example
+2023M11,USA,20125.0,19495.0,20755.0,19030.0,21220.0,fictional_schema_example
+2023M11,Thailand,20875.0,20235.0,21515.0,19765.0,21985.0,fictional_schema_example
+2023M11,Turkey,21625.0,20975.0,22275.0,20500.0,22750.0,fictional_schema_example
+2023M11,Australia,22375.0,21715.0,23035.0,21235.0,23515.0,fictional_schema_example
+2023M11,Hawaii,23125.0,22455.0,23795.0,21970.0,24280.0,fictional_schema_example
+2023M11,Austria,23875.0,23195.0,24555.0,22705.0,25045.0,fictional_schema_example
+2023M11,Czech,24625.0,23935.0,25315.0,23440.0,25810.0,fictional_schema_example
+2023M12,Canada,10500.0,10000.0,11000.0,9600.0,11400.0,fictional_schema_example
+2023M12,Chile,11250.0,10740.0,11760.0,10335.0,12165.0,fictional_schema_example
+2023M12,Mexico,12000.0,11480.0,12520.0,11070.0,12930.0,fictional_schema_example
+2023M12,Taiwan China,12750.0,12220.0,13280.0,11805.0,13695.0,fictional_schema_example
+2023M12,Hong Kong China,13500.0,12960.0,14040.0,12540.0,14460.0,fictional_schema_example
+2023M12,Japan,14250.0,13700.0,14800.0,13275.0,15225.0,fictional_schema_example
+2023M12,South Korea,15000.0,14440.0,15560.0,14010.0,15990.0,fictional_schema_example
+2023M12,Macao China,15750.0,15180.0,16320.0,14745.0,16755.0,fictional_schema_example
+2023M12,Maldives,16500.0,15920.0,17080.0,15480.0,17520.0,fictional_schema_example
+2023M12,Cambodia,17250.0,16660.0,17840.0,16215.0,18285.0,fictional_schema_example
+2023M12,Indonesia,18000.0,17400.0,18600.0,16950.0,19050.0,fictional_schema_example
+2023M12,Singapore,18750.0,18140.0,19360.0,17685.0,19815.0,fictional_schema_example
+2023M12,New Zealand,19500.0,18880.0,20120.0,18420.0,20580.0,fictional_schema_example
+2023M12,USA,20250.0,19620.0,20880.0,19155.0,21345.0,fictional_schema_example
+2023M12,Thailand,21000.0,20360.0,21640.0,19890.0,22110.0,fictional_schema_example
+2023M12,Turkey,21750.0,21100.0,22400.0,20625.0,22875.0,fictional_schema_example
+2023M12,Australia,22500.0,21840.0,23160.0,21360.0,23640.0,fictional_schema_example
+2023M12,Hawaii,23250.0,22580.0,23920.0,22095.0,24405.0,fictional_schema_example
+2023M12,Austria,24000.0,23320.0,24680.0,22830.0,25170.0,fictional_schema_example
+2023M12,Czech,24750.0,24060.0,25440.0,23565.0,25935.0,fictional_schema_example
+2024M01,Canada,10625.0,10125.0,11125.0,9725.0,11525.0,fictional_schema_example
+2024M01,Chile,11375.0,10865.0,11885.0,10460.0,12290.0,fictional_schema_example
+2024M01,Mexico,12125.0,11605.0,12645.0,11195.0,13055.0,fictional_schema_example
+2024M01,Taiwan China,12875.0,12345.0,13405.0,11930.0,13820.0,fictional_schema_example
+2024M01,Hong Kong China,13625.0,13085.0,14165.0,12665.0,14585.0,fictional_schema_example
+2024M01,Japan,14375.0,13825.0,14925.0,13400.0,15350.0,fictional_schema_example
+2024M01,South Korea,15125.0,14565.0,15685.0,14135.0,16115.0,fictional_schema_example
+2024M01,Macao China,15875.0,15305.0,16445.0,14870.0,16880.0,fictional_schema_example
+2024M01,Maldives,16625.0,16045.0,17205.0,15605.0,17645.0,fictional_schema_example
+2024M01,Cambodia,17375.0,16785.0,17965.0,16340.0,18410.0,fictional_schema_example
+2024M01,Indonesia,18125.0,17525.0,18725.0,17075.0,19175.0,fictional_schema_example
+2024M01,Singapore,18875.0,18265.0,19485.0,17810.0,19940.0,fictional_schema_example
+2024M01,New Zealand,19625.0,19005.0,20245.0,18545.0,20705.0,fictional_schema_example
+2024M01,USA,20375.0,19745.0,21005.0,19280.0,21470.0,fictional_schema_example
+2024M01,Thailand,21125.0,20485.0,21765.0,20015.0,22235.0,fictional_schema_example
+2024M01,Turkey,21875.0,21225.0,22525.0,20750.0,23000.0,fictional_schema_example
+2024M01,Australia,22625.0,21965.0,23285.0,21485.0,23765.0,fictional_schema_example
+2024M01,Hawaii,23375.0,22705.0,24045.0,22220.0,24530.0,fictional_schema_example
+2024M01,Austria,24125.0,23445.0,24805.0,22955.0,25295.0,fictional_schema_example
+2024M01,Czech,24875.0,24185.0,25565.0,23690.0,26060.0,fictional_schema_example
+2024M02,Canada,10750.0,10250.0,11250.0,9850.0,11650.0,fictional_schema_example
+2024M02,Chile,11500.0,10990.0,12010.0,10585.0,12415.0,fictional_schema_example
+2024M02,Mexico,12250.0,11730.0,12770.0,11320.0,13180.0,fictional_schema_example
+2024M02,Taiwan China,13000.0,12470.0,13530.0,12055.0,13945.0,fictional_schema_example
+2024M02,Hong Kong China,13750.0,13210.0,14290.0,12790.0,14710.0,fictional_schema_example
+2024M02,Japan,14500.0,13950.0,15050.0,13525.0,15475.0,fictional_schema_example
+2024M02,South Korea,15250.0,14690.0,15810.0,14260.0,16240.0,fictional_schema_example
+2024M02,Macao China,16000.0,15430.0,16570.0,14995.0,17005.0,fictional_schema_example
+2024M02,Maldives,16750.0,16170.0,17330.0,15730.0,17770.0,fictional_schema_example
+2024M02,Cambodia,17500.0,16910.0,18090.0,16465.0,18535.0,fictional_schema_example
+2024M02,Indonesia,18250.0,17650.0,18850.0,17200.0,19300.0,fictional_schema_example
+2024M02,Singapore,19000.0,18390.0,19610.0,17935.0,20065.0,fictional_schema_example
+2024M02,New Zealand,19750.0,19130.0,20370.0,18670.0,20830.0,fictional_schema_example
+2024M02,USA,20500.0,19870.0,21130.0,19405.0,21595.0,fictional_schema_example
+2024M02,Thailand,21250.0,20610.0,21890.0,20140.0,22360.0,fictional_schema_example
+2024M02,Turkey,22000.0,21350.0,22650.0,20875.0,23125.0,fictional_schema_example
+2024M02,Australia,22750.0,22090.0,23410.0,21610.0,23890.0,fictional_schema_example
+2024M02,Hawaii,23500.0,22830.0,24170.0,22345.0,24655.0,fictional_schema_example
+2024M02,Austria,24250.0,23570.0,24930.0,23080.0,25420.0,fictional_schema_example
+2024M02,Czech,25000.0,24310.0,25690.0,23815.0,26185.0,fictional_schema_example
+2024M03,Canada,10875.0,10375.0,11375.0,9975.0,11775.0,fictional_schema_example
+2024M03,Chile,11625.0,11115.0,12135.0,10710.0,12540.0,fictional_schema_example
+2024M03,Mexico,12375.0,11855.0,12895.0,11445.0,13305.0,fictional_schema_example
+2024M03,Taiwan China,13125.0,12595.0,13655.0,12180.0,14070.0,fictional_schema_example
+2024M03,Hong Kong China,13875.0,13335.0,14415.0,12915.0,14835.0,fictional_schema_example
+2024M03,Japan,14625.0,14075.0,15175.0,13650.0,15600.0,fictional_schema_example
+2024M03,South Korea,15375.0,14815.0,15935.0,14385.0,16365.0,fictional_schema_example
+2024M03,Macao China,16125.0,15555.0,16695.0,15120.0,17130.0,fictional_schema_example
+2024M03,Maldives,16875.0,16295.0,17455.0,15855.0,17895.0,fictional_schema_example
+2024M03,Cambodia,17625.0,17035.0,18215.0,16590.0,18660.0,fictional_schema_example
+2024M03,Indonesia,18375.0,17775.0,18975.0,17325.0,19425.0,fictional_schema_example
+2024M03,Singapore,19125.0,18515.0,19735.0,18060.0,20190.0,fictional_schema_example
+2024M03,New Zealand,19875.0,19255.0,20495.0,18795.0,20955.0,fictional_schema_example
+2024M03,USA,20625.0,19995.0,21255.0,19530.0,21720.0,fictional_schema_example
+2024M03,Thailand,21375.0,20735.0,22015.0,20265.0,22485.0,fictional_schema_example
+2024M03,Turkey,22125.0,21475.0,22775.0,21000.0,23250.0,fictional_schema_example
+2024M03,Australia,22875.0,22215.0,23535.0,21735.0,24015.0,fictional_schema_example
+2024M03,Hawaii,23625.0,22955.0,24295.0,22470.0,24780.0,fictional_schema_example
+2024M03,Austria,24375.0,23695.0,25055.0,23205.0,25545.0,fictional_schema_example
+2024M03,Czech,25125.0,24435.0,25815.0,23940.0,26310.0,fictional_schema_example
+2024M04,Canada,11000.0,10500.0,11500.0,10100.0,11900.0,fictional_schema_example
+2024M04,Chile,11750.0,11240.0,12260.0,10835.0,12665.0,fictional_schema_example
+2024M04,Mexico,12500.0,11980.0,13020.0,11570.0,13430.0,fictional_schema_example
+2024M04,Taiwan China,13250.0,12720.0,13780.0,12305.0,14195.0,fictional_schema_example
+2024M04,Hong Kong China,14000.0,13460.0,14540.0,13040.0,14960.0,fictional_schema_example
+2024M04,Japan,14750.0,14200.0,15300.0,13775.0,15725.0,fictional_schema_example
+2024M04,South Korea,15500.0,14940.0,16060.0,14510.0,16490.0,fictional_schema_example
+2024M04,Macao China,16250.0,15680.0,16820.0,15245.0,17255.0,fictional_schema_example
+2024M04,Maldives,17000.0,16420.0,17580.0,15980.0,18020.0,fictional_schema_example
+2024M04,Cambodia,17750.0,17160.0,18340.0,16715.0,18785.0,fictional_schema_example
+2024M04,Indonesia,18500.0,17900.0,19100.0,17450.0,19550.0,fictional_schema_example
+2024M04,Singapore,19250.0,18640.0,19860.0,18185.0,20315.0,fictional_schema_example
+2024M04,New Zealand,20000.0,19380.0,20620.0,18920.0,21080.0,fictional_schema_example
+2024M04,USA,20750.0,20120.0,21380.0,19655.0,21845.0,fictional_schema_example
+2024M04,Thailand,21500.0,20860.0,22140.0,20390.0,22610.0,fictional_schema_example
+2024M04,Turkey,22250.0,21600.0,22900.0,21125.0,23375.0,fictional_schema_example
+2024M04,Australia,23000.0,22340.0,23660.0,21860.0,24140.0,fictional_schema_example
+2024M04,Hawaii,23750.0,23080.0,24420.0,22595.0,24905.0,fictional_schema_example
+2024M04,Austria,24500.0,23820.0,25180.0,23330.0,25670.0,fictional_schema_example
+2024M04,Czech,25250.0,24560.0,25940.0,24065.0,26435.0,fictional_schema_example
+2024M05,Canada,11125.0,10625.0,11625.0,10225.0,12025.0,fictional_schema_example
+2024M05,Chile,11875.0,11365.0,12385.0,10960.0,12790.0,fictional_schema_example
+2024M05,Mexico,12625.0,12105.0,13145.0,11695.0,13555.0,fictional_schema_example
+2024M05,Taiwan China,13375.0,12845.0,13905.0,12430.0,14320.0,fictional_schema_example
+2024M05,Hong Kong China,14125.0,13585.0,14665.0,13165.0,15085.0,fictional_schema_example
+2024M05,Japan,14875.0,14325.0,15425.0,13900.0,15850.0,fictional_schema_example
+2024M05,South Korea,15625.0,15065.0,16185.0,14635.0,16615.0,fictional_schema_example
+2024M05,Macao China,16375.0,15805.0,16945.0,15370.0,17380.0,fictional_schema_example
+2024M05,Maldives,17125.0,16545.0,17705.0,16105.0,18145.0,fictional_schema_example
+2024M05,Cambodia,17875.0,17285.0,18465.0,16840.0,18910.0,fictional_schema_example
+2024M05,Indonesia,18625.0,18025.0,19225.0,17575.0,19675.0,fictional_schema_example
+2024M05,Singapore,19375.0,18765.0,19985.0,18310.0,20440.0,fictional_schema_example
+2024M05,New Zealand,20125.0,19505.0,20745.0,19045.0,21205.0,fictional_schema_example
+2024M05,USA,20875.0,20245.0,21505.0,19780.0,21970.0,fictional_schema_example
+2024M05,Thailand,21625.0,20985.0,22265.0,20515.0,22735.0,fictional_schema_example
+2024M05,Turkey,22375.0,21725.0,23025.0,21250.0,23500.0,fictional_schema_example
+2024M05,Australia,23125.0,22465.0,23785.0,21985.0,24265.0,fictional_schema_example
+2024M05,Hawaii,23875.0,23205.0,24545.0,22720.0,25030.0,fictional_schema_example
+2024M05,Austria,24625.0,23945.0,25305.0,23455.0,25795.0,fictional_schema_example
+2024M05,Czech,25375.0,24685.0,26065.0,24190.0,26560.0,fictional_schema_example
+2024M06,Canada,11250.0,10750.0,11750.0,10350.0,12150.0,fictional_schema_example
+2024M06,Chile,12000.0,11490.0,12510.0,11085.0,12915.0,fictional_schema_example
+2024M06,Mexico,12750.0,12230.0,13270.0,11820.0,13680.0,fictional_schema_example
+2024M06,Taiwan China,13500.0,12970.0,14030.0,12555.0,14445.0,fictional_schema_example
+2024M06,Hong Kong China,14250.0,13710.0,14790.0,13290.0,15210.0,fictional_schema_example
+2024M06,Japan,15000.0,14450.0,15550.0,14025.0,15975.0,fictional_schema_example
+2024M06,South Korea,15750.0,15190.0,16310.0,14760.0,16740.0,fictional_schema_example
+2024M06,Macao China,16500.0,15930.0,17070.0,15495.0,17505.0,fictional_schema_example
+2024M06,Maldives,17250.0,16670.0,17830.0,16230.0,18270.0,fictional_schema_example
+2024M06,Cambodia,18000.0,17410.0,18590.0,16965.0,19035.0,fictional_schema_example
+2024M06,Indonesia,18750.0,18150.0,19350.0,17700.0,19800.0,fictional_schema_example
+2024M06,Singapore,19500.0,18890.0,20110.0,18435.0,20565.0,fictional_schema_example
+2024M06,New Zealand,20250.0,19630.0,20870.0,19170.0,21330.0,fictional_schema_example
+2024M06,USA,21000.0,20370.0,21630.0,19905.0,22095.0,fictional_schema_example
+2024M06,Thailand,21750.0,21110.0,22390.0,20640.0,22860.0,fictional_schema_example
+2024M06,Turkey,22500.0,21850.0,23150.0,21375.0,23625.0,fictional_schema_example
+2024M06,Australia,23250.0,22590.0,23910.0,22110.0,24390.0,fictional_schema_example
+2024M06,Hawaii,24000.0,23330.0,24670.0,22845.0,25155.0,fictional_schema_example
+2024M06,Austria,24750.0,24070.0,25430.0,23580.0,25920.0,fictional_schema_example
+2024M06,Czech,25500.0,24810.0,26190.0,24315.0,26685.0,fictional_schema_example
+2024M07,Canada,11375.0,10875.0,11875.0,10475.0,12275.0,fictional_schema_example
+2024M07,Chile,12125.0,11615.0,12635.0,11210.0,13040.0,fictional_schema_example
+2024M07,Mexico,12875.0,12355.0,13395.0,11945.0,13805.0,fictional_schema_example
+2024M07,Taiwan China,13625.0,13095.0,14155.0,12680.0,14570.0,fictional_schema_example
+2024M07,Hong Kong China,14375.0,13835.0,14915.0,13415.0,15335.0,fictional_schema_example
+2024M07,Japan,15125.0,14575.0,15675.0,14150.0,16100.0,fictional_schema_example
+2024M07,South Korea,15875.0,15315.0,16435.0,14885.0,16865.0,fictional_schema_example
+2024M07,Macao China,16625.0,16055.0,17195.0,15620.0,17630.0,fictional_schema_example
+2024M07,Maldives,17375.0,16795.0,17955.0,16355.0,18395.0,fictional_schema_example
+2024M07,Cambodia,18125.0,17535.0,18715.0,17090.0,19160.0,fictional_schema_example
+2024M07,Indonesia,18875.0,18275.0,19475.0,17825.0,19925.0,fictional_schema_example
+2024M07,Singapore,19625.0,19015.0,20235.0,18560.0,20690.0,fictional_schema_example
+2024M07,New Zealand,20375.0,19755.0,20995.0,19295.0,21455.0,fictional_schema_example
+2024M07,USA,21125.0,20495.0,21755.0,20030.0,22220.0,fictional_schema_example
+2024M07,Thailand,21875.0,21235.0,22515.0,20765.0,22985.0,fictional_schema_example
+2024M07,Turkey,22625.0,21975.0,23275.0,21500.0,23750.0,fictional_schema_example
+2024M07,Australia,23375.0,22715.0,24035.0,22235.0,24515.0,fictional_schema_example
+2024M07,Hawaii,24125.0,23455.0,24795.0,22970.0,25280.0,fictional_schema_example
+2024M07,Austria,24875.0,24195.0,25555.0,23705.0,26045.0,fictional_schema_example
+2024M07,Czech,25625.0,24935.0,26315.0,24440.0,26810.0,fictional_schema_example
