@@ -1,0 +1,24 @@
+# Generated submission artefacts (do not commit)
+# Covers A2-Group-NAME-{Notebook.ipynb,Report.pdf,Forecast.csv,Intervals.csv,Protocol.md,Model-Card.md,Contributions.md}
+A2-*
+
+# Generated copies of the required outputs
+/Forecast.csv
+/Intervals.csv
+
+# Local dataset download
+ISF-TDF2023.csv
+/data/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local scratch, packaged submissions, logs
+/outputs/
+*.zip
+*.log
