@@ -1,0 +1,3038 @@
+{
+  "data": {
+    "source": "local:E:\\Code\\tourism-prediction\\.claude\\worktrees\\docs-requirements-review-e29098\\ISF-TDF2023.csv",
+    "sha256": "8884485b0f5f772bd78f412c56f688251f38c6377b663363503a3fedd613cb1e",
+    "raw_shape": [
+      427,
+      21
+    ],
+    "history_shape": [
+      403,
+      21
+    ],
+    "validation_shape": [
+      7,
+      21
+    ],
+    "raw_date_range": [
+      "1989M01",
+      "2024M07"
+    ],
+    "history_date_range": [
+      "1989M01",
+      "2022M07"
+    ],
+    "validation_months": [
+      "2022M08",
+      "2022M09",
+      "2022M10",
+      "2022M11",
+      "2022M12",
+      "2023M01",
+      "2023M02"
+    ],
+    "destinations": [
+      "Canada",
+      "Chile",
+      "Mexico",
+      "Taiwan China",
+      "Hong Kong China",
+      "Japan",
+      "South Korea",
+      "Macao China",
+      "Maldives",
+      "Cambodia",
+      "Indonesia",
+      "Singapore",
+      "New Zealand",
+      "USA",
+      "Thailand",
+      "Turkey",
+      "Australia",
+      "Hawaii",
+      "Austria",
+      "Czech"
+    ],
+    "missing_report": {
+      "Canada": {
+        "missing_before_cutoff": 156,
+        "first_valid": "2002M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Chile": {
+        "missing_before_cutoff": 291,
+        "first_valid": "2012M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 15,
+        "internal_gap_dates": [
+          "2017M11",
+          "2017M12",
+          "2020M04",
+          "2020M05",
+          "2020M06",
+          "2020M07",
+          "2020M08",
+          "2020M09",
+          "2020M10",
+          "2021M04",
+          "2021M05",
+          "2021M06",
+          "2021M07",
+          "2021M08",
+          "2021M09"
+        ]
+      },
+      "Mexico": {
+        "missing_before_cutoff": 192,
+        "first_valid": "2005M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Taiwan China": {
+        "missing_before_cutoff": 234,
+        "first_valid": "2008M07",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Hong Kong China": {
+        "missing_before_cutoff": 120,
+        "first_valid": "1999M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Japan": {
+        "missing_before_cutoff": 96,
+        "first_valid": "1997M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "South Korea": {
+        "missing_before_cutoff": 108,
+        "first_valid": "1998M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Macao China": {
+        "missing_before_cutoff": 120,
+        "first_valid": "1999M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Maldives": {
+        "missing_before_cutoff": 111,
+        "first_valid": "1998M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 3,
+        "internal_gap_dates": [
+          "2020M04",
+          "2020M05",
+          "2020M06"
+        ]
+      },
+      "Cambodia": {
+        "missing_before_cutoff": 168,
+        "first_valid": "2003M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Indonesia": {
+        "missing_before_cutoff": 288,
+        "first_valid": "2013M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Singapore": {
+        "missing_before_cutoff": 156,
+        "first_valid": "2002M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "New Zealand": {
+        "missing_before_cutoff": 156,
+        "first_valid": "2002M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "USA": {
+        "missing_before_cutoff": 132,
+        "first_valid": "2000M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Thailand": {
+        "missing_before_cutoff": 78,
+        "first_valid": "1995M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 6,
+        "internal_gap_dates": [
+          "2020M04",
+          "2020M05",
+          "2020M06",
+          "2020M07",
+          "2020M08",
+          "2020M09"
+        ]
+      },
+      "Turkey": {
+        "missing_before_cutoff": 84,
+        "first_valid": "1996M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Australia": {
+        "missing_before_cutoff": 0,
+        "first_valid": "1989M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Hawaii": {
+        "missing_before_cutoff": 0,
+        "first_valid": "1989M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Austria": {
+        "missing_before_cutoff": 172,
+        "first_valid": "2003M05",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Czech": {
+        "missing_before_cutoff": 276,
+        "first_valid": "2012M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      }
+    }
+  },
+  "notebook_baseline_check": {
+    "naive_lag1": {
+      "computed_mean_mase": 0.8669132790407004,
+      "notebook_mean_mase": 0.866913,
+      "abs_diff": 2.7904070032391814e-07,
+      "matches": true,
+      "valid_samples": 140
+    },
+    "naive_lag12": {
+      "computed_mean_mase": 1.4139211469069088,
+      "notebook_mean_mase": 1.413921,
+      "abs_diff": 1.4690690885998947e-07,
+      "matches": true,
+      "valid_samples": 138
+    }
+  },
+  "audit_isolation": {
+    "history_max_date": "2022M07",
+    "validation_months": [
+      "2022M08",
+      "2022M09",
+      "2022M10",
+      "2022M11",
+      "2022M12",
+      "2023M01",
+      "2023M02"
+    ],
+    "note": "locked audit and final-period actuals are not loaded into the experiment object"
+  },
+  "selected_candidates_by_backtest": {
+    "damped_trend": [
+      {
+        "damping": 0.7,
+        "trend_cap": 0.1,
+        "window": 12
+      },
+      {
+        "damping": 0.7,
+        "trend_cap": 0.15,
+        "window": 12
+      }
+    ],
+    "adaptive_seasonal": [
+      {
+        "ratio_cap": [
+          0.5,
+          2.0
+        ],
+        "window": 3
+      },
+      {
+        "ratio_cap": [
+          0.5,
+          3.0
+        ],
+        "window": 3
+      }
+    ],
+    "global_ridge": [
+      {
+        "alpha": 1.0
+      },
+      {
+        "alpha": 0.1
+      }
+    ],
+    "global_hgb": [
+      {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 100,
+        "max_leaf_nodes": 15
+      },
+      {
+        "l2_regularization": 10.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      }
+    ]
+  },
+  "family_best_validation": {
+    "adaptive_seasonal": "adaptive_seasonal_w3_cap0.5-3.0",
+    "damped_trend": "damped_trend_w12_phi0.7_cap0.15",
+    "global_ridge": "global_ridge_a0.1",
+    "global_hgb": "global_hgb_i100_l15_l21.0"
+  },
+  "key_model_summary": [
+    {
+      "model": "recent_ma_3",
+      "MAE_macro": 31297.747619047623,
+      "MAE_pooled": 31297.747619047623,
+      "mean_MASE": 0.8051351791108188,
+      "median_MASE": 0.5605696678578174,
+      "mean_MAPE": 39.71128000230261,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0072,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{}",
+      "info": "{\"short_window_destinations\": 0, \"window\": 3}",
+      "short": "MA3",
+      "destinations_better_than_lag1": 5,
+      "destinations_worse_than_lag1": 15,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 2.137445643528023,
+      "best_destination": "Czech",
+      "best_destination_mase": 0.1421455539016454,
+      "max_abs_error": 1079940.3333333333
+    },
+    {
+      "model": "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15+global_hgb_i100_l15_l21.0+adaptive_seasonal_w3_cap0.5-3.0_w0.25_0.25_0.25_0.25",
+      "MAE_macro": 40634.24073501672,
+      "MAE_pooled": 40634.24073501672,
+      "mean_MASE": 0.8163358293063618,
+      "median_MASE": 0.5086225165363647,
+      "mean_MAPE": 37.42155230003496,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0053,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\", \"global_hgb_i100_l15_l21.0\", \"adaptive_seasonal_w3_cap0.5-3.0\"], \"weights\": [0.25, 0.25, 0.25, 0.25]}",
+      "info": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\", \"global_hgb_i100_l15_l21.0\", \"adaptive_seasonal_w3_cap0.5-3.0\"], \"weights\": [0.25, 0.25, 0.25, 0.25]}",
+      "short": "E4-equal",
+      "destinations_better_than_lag1": 11,
+      "destinations_worse_than_lag1": 9,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 3.8293836990590178,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1086873401126655,
+      "max_abs_error": 1080831.1863981206
+    },
+    {
+      "model": "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15+global_hgb_i100_l15_l21.0_w0.33_0.33_0.33",
+      "MAE_macro": 43752.55841946158,
+      "MAE_pooled": 43752.55841946157,
+      "mean_MASE": 0.8382921166588959,
+      "median_MASE": 0.5368474715834839,
+      "mean_MAPE": 37.98103082793092,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0026,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\", \"global_hgb_i100_l15_l21.0\"], \"weights\": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]}",
+      "info": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\", \"global_hgb_i100_l15_l21.0\"], \"weights\": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]}",
+      "short": "E3-equal",
+      "destinations_better_than_lag1": 9,
+      "destinations_worse_than_lag1": 11,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 4.3760710775020994,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1146795907879014,
+      "max_abs_error": 1072955.581864161
+    },
+    {
+      "model": "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15_w0.75_0.25",
+      "MAE_macro": 43041.04138808052,
+      "MAE_pooled": 43041.04138808052,
+      "mean_MASE": 0.849989317618945,
+      "median_MASE": 0.5231101425038156,
+      "mean_MAPE": 39.70917199845566,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0018,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\"], \"weights\": [0.75, 0.25]}",
+      "info": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\"], \"weights\": [0.75, 0.25]}",
+      "short": "E2-75/25",
+      "destinations_better_than_lag1": 14,
+      "destinations_worse_than_lag1": 6,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 4.35286928130335,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.105838916883939,
+      "max_abs_error": 1067038.0057043289
+    },
+    {
+      "model": "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15_w0.50_0.50",
+      "MAE_macro": 43019.23639931104,
+      "MAE_pooled": 43019.23639931104,
+      "mean_MASE": 0.8503174811104627,
+      "median_MASE": 0.4875433812471029,
+      "mean_MAPE": 39.01216395549788,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0024,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\"], \"weights\": [0.5, 0.5]}",
+      "info": "{\"members\": [\"global_ridge_a0.1\", \"damped_trend_w12_phi0.7_cap0.15\"], \"weights\": [0.5, 0.5]}",
+      "short": "E2-50/50",
+      "destinations_better_than_lag1": 12,
+      "destinations_worse_than_lag1": 8,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 4.362992923402612,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1074292446203417,
+      "max_abs_error": 1064929.0685122593
+    },
+    {
+      "model": "global_ridge_a0.1",
+      "MAE_macro": 43142.24285175702,
+      "MAE_pooled": 43142.24285175702,
+      "mean_MASE": 0.8640303346891116,
+      "median_MASE": 0.5538377655765265,
+      "mean_MAPE": 40.86834493899476,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 14.2648,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"alpha\": 0.1}",
+      "info": "{\"alpha\": 0.1, \"destination_columns\": 20, \"n_features\": 38, \"training\": {\"n_destinations\": 20, \"n_origins\": 390, \"n_samples\": 33504, \"origin_range\": [\"1990M01\", \"2022M06\"], \"skipped_origins\": 24}}",
+      "short": "Ridge",
+      "destinations_better_than_lag1": 13,
+      "destinations_worse_than_lag1": 7,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 4.342745639204088,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1053931955253492,
+      "max_abs_error": 1069146.942896398
+    },
+    {
+      "model": "naive_lag1",
+      "MAE_macro": 43894.87142857142,
+      "MAE_pooled": 43894.87142857143,
+      "mean_MASE": 0.8669132790407004,
+      "median_MASE": 0.5262726137636753,
+      "mean_MAPE": 37.67102515949886,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.2393,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{}",
+      "info": "{\"fallback_count\": 0, \"lag\": 1}",
+      "short": "Lag1",
+      "destinations_better_than_lag1": 0,
+      "destinations_worse_than_lag1": 0,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 4.371011260132122,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.127512002027289,
+      "max_abs_error": 1069802.0
+    },
+    {
+      "model": "damped_trend_w12_phi0.7_cap0.15",
+      "MAE_macro": 43093.72745926377,
+      "MAE_pooled": 43093.72745926377,
+      "mean_MASE": 0.8736116448528335,
+      "median_MASE": 0.5143628409723383,
+      "mean_MAPE": 39.21024387690618,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0723,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"damping\": 0.7, \"trend_cap\": 0.15, \"window\": 12}",
+      "info": "{\"capped_slope_destinations\": 7, \"damping\": 0.7, \"fallback_destinations\": [], \"max_total_log_growth\": 2.5, \"mean_estimated_slope\": 0.07750497870875064, \"median_estimated_slope\": 0.10989986265575102, \"trend_cap\": 0.15, \"window\": 12}",
+      "short": "Damped",
+      "destinations_better_than_lag1": 10,
+      "destinations_worse_than_lag1": 10,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 4.383240207601136,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1316545243662752,
+      "max_abs_error": 1060711.1941281206
+    },
+    {
+      "model": "global_hgb_i100_l15_l21.0",
+      "MAE_macro": 46021.40795212852,
+      "MAE_pooled": 46021.4079521285,
+      "mean_MASE": 0.9197666993060124,
+      "median_MASE": 0.5661708545510604,
+      "mean_MAPE": 41.39275855475197,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 15.2901,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"l2_regularization\": 1.0, \"learning_rate\": 0.1, \"max_iter\": 100, \"max_leaf_nodes\": 15}",
+      "info": "{\"min_samples_leaf\": 20, \"n_features\": 38, \"params\": {\"l2_regularization\": 1.0, \"learning_rate\": 0.1, \"max_iter\": 100, \"max_leaf_nodes\": 15}, \"training\": {\"n_destinations\": 20, \"n_origins\": 390, \"n_samples\": 33504, \"origin_range\": [\"1990M01\", \"2022M06\"], \"skipped_origins\": 24}}",
+      "short": "HGB",
+      "destinations_better_than_lag1": 5,
+      "destinations_worse_than_lag1": 15,
+      "worst_destination": "Macao China",
+      "worst_destination_mase": 4.402227385701074,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1346706614677624,
+      "max_abs_error": 1089008.6085679638
+    },
+    {
+      "model": "recent_ma_6",
+      "MAE_macro": 31736.78214285714,
+      "MAE_pooled": 31736.782142857144,
+      "mean_MASE": 0.9883959232169902,
+      "median_MASE": 0.7974066809833185,
+      "mean_MAPE": 51.16696029984033,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0068,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{}",
+      "info": "{\"short_window_destinations\": 0, \"window\": 6}",
+      "short": "MA6",
+      "destinations_better_than_lag1": 1,
+      "destinations_worse_than_lag1": 19,
+      "worst_destination": "Mexico",
+      "worst_destination_mase": 2.6011898668999254,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1540254335173792,
+      "max_abs_error": 1093843.6666666667
+    },
+    {
+      "model": "adaptive_seasonal_w3_cap0.5-3.0",
+      "MAE_macro": 36194.6181227744,
+      "MAE_pooled": 36194.61812277439,
+      "mean_MASE": 1.035491536726402,
+      "median_MASE": 0.7760646122809016,
+      "mean_MAPE": 58.25686789453363,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.0315,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{\"ratio_cap\": [0.5, 3.0], \"window\": 3}",
+      "info": "{\"base_fallback_count\": 0, \"base_fallbacks\": [], \"fallback_years\": 3, \"mean_ratio\": 2.428452262500191, \"median_ratio\": 3.0, \"min_pairs\": 2, \"ratio_cap\": [0.5, 3.0], \"ratio_fallback_destinations\": [\"Chile\"], \"window\": 3}",
+      "short": "Adaptive",
+      "destinations_better_than_lag1": 4,
+      "destinations_worse_than_lag1": 16,
+      "worst_destination": "Chile",
+      "worst_destination_mase": 3.827065590817549,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1138058659062248,
+      "max_abs_error": 1104458.0
+    },
+    {
+      "model": "naive_lag12",
+      "MAE_macro": 36713.02857142857,
+      "MAE_pooled": 36713.02857142857,
+      "mean_MASE": 1.4681906708041856,
+      "median_MASE": 0.8958938562734284,
+      "mean_MAPE": 74.52653139742965,
+      "valid_samples": 140,
+      "mape_valid_samples": 140,
+      "runtime_seconds": 0.24,
+      "n_destinations": 20,
+      "note": NaN,
+      "params": "{}",
+      "info": "{\"fallback_count\": 2, \"fallbacks\": [{\"Date\": \"2022M08\", \"destination\": \"Chile\", \"fallback_source\": \"2019M08\", \"fallback_value\": 2247.0, \"model\": \"naive_lag12\"}, {\"Date\": \"2022M09\", \"destination\": \"Chile\", \"fallback_source\": \"2019M09\", \"fallback_value\": 2817.0, \"model\": \"naive_lag12\"}], \"lag\": 12}",
+      "short": "Lag12",
+      "destinations_better_than_lag1": 2,
+      "destinations_worse_than_lag1": 18,
+      "worst_destination": "Mexico",
+      "worst_destination_mase": 4.403376045708756,
+      "best_destination": "Taiwan China",
+      "best_destination_mase": 0.1424702591933872,
+      "max_abs_error": 1108076.0
+    }
+  ],
+  "destination_detail": {
+    "MA3": {
+      "worst": [
+        {
+          "destination": "Macao China",
+          "mae": 273346.8571428572,
+          "mase": 2.137445643528023,
+          "mape": 35.43248759595263,
+          "n": 7
+        },
+        {
+          "destination": "Mexico",
+          "mae": 3242.1904761904766,
+          "mase": 2.111920692083167,
+          "mape": 26.595234653821848,
+          "n": 7
+        },
+        {
+          "destination": "Cambodia",
+          "mae": 12025.761904761906,
+          "mase": 1.990176720622229,
+          "mape": 43.86335452067819,
+          "n": 7
+        },
+        {
+          "destination": "Chile",
+          "mae": 450.1428571428572,
+          "mase": 1.5346250542970346,
+          "mape": 45.76612781569344,
+          "n": 7
+        },
+        {
+          "destination": "Thailand",
+          "mae": 41635.42857142857,
+          "mase": 1.1524515621832958,
+          "mape": 54.04981497187126,
+          "n": 7
+        }
+      ],
+      "best": [
+        {
+          "destination": "Canada",
+          "mae": 2227.9047619047624,
+          "mase": 0.348970576222986,
+          "mape": 26.041793411993154,
+          "n": 7
+        },
+        {
+          "destination": "Singapore",
+          "mae": 9136.714285714286,
+          "mase": 0.3464062575236978,
+          "mape": 38.18042536288216,
+          "n": 7
+        },
+        {
+          "destination": "Austria",
+          "mae": 1086.4761904761908,
+          "mase": 0.1620858408674024,
+          "mape": 19.83001462753362,
+          "n": 7
+        },
+        {
+          "destination": "Taiwan China",
+          "mae": 3901.047619047619,
+          "mase": 0.1529277852940339,
+          "mape": 68.56973756920594,
+          "n": 7
+        },
+        {
+          "destination": "Czech",
+          "mae": 1124.7142857142858,
+          "mase": 0.1421455539016454,
+          "mape": 12.61322770830858,
+          "n": 7
+        }
+      ]
+    },
+    "E2-75/25": {
+      "worst": [
+        {
+          "destination": "Macao China",
+          "mae": 556665.9162541453,
+          "mase": 4.35286928130335,
+          "mape": 97.82923788670318,
+          "n": 7
+        },
+        {
+          "destination": "Mexico",
+          "mae": 3228.824878958448,
+          "mase": 2.103214515945873,
+          "mape": 27.647414635875705,
+          "n": 7
+        },
+        {
+          "destination": "Cambodia",
+          "mae": 9660.717549879424,
+          "mase": 1.598778965070264,
+          "mape": 30.745472247874083,
+          "n": 7
+        },
+        {
+          "destination": "Australia",
+          "mae": 9440.295004642136,
+          "mase": 1.0865608808923084,
+          "mape": 80.14103474419969,
+          "n": 7
+        },
+        {
+          "destination": "Chile",
+          "mae": 287.2132249218928,
+          "mase": 0.979166066719804,
+          "mape": 27.821701671523947,
+          "n": 7
+        }
+      ],
+      "best": [
+        {
+          "destination": "Japan",
+          "mae": 8273.61099257719,
+          "mase": 0.2926075358472909,
+          "mape": 31.028263123688227,
+          "n": 7
+        },
+        {
+          "destination": "Canada",
+          "mae": 1772.4577707493142,
+          "mase": 0.2776310819769855,
+          "mape": 23.10811194466856,
+          "n": 7
+        },
+        {
+          "destination": "Singapore",
+          "mae": 6452.491248681828,
+          "mase": 0.2446375442269335,
+          "mape": 25.345283110454243,
+          "n": 7
+        },
+        {
+          "destination": "Austria",
+          "mae": 1426.9953728944215,
+          "mase": 0.212886160743302,
+          "mape": 30.33909506355373,
+          "n": 7
+        },
+        {
+          "destination": "Taiwan China",
+          "mae": 2699.853750702141,
+          "mase": 0.105838916883939,
+          "mape": 39.23220933658564,
+          "n": 7
+        }
+      ]
+    },
+    "E3-equal": {
+      "worst": [
+        {
+          "destination": "Macao China",
+          "mae": 559633.0738472288,
+          "mase": 4.3760710775020994,
+          "mape": 98.48244800910196,
+          "n": 7
+        },
+        {
+          "destination": "Mexico",
+          "mae": 3186.8794338413863,
+          "mase": 2.075891798748379,
+          "mape": 26.865591906785053,
+          "n": 7
+        },
+        {
+          "destination": "Cambodia",
+          "mae": 10163.205504875908,
+          "mase": 1.6819370916278071,
+          "mape": 32.50793002948104,
+          "n": 7
+        },
+        {
+          "destination": "Thailand",
+          "mae": 30736.71664082744,
+          "mase": 0.8507796923078842,
+          "mape": 30.8026233701245,
+          "n": 7
+        },
+        {
+          "destination": "Australia",
+          "mae": 7383.730119856262,
+          "mase": 0.8498539822491725,
+          "mape": 52.61595944502483,
+          "n": 7
+        }
+      ],
+      "best": [
+        {
+          "destination": "Canada",
+          "mae": 2162.254372366539,
+          "mase": 0.3386873474880063,
+          "mape": 27.164774161288623,
+          "n": 7
+        },
+        {
+          "destination": "Japan",
+          "mae": 9186.464280889206,
+          "mase": 0.3248918372874619,
+          "mape": 32.34477403582411,
+          "n": 7
+        },
+        {
+          "destination": "Singapore",
+          "mae": 6602.66146376308,
+          "mase": 0.2503310463515606,
+          "mape": 24.797891217141625,
+          "n": 7
+        },
+        {
+          "destination": "Austria",
+          "mae": 1239.4396734940788,
+          "mase": 0.1849056826497561,
+          "mape": 25.42181908152458,
+          "n": 7
+        },
+        {
+          "destination": "Taiwan China",
+          "mae": 2925.3712380411425,
+          "mase": 0.1146795907879014,
+          "mape": 40.90250527308571,
+          "n": 7
+        }
+      ]
+    },
+    "E4-equal": {
+      "worst": [
+        {
+          "destination": "Macao China",
+          "mae": 489720.0553854215,
+          "mase": 3.8293836990590178,
+          "mape": 83.06250027675503,
+          "n": 7
+        },
+        {
+          "destination": "Cambodia",
+          "mae": 10484.66108578366,
+          "mase": 1.735135668059241,
+          "mape": 33.762914115923834,
+          "n": 7
+        },
+        {
+          "destination": "Mexico",
+          "mae": 2608.373861095325,
+          "mase": 1.699060795591718,
+          "mape": 22.534702106066455,
+          "n": 7
+        },
+        {
+          "destination": "Chile",
+          "mae": 461.8713522401141,
+          "mase": 1.5746097883427828,
+          "mape": 53.61576261287253,
+          "n": 7
+        },
+        {
+          "destination": "Thailand",
+          "mae": 35496.05269650304,
+          "mase": 0.9825161595549758,
+          "mape": 40.80982906359571,
+          "n": 7
+        }
+      ],
+      "best": [
+        {
+          "destination": "Singapore",
+          "mae": 7622.684128717816,
+          "mase": 0.2890038364713947,
+          "mape": 28.649915668653136,
+          "n": 7
+        },
+        {
+          "destination": "Czech",
+          "mae": 2042.373139855477,
+          "mase": 0.2581226760663275,
+          "mape": 27.15331116109441,
+          "n": 7
+        },
+        {
+          "destination": "Hawaii",
+          "mae": 294.5417321815575,
+          "mase": 0.2337342080902559,
+          "mape": 49.0785508077864,
+          "n": 7
+        },
+        {
+          "destination": "Austria",
+          "mae": 772.1154694062736,
+          "mase": 0.1151879684087633,
+          "mape": 14.720338198061269,
+          "n": 7
+        },
+        {
+          "destination": "Taiwan China",
+          "mae": 2772.5144162123283,
+          "mase": 0.1086873401126655,
+          "mape": 37.94615329219883,
+          "n": 7
+        }
+      ]
+    },
+    "Ridge": {
+      "worst": [
+        {
+          "destination": "Macao China",
+          "mae": 555371.2560792532,
+          "mase": 4.342745639204088,
+          "mape": 97.5370605493037,
+          "n": 7
+        },
+        {
+          "destination": "Mexico",
+          "mae": 3475.439592862675,
+          "mase": 2.2638561318815524,
+          "mape": 29.72550123711241,
+          "n": 7
+        },
+        {
+          "destination": "Cambodia",
+          "mae": 10129.695346252529,
+          "mase": 1.6763914024544495,
+          "mape": 32.80182038650911,
+          "n": 7
+        },
+        {
+          "destination": "Australia",
+          "mae": 9892.743534656658,
+          "mase": 1.1386368883782254,
+          "mape": 85.2946506641189,
+          "n": 7
+        },
+        {
+          "destination": "Chile",
+          "mae": 294.7831978768935,
+          "mase": 1.0049735853169686,
+          "mape": 29.06682210425616,
+          "n": 7
+        }
+      ],
+      "best": [
+        {
+          "destination": "Canada",
+          "mae": 1759.683714868943,
+          "mase": 0.2756302021739069,
+          "mape": 23.54617895756624,
+          "n": 7
+        },
+        {
+          "destination": "South Korea",
+          "mae": 7200.597513823733,
+          "mase": 0.2606215160940471,
+          "mape": 20.59585539317545,
+          "n": 7
+        },
+        {
+          "destination": "Singapore",
+          "mae": 6723.501766118389,
+          "mase": 0.2549125442060339,
+          "mape": 26.080106726278316,
+          "n": 7
+        },
+        {
+          "destination": "Austria",
+          "mae": 1358.9901332978666,
+          "mase": 0.2027408059347759,
+          "mape": 28.528454910000583,
+          "n": 7
+        },
+        {
+          "destination": "Taiwan China",
+          "mae": 2688.483807422428,
+          "mase": 0.1053931955253492,
+          "mape": 42.825751761490245,
+          "n": 7
+        }
+      ]
+    }
+  },
+  "failure_cases": {
+    "MA3": [
+      {
+        "Date": "2023M02",
+        "destination": "Hong Kong China",
+        "actual": 1109885.0,
+        "forecast": 29944.666666666668,
+        "ae": 1079940.3333333333,
+        "horizon": 7
+      },
+      {
+        "Date": "2023M02",
+        "destination": "Macao China",
+        "actual": 1003999.0,
+        "forecast": 294089.0,
+        "ae": 709910.0,
+        "horizon": 7
+      },
+      {
+        "Date": "2023M01",
+        "destination": "Macao China",
+        "actual": 991641.0,
+        "forecast": 294089.0,
+        "ae": 697552.0,
+        "horizon": 6
+      },
+      {
+        "Date": "2023M01",
+        "destination": "Hong Kong China",
+        "actual": 280525.0,
+        "forecast": 29944.666666666668,
+        "ae": 250580.3333333333,
+        "horizon": 6
+      },
+      {
+        "Date": "2022M10",
+        "destination": "Macao China",
+        "actual": 518843.0,
+        "forecast": 294089.0,
+        "ae": 224754.0,
+        "horizon": 3
+      },
+      {
+        "Date": "2022M09",
+        "destination": "Macao China",
+        "actual": 502668.0,
+        "forecast": 294089.0,
+        "ae": 208579.0,
+        "horizon": 2
+      },
+      {
+        "Date": "2023M02",
+        "destination": "Thailand",
+        "actual": 155656.0,
+        "forecast": 20715.0,
+        "ae": 134941.0,
+        "horizon": 7
+      },
+      {
+        "Date": "2023M01",
+        "destination": "Thailand",
+        "actual": 91841.0,
+        "forecast": 20715.0,
+        "ae": 71126.0,
+        "horizon": 6
+      }
+    ],
+    "E2-75/25": [
+      {
+        "Date": "2023M02",
+        "destination": "Hong Kong China",
+        "actual": 1109885.0,
+        "forecast": 42846.99429567135,
+        "ae": 1067038.0057043289,
+        "horizon": 7
+      },
+      {
+        "Date": "2023M02",
+        "destination": "Macao China",
+        "actual": 1003999.0,
+        "forecast": 8412.041262788884,
+        "ae": 995586.9587372112,
+        "horizon": 7
+      },
+      {
+        "Date": "2023M01",
+        "destination": "Macao China",
+        "actual": 991641.0,
+        "forecast": 8852.760847830423,
+        "ae": 982788.2391521696,
+        "horizon": 6
+      },
+      {
+        "Date": "2022M10",
+        "destination": "Macao China",
+        "actual": 518843.0,
+        "forecast": 10288.575334666824,
+        "ae": 508554.4246653332,
+        "horizon": 3
+      },
+      {
+        "Date": "2022M09",
+        "destination": "Macao China",
+        "actual": 502668.0,
+        "forecast": 10381.097492465806,
+        "ae": 492286.9025075342,
+        "horizon": 2
+      },
+      {
+        "Date": "2022M12",
+        "destination": "Macao China",
+        "actual": 336593.0,
+        "forecast": 9403.679114602206,
+        "ae": 327189.3208853978,
+        "horizon": 5
+      },
+      {
+        "Date": "2022M11",
+        "destination": "Macao China",
+        "actual": 320267.0,
+        "forecast": 9930.878547728626,
+        "ae": 310336.12145227136,
+        "horizon": 4
+      },
+      {
+        "Date": "2022M08",
+        "destination": "Macao China",
+        "actual": 290138.0,
+        "forecast": 10218.553620900044,
+        "ae": 279919.4463791,
+        "horizon": 1
+      }
+    ],
+    "E3-equal": [
+      {
+        "Date": "2023M02",
+        "destination": "Hong Kong China",
+        "actual": 1109885.0,
+        "forecast": 36929.418135839165,
+        "ae": 1072955.581864161,
+        "horizon": 7
+      },
+      {
+        "Date": "2023M02",
+        "destination": "Macao China",
+        "actual": 1003999.0,
+        "forecast": 5420.56668275771,
+        "ae": 998578.4333172424,
+        "horizon": 7
+      },
+      {
+        "Date": "2023M01",
+        "destination": "Macao China",
+        "actual": 991641.0,
+        "forecast": 5769.973773641155,
+        "ae": 985871.0262263588,
+        "horizon": 6
+      },
+      {
+        "Date": "2022M10",
+        "destination": "Macao China",
+        "actual": 518843.0,
+        "forecast": 7332.259533706412,
+        "ae": 511510.7404662936,
+        "horizon": 3
+      },
+      {
+        "Date": "2022M09",
+        "destination": "Macao China",
+        "actual": 502668.0,
+        "forecast": 7400.954032412514,
+        "ae": 495267.0459675875,
+        "horizon": 2
+      },
+      {
+        "Date": "2022M12",
+        "destination": "Macao China",
+        "actual": 336593.0,
+        "forecast": 6734.115982952182,
+        "ae": 329858.8840170478,
+        "horizon": 5
+      },
+      {
+        "Date": "2022M11",
+        "destination": "Macao China",
+        "actual": 320267.0,
+        "forecast": 7122.179787588546,
+        "ae": 313144.82021241146,
+        "horizon": 4
+      },
+      {
+        "Date": "2022M08",
+        "destination": "Macao China",
+        "actual": 290138.0,
+        "forecast": 6937.433276340636,
+        "ae": 283200.56672365934,
+        "horizon": 1
+      }
+    ]
+  },
+  "horizon_validation": {
+    "Lag1": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.3798323539445311,
+        "mean_mae": 18169.45,
+        "mean_mape": 21.68793751941895
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.4151103707919068,
+        "mean_mae": 27554.15,
+        "mean_mape": 26.7028265446938
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.4974126624170563,
+        "mean_mae": 28187.2,
+        "mean_mape": 32.699622733203846
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.5928192067017984,
+        "mean_mae": 19222.05,
+        "mean_mape": 31.94190115314381
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 1.037916147749821,
+        "mean_mae": 24010.65,
+        "mean_mape": 42.63158727424213
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.2405627410165956,
+        "mean_mae": 70627.15,
+        "mean_mape": 48.63603798581812
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.904739470663193,
+        "mean_mae": 119493.45,
+        "mean_mape": 59.397262905971424
+      }
+    ],
+    "Lag12": [
+      {
+        "horizon": 1,
+        "mean_mase": 1.165884333328563,
+        "mean_mae": 12670.85,
+        "mean_mape": 74.51405268718536
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 1.1274446422110451,
+        "mean_mae": 12261.5,
+        "mean_mape": 76.75346368210765
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 1.012701508264548,
+        "mean_mae": 20574.05,
+        "mean_mape": 67.96851022144492
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 1.175094945094075,
+        "mean_mae": 31797.3,
+        "mean_mape": 73.7355736097528
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 1.725411717013814,
+        "mean_mae": 36131.4,
+        "mean_mape": 74.99528917170193
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.7444438663963429,
+        "mean_mae": 46580.85,
+        "mean_mape": 77.04738340128668
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 2.32635368332091,
+        "mean_mae": 96975.25,
+        "mean_mape": 76.67144700852825
+      }
+    ],
+    "MA3": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.3291036580014027,
+        "mean_mae": 5864.516666666666,
+        "mean_mape": 24.61816603519616
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.2836079353254417,
+        "mean_mae": 14397.116666666663,
+        "mean_mape": 25.15433747714884
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.3802213747938586,
+        "mean_mae": 15099.4,
+        "mean_mape": 33.77190625981816
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.4901830848593923,
+        "mean_mae": 6312.616666666667,
+        "mean_mape": 31.484227135413857
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 1.1116034668603794,
+        "mean_mae": 12036.65,
+        "mean_mape": 49.56455356822666
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.183415094347367,
+        "mean_mae": 58258.48333333334,
+        "mean_mape": 51.11212215906395
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.85781163958789,
+        "mean_mae": 107115.45,
+        "mean_mape": 62.2736473812506
+      }
+    ],
+    "MA6": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.5945332861534831,
+        "mean_mae": 14122.008333333337,
+        "mean_mape": 40.80623948337377
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.4117653192193399,
+        "mean_mae": 10593.108333333332,
+        "mean_mape": 38.14217980331238
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.517841583846482,
+        "mean_mae": 11262.258333333331,
+        "mean_mape": 45.30915429832821
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.6517843389560622,
+        "mean_mae": 12044.975,
+        "mean_mape": 45.00468637204531
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 1.3602885874564428,
+        "mean_mae": 16272.241666666669,
+        "mean_mape": 60.61794323176538
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.3642149892196629,
+        "mean_mae": 54555.175,
+        "mean_mape": 60.260634121705685
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 2.018343357667459,
+        "mean_mae": 103307.70833333334,
+        "mean_mape": 68.02788478835156
+      }
+    ],
+    "Damped": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.4186648614921464,
+        "mean_mae": 18320.123912923027,
+        "mean_mape": 25.439366892170625
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.5238607995021798,
+        "mean_mae": 27411.7358865407,
+        "mean_mape": 31.26918440864284
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.5858398486168872,
+        "mean_mae": 27605.18759575043,
+        "mean_mape": 36.90179961205071
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.6060504250164309,
+        "mean_mae": 18394.912741667704,
+        "mean_mape": 34.86042932704416
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.9372819910588128,
+        "mean_mae": 22665.881910243814,
+        "mean_mape": 37.47406521896347
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.1989864789278255,
+        "mean_mae": 69337.40142062778,
+        "mean_mape": 47.49485750416847
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.8445971093555524,
+        "mean_mae": 117920.84874709295,
+        "mean_mape": 61.032004175303065
+      }
+    ],
+    "Adaptive": [
+      {
+        "horizon": 1,
+        "mean_mase": 1.1138964404859495,
+        "mean_mae": 21075.50329561717,
+        "mean_mape": 72.56023777258382
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.950951720555339,
+        "mean_mae": 19591.375970038534,
+        "mean_mape": 72.85152765436439
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.64944883792559,
+        "mean_mae": 24770.7702291068,
+        "mean_mape": 47.12346810464822
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.618601358354937,
+        "mean_mae": 9548.347921841025,
+        "mean_mape": 47.41813843118162
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.8494539870598803,
+        "mean_mae": 12713.73595700553,
+        "mean_mape": 50.9875044673074
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.2200662652231673,
+        "mean_mae": 57483.76014933047,
+        "mean_mape": 55.20508230429523
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.8460221474799507,
+        "mean_mae": 108178.83333648116,
+        "mean_mape": 61.65211652735466
+      }
+    ],
+    "Ridge": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.4177763081310458,
+        "mean_mae": 18145.46316380172,
+        "mean_mape": 33.313778602639445
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.5161264041212025,
+        "mean_mae": 27053.03012345329,
+        "mean_mape": 37.81059941483019
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.5152255840406179,
+        "mean_mae": 27943.85359977469,
+        "mean_mape": 41.385494271143166
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.5575980557796617,
+        "mean_mae": 18242.15842647919,
+        "mean_mape": 32.89022327367077
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.9954066529404898,
+        "mean_mae": 22291.80197921562,
+        "mean_mape": 36.880539401559005
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.1604384719512035,
+        "mean_mae": 69440.49603400446,
+        "mean_mape": 44.60181307027385
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.8856408658595591,
+        "mean_mae": 118878.8966355702,
+        "mean_mape": 59.1959665388469
+      }
+    ],
+    "HGB": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.3491161824423878,
+        "mean_mae": 18684.53240756325,
+        "mean_mape": 22.160517191851792
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.3867415177150682,
+        "mean_mae": 28467.61971184906,
+        "mean_mape": 26.403952924814064
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.4559483750099181,
+        "mean_mae": 29562.604115103604,
+        "mean_mape": 33.34894481949679
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.5321461391011323,
+        "mean_mae": 21088.516331748782,
+        "mean_mape": 33.904514257608135
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 1.286064105343407,
+        "mean_mae": 27446.97580764721,
+        "mean_mape": 55.54009181280081
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.3794565828797984,
+        "mean_mae": 73976.94378560684,
+        "mean_mape": 55.06747325781007
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 2.048893992650373,
+        "mean_mae": 122922.6635053808,
+        "mean_mape": 63.32381561888212
+      }
+    ],
+    "E2-75/25": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.4108800239294953,
+        "mean_mae": 18097.785382653303,
+        "mean_mape": 30.319633998397585
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.5106840888597339,
+        "mean_mae": 26960.18324215417,
+        "mean_mape": 34.871602497189905
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.5278014201745783,
+        "mean_mae": 27686.669778157506,
+        "mean_mape": 38.94834530911673
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.567254327931554,
+        "mean_mae": 18230.541780697917,
+        "mean_mape": 33.15523468176049
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.9490028063705894,
+        "mean_mae": 22341.69938691729,
+        "mean_mape": 36.63068664872213
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.152475815592924,
+        "mean_mae": 69390.63459199495,
+        "mean_mape": 45.05439445444872
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.83182674047374,
+        "mean_mae": 118579.77555398848,
+        "mean_mape": 58.98430639955399
+      }
+    ],
+    "E2-50/50": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.4087727088132227,
+        "mean_mae": 18152.772894681984,
+        "mean_mape": 27.733032824919896
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.5132458898817235,
+        "mean_mae": 27073.15738673452,
+        "mean_mape": 32.80767461094163
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.5448850869979235,
+        "mean_mae": 27554.03083273162,
+        "mean_mape": 37.05411211078384
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.5786568221407773,
+        "mean_mae": 18230.073399847675,
+        "mean_mape": 33.574739783462164
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.9025989598006892,
+        "mean_mae": 22391.59679461897,
+        "mean_mape": 36.38083389588526
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.167979370037891,
+        "mean_mae": 69372.89020153922,
+        "mean_mape": 45.86788213768864
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.8360835301010112,
+        "mean_mae": 118360.13328502332,
+        "mean_mape": 59.66687232480368
+      }
+    ],
+    "E3-equal": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.3765605737085608,
+        "mean_mae": 18245.56906656174,
+        "mean_mape": 24.76472264827336
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.441357213550699,
+        "mean_mae": 27196.968142518228,
+        "mean_mape": 28.8041213199222
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.4834824437305464,
+        "mean_mae": 27708.800487759618,
+        "mean_mape": 33.690643037380106
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.5425479704374212,
+        "mean_mae": 18822.772537191853,
+        "mean_mape": 31.878621212849925
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 1.000673995202345,
+        "mean_mae": 23825.20597742485,
+        "mean_mape": 40.724020398149655
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.1682230362301371,
+        "mean_mae": 70681.10900756513,
+        "mean_mape": 46.480307403981946
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.8551995837525623,
+        "mean_mae": 119787.48371720956,
+        "mean_mape": 59.524779774959214
+      }
+    ],
+    "E4-equal": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.367822399536684,
+        "mean_mae": 15020.000822932729,
+        "mean_mape": 24.38705813378637
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.5072874990423462,
+        "mean_mae": 24350.62644821661,
+        "mean_mape": 31.61083723365174
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.4848051906063914,
+        "mean_mae": 26518.778182077804,
+        "mean_mape": 31.41376144853596
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.49838478562638,
+        "mean_mae": 14949.236852515209,
+        "mean_mape": 30.447128207903
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.8619062490651104,
+        "mean_mae": 19460.093098203048,
+        "mean_mape": 38.271324366248905
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.1481056915649943,
+        "mean_mae": 67301.65361914416,
+        "mean_mape": 46.783748418305656
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.846038989702626,
+        "mean_mae": 116839.29612202747,
+        "mean_mape": 59.03700829181306
+      }
+    ]
+  },
+  "backtest_recovery_horizon": {
+    "Lag1": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.16564245746901424,
+        "mean_mae": 4995.076923076923
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.23395630841325327,
+        "mean_mae": 10231.0
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.2366861314908669,
+        "mean_mae": 9424.51282051282
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.21380602597813758,
+        "mean_mae": 6288.4473684210525
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.39013604096933513,
+        "mean_mae": 17681.394736842107
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 0.25646240751235705,
+        "mean_mae": 8872.71052631579
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 0.30947631016641647,
+        "mean_mae": 15168.0
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 0.43000343432445787,
+        "mean_mae": 12440.102564102564
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 0.418987225540445,
+        "mean_mae": 6452.4358974358975
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.33478637007416606,
+        "mean_mae": 11594.175
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.34039973356043585,
+        "mean_mae": 8040.925
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.5568653566356405,
+        "mean_mae": 12985.45
+      }
+    ],
+    "Lag12": [
+      {
+        "horizon": 1,
+        "mean_mase": 7.564348869841544,
+        "mean_mae": 249820.89743589744
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 2.216188324255021,
+        "mean_mae": 65806.02564102564
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 1.640021566180406,
+        "mean_mae": 55255.07692307692
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 2.000078460384992,
+        "mean_mae": 88467.18421052632
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 2.009248263973694,
+        "mean_mae": 77853.5
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.812129261797841,
+        "mean_mae": 64234.57894736842
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 1.3319212972489947,
+        "mean_mae": 50078.8717948718
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 1.166363279326236,
+        "mean_mae": 39223.256410256414
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 1.0453865371938444,
+        "mean_mae": 33914.64102564102
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.55098750817481,
+        "mean_mae": 11726.9
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.3988012563291695,
+        "mean_mae": 11800.675
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.5568653566356405,
+        "mean_mae": 12985.45
+      }
+    ],
+    "MA3": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.1692834063360574,
+        "mean_mae": 8556.538461538463
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.22237884775490704,
+        "mean_mae": 13198.803418803418
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.18408338371288283,
+        "mean_mae": 5450.11111111111
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.23331598893098424,
+        "mean_mae": 11101.131578947367
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.3757496472534036,
+        "mean_mae": 13921.131578947368
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 0.2569853520157251,
+        "mean_mae": 6915.236842105263
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 0.2951208314035267,
+        "mean_mae": 11356.435897435897
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 0.4670351907232732,
+        "mean_mae": 15588.726495726496
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 0.45358978291193097,
+        "mean_mae": 9803.675213675211
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.33828851734349635,
+        "mean_mae": 12178.641666666666
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.3455941548415232,
+        "mean_mae": 8551.991666666665
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.5254651997776972,
+        "mean_mae": 8990.616666666665
+      }
+    ],
+    "MA6": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.4158209946364118,
+        "mean_mae": 13739.444444444442
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.42755307605835174,
+        "mean_mae": 13315.23076923077
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.4828450037607573,
+        "mean_mae": 16088.076923076924
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.4263187324488674,
+        "mean_mae": 20570.916666666664
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.5780528542612986,
+        "mean_mae": 24815.162280701752
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 0.401003984939893,
+        "mean_mae": 10720.881578947367
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 0.4869687699216497,
+        "mean_mae": 21811.940170940168
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 0.5650911459695589,
+        "mean_mae": 15569.846153846154
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 0.6232663330404282,
+        "mean_mae": 18767.837606837606
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.5365730574367852,
+        "mean_mae": 12192.079166666666
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.6065204044236492,
+        "mean_mae": 17267.404166666667
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.793504991857307,
+        "mean_mae": 18820.479166666664
+      }
+    ],
+    "Damped": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.17487682122507467,
+        "mean_mae": 6462.995095722138
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.23956144643954944,
+        "mean_mae": 11256.260892384538
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.3018445515545223,
+        "mean_mae": 14070.637733889544
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.24243051697043927,
+        "mean_mae": 8318.460698293056
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.42547656444076587,
+        "mean_mae": 19453.83074439613
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 0.36647146933124514,
+        "mean_mae": 21387.238915440957
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 0.37845151883959977,
+        "mean_mae": 21897.429055249802
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 0.5292086339962652,
+        "mean_mae": 22909.199801183673
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 0.4887050049885964,
+        "mean_mae": 16062.345567816306
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.4736509977186933,
+        "mean_mae": 24943.56668012474
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.4131026039510835,
+        "mean_mae": 14772.877167957335
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.6082176823500081,
+        "mean_mae": 18655.333950605287
+      }
+    ],
+    "Adaptive": [
+      {
+        "horizon": 1,
+        "mean_mase": 3.805250270868388,
+        "mean_mae": 127972.96440228257
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 1.238990753594005,
+        "mean_mae": 47999.707247168924
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.9899038186662995,
+        "mean_mae": 43008.47423065345
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 1.2879322482805842,
+        "mean_mae": 64503.58899145679
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 1.3141752735630607,
+        "mean_mae": 55690.10084295986
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 1.1582450055597233,
+        "mean_mae": 45575.1910394688
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 0.8840281988975522,
+        "mean_mae": 34411.83516186576
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 0.9068345458107075,
+        "mean_mae": 33567.75616292293
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 0.8787827892226888,
+        "mean_mae": 33213.735277849344
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.4693090246579418,
+        "mean_mae": 10781.732797117078
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.5283888238319465,
+        "mean_mae": 22383.31358527103
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.6176691275847223,
+        "mean_mae": 14776.912245304546
+      }
+    ],
+    "Ridge": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.23834339958365172,
+        "mean_mae": 15063.917738253498
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.23452133004284312,
+        "mean_mae": 11535.779533867662
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.4553618731341981,
+        "mean_mae": 29711.1384583788
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.3815734113307517,
+        "mean_mae": 26505.051109018194
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.6178150555022546,
+        "mean_mae": 41501.61649998313
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 0.42386539951779234,
+        "mean_mae": 26519.47301350407
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 0.528637691014815,
+        "mean_mae": 39154.07268910295
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 0.5106432575113335,
+        "mean_mae": 20415.424686860544
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 0.5363288557423482,
+        "mean_mae": 22309.161022934088
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.41217742116269607,
+        "mean_mae": 17591.33197134069
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.4570417577421434,
+        "mean_mae": 24422.74007094646
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.6614604965224663,
+        "mean_mae": 28272.942476303433
+      }
+    ],
+    "HGB": [
+      {
+        "horizon": 1,
+        "mean_mase": 0.1790559983473606,
+        "mean_mae": 8375.567044480591
+      },
+      {
+        "horizon": 2,
+        "mean_mase": 0.23051366997332037,
+        "mean_mae": 12923.485869480868
+      },
+      {
+        "horizon": 3,
+        "mean_mase": 0.2742691241673744,
+        "mean_mae": 14094.607917127552
+      },
+      {
+        "horizon": 4,
+        "mean_mase": 0.2573689546166173,
+        "mean_mae": 12477.83984390708
+      },
+      {
+        "horizon": 5,
+        "mean_mase": 0.4741868059533933,
+        "mean_mae": 26022.138604782085
+      },
+      {
+        "horizon": 6,
+        "mean_mase": 0.27345845659566836,
+        "mean_mae": 8874.048549030034
+      },
+      {
+        "horizon": 7,
+        "mean_mase": 0.3149126759480925,
+        "mean_mae": 14138.971489174282
+      },
+      {
+        "horizon": 8,
+        "mean_mase": 0.45229028446076514,
+        "mean_mae": 14693.562637239442
+      },
+      {
+        "horizon": 9,
+        "mean_mase": 0.43619742684951507,
+        "mean_mae": 7405.060401976252
+      },
+      {
+        "horizon": 10,
+        "mean_mase": 0.3155058713503901,
+        "mean_mae": 9291.156058031123
+      },
+      {
+        "horizon": 11,
+        "mean_mase": 0.36089055157590755,
+        "mean_mae": 10884.375138755915
+      },
+      {
+        "horizon": 12,
+        "mean_mase": 0.5689678443504016,
+        "mean_mae": 14682.840238774526
+      }
+    ]
+  },
+  "backtest_ensemble_by_origin": [
+    {
+      "model": "E2-50/50",
+      "origin": "2017M07",
+      "mean_mase": 3.50398915008054,
+      "mean_mae": 50018.020735412465,
+      "mean_mape": 27.82315300580009
+    },
+    {
+      "model": "E2-50/50",
+      "origin": "2018M07",
+      "mean_mase": 3.145190283772124,
+      "mean_mae": 71362.09607172331,
+      "mean_mape": 26.059631219341956
+    },
+    {
+      "model": "E2-50/50",
+      "origin": "2019M07",
+      "mean_mase": 9.901633325235734,
+      "mean_mae": 370801.3295389401,
+      "mean_mape": 53363.15918278782
+    },
+    {
+      "model": "E2-50/50",
+      "origin": "2020M12",
+      "mean_mase": 0.2907226666626697,
+      "mean_mae": 10289.032446293719,
+      "mean_mape": 69.91982737043797
+    },
+    {
+      "model": "E2-50/50",
+      "origin": "2021M03",
+      "mean_mase": 0.5042863233066565,
+      "mean_mae": 26847.133982452182,
+      "mean_mape": 96.34088353377389
+    },
+    {
+      "model": "E2-75/25",
+      "origin": "2017M07",
+      "mean_mase": 3.3840396510953257,
+      "mean_mae": 49755.35845401013,
+      "mean_mape": 25.717666811681365
+    },
+    {
+      "model": "E2-75/25",
+      "origin": "2018M07",
+      "mean_mase": 2.987074132168976,
+      "mean_mae": 70797.30855913408,
+      "mean_mape": 24.220760441257532
+    },
+    {
+      "model": "E2-75/25",
+      "origin": "2019M07",
+      "mean_mase": 9.698337534064672,
+      "mean_mae": 376794.03471573466,
+      "mean_mape": 50820.02318208996
+    },
+    {
+      "model": "E2-75/25",
+      "origin": "2020M12",
+      "mean_mase": 0.317264603060968,
+      "mean_mae": 12267.601361026098,
+      "mean_mape": 69.41784121590277
+    },
+    {
+      "model": "E2-75/25",
+      "origin": "2021M03",
+      "mean_mase": 0.5265969170300997,
+      "mean_mae": 30565.789745542068,
+      "mean_mape": 96.51287710082491
+    },
+    {
+      "model": "E3-equal",
+      "origin": "2017M07",
+      "mean_mase": 3.2742658625738836,
+      "mean_mae": 46302.05719688855,
+      "mean_mape": 25.4993829763569
+    },
+    {
+      "model": "E3-equal",
+      "origin": "2018M07",
+      "mean_mase": 2.720119423459603,
+      "mean_mae": 65919.33895538514,
+      "mean_mape": 22.32044753153666
+    },
+    {
+      "model": "E3-equal",
+      "origin": "2019M07",
+      "mean_mase": 9.852372343295698,
+      "mean_mae": 373975.53274073085,
+      "mean_mape": 53054.08691483322
+    },
+    {
+      "model": "E3-equal",
+      "origin": "2020M12",
+      "mean_mase": 0.3032347813919385,
+      "mean_mae": 11667.018728071476,
+      "mean_mape": 75.95148148315118
+    },
+    {
+      "model": "E3-equal",
+      "origin": "2021M03",
+      "mean_mase": 0.42882577981417624,
+      "mean_mae": 19931.706659148836,
+      "mean_mape": 91.50530675997275
+    },
+    {
+      "model": "E4-equal",
+      "origin": "2017M07",
+      "mean_mase": 2.7740771053428337,
+      "mean_mae": 39550.801837601386,
+      "mean_mape": 21.010116993683145
+    },
+    {
+      "model": "E4-equal",
+      "origin": "2018M07",
+      "mean_mase": 2.194149720371247,
+      "mean_mae": 58620.961089553944,
+      "mean_mape": 17.909402410139556
+    },
+    {
+      "model": "E4-equal",
+      "origin": "2019M07",
+      "mean_mase": 9.680822754187016,
+      "mean_mae": 377949.2453002156,
+      "mean_mape": 51682.726560241834
+    },
+    {
+      "model": "E4-equal",
+      "origin": "2020M12",
+      "mean_mase": 0.5646030427941614,
+      "mean_mae": 20356.431436963747,
+      "mean_mape": 912.5833862824721
+    },
+    {
+      "model": "E4-equal",
+      "origin": "2021M03",
+      "mean_mase": 0.44720979004022743,
+      "mean_mae": 15615.158840705251,
+      "mean_mape": 575.821170773714
+    }
+  ],
+  "backtest_ensemble_by_horizon": [
+    {
+      "model": "E2-50/50",
+      "horizon": 1,
+      "mean_mase": 1.101789272581502,
+      "mean_mae": 42805.87618211582,
+      "mean_mape": 27.03311011604606
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 2,
+      "mean_mase": 1.7276595639010386,
+      "mean_mae": 72051.57012036565,
+      "mean_mape": 45.75733952324651
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 3,
+      "mean_mase": 1.806084363801095,
+      "mean_mae": 59197.193289607836,
+      "mean_mape": 44.58980679612784
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 4,
+      "mean_mase": 2.960680988704362,
+      "mean_mae": 78451.00486356195,
+      "mean_mape": 57.470296031727386
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 5,
+      "mean_mase": 3.0855391162135706,
+      "mean_mae": 80657.56141625631,
+      "mean_mape": 71.24631078524551
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 6,
+      "mean_mase": 2.444516491229821,
+      "mean_mae": 67632.54845887244,
+      "mean_mape": 59.2285291593708
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 7,
+      "mean_mase": 4.915105622730293,
+      "mean_mae": 148224.06994375904,
+      "mean_mape": 330.8833654695423
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 8,
+      "mean_mase": 5.321719810238592,
+      "mean_mae": 143321.69503490883,
+      "mean_mape": 1121.0051287579092
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 9,
+      "mean_mase": 4.638321974608734,
+      "mean_mae": 132114.74684295573,
+      "mean_mape": 41317.55676398649
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 10,
+      "mean_mase": 4.441022056090809,
+      "mean_mae": 140484.33517470353,
+      "mean_mape": 65243.69789463275
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 11,
+      "mean_mase": 4.390751795671176,
+      "mean_mae": 147564.38126851773,
+      "mean_mape": 10813.321249954508
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 12,
+      "mean_mase": 4.509497722075215,
+      "mean_mae": 141376.09671890337,
+      "mean_mape": 7696.74348689656
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 1,
+      "mean_mase": 1.4445988380158117,
+      "mean_mae": 50371.99962045616,
+      "mean_mape": 29.92956844123714
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 2,
+      "mean_mase": 1.7189158456037184,
+      "mean_mae": 72241.24269764945,
+      "mean_mape": 45.32696996002838
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 3,
+      "mean_mase": 1.7583819495303143,
+      "mean_mae": 61030.190016277236,
+      "mean_mape": 45.60610372223392
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 4,
+      "mean_mase": 2.6511355754588224,
+      "mean_mae": 78531.15264868888,
+      "mean_mape": 54.397151493314276
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 5,
+      "mean_mase": 2.7542256468183157,
+      "mean_mae": 80912.6903620944,
+      "mean_mape": 67.44428903348012
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 6,
+      "mean_mase": 2.2522591019958154,
+      "mean_mae": 69101.59469461213,
+      "mean_mape": 55.80557971380364
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 7,
+      "mean_mase": 4.8038005273341735,
+      "mean_mae": 152086.00918077186,
+      "mean_mape": 319.51628392970935
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 8,
+      "mean_mase": 4.983704098441662,
+      "mean_mae": 139710.52865165944,
+      "mean_mape": 1075.3944737474244
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 9,
+      "mean_mase": 4.421379837241605,
+      "mean_mae": 132861.9348009837,
+      "mean_mape": 39024.99743557802
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 10,
+      "mean_mase": 4.3040984248884895,
+      "mean_mae": 139711.88727301446,
+      "mean_mape": 61864.83137195059
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 11,
+      "mean_mase": 4.4886920160966355,
+      "mean_mae": 155164.66205179834,
+      "mean_mape": 10530.930517506378
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 12,
+      "mean_mase": 4.714865585127506,
+      "mean_mae": 147731.0174597238,
+      "mean_mape": 7677.643814037398
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 1,
+      "mean_mase": 0.9530299141791845,
+      "mean_mae": 41606.47417169964,
+      "mean_mape": 28.22479494641137
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 2,
+      "mean_mase": 1.6786500899513266,
+      "mean_mae": 66888.12736343626,
+      "mean_mape": 47.594886797525106
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 3,
+      "mean_mase": 1.792355811558109,
+      "mean_mae": 59350.62034358518,
+      "mean_mape": 44.03136977018189
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 4,
+      "mean_mase": 2.666070919959073,
+      "mean_mae": 75990.45521222393,
+      "mean_mape": 55.537280491455085
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 5,
+      "mean_mase": 2.709697046004718,
+      "mean_mae": 79293.017555418,
+      "mean_mape": 65.62187363158736
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 6,
+      "mean_mase": 2.1602898475112347,
+      "mean_mae": 66666.32180940142,
+      "mean_mape": 54.51357763315551
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 7,
+      "mean_mase": 4.68746945594371,
+      "mean_mae": 148009.00735595782,
+      "mean_mape": 335.2069331623158
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 8,
+      "mean_mase": 5.031538865238104,
+      "mean_mae": 140624.38639368233,
+      "mean_mape": 1121.5848231532611
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 9,
+      "mean_mase": 4.556874665844094,
+      "mean_mae": 131744.7068991851,
+      "mean_mape": 41406.33044005691
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 10,
+      "mean_mase": 4.411530073580661,
+      "mean_mae": 138049.2978107792,
+      "mean_mape": 64394.117395231166
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 11,
+      "mean_mase": 4.259443450376627,
+      "mean_mae": 135655.536524408,
+      "mean_mape": 10499.871607726187
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 12,
+      "mean_mase": 4.568731712348807,
+      "mean_mae": 141744.7914751381,
+      "mean_mape": 8031.52541261419
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 1,
+      "mean_mase": 1.2310520625127483,
+      "mean_mae": 54121.05025445176,
+      "mean_mape": 869.46443759605
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 2,
+      "mean_mase": 1.443974346771069,
+      "mean_mae": 57989.41598642264,
+      "mean_mape": 384.7750071534846
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 3,
+      "mean_mase": 1.5371012784203995,
+      "mean_mae": 56493.068480877046,
+      "mean_mape": 427.67582714501293
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 4,
+      "mean_mase": 2.3066807296433187,
+      "mean_mae": 72121.53379523856,
+      "mean_mape": 364.7883701240099
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 5,
+      "mean_mase": 2.307004085656436,
+      "mean_mae": 77261.91069624801,
+      "mean_mape": 411.01574363311727
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 6,
+      "mean_mase": 2.1244916422387496,
+      "mean_mae": 69507.0481357156,
+      "mean_mape": 569.6942511622467
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 7,
+      "mean_mase": 4.600549031050138,
+      "mean_mae": 149724.38551629055,
+      "mean_mape": 460.9737130552423
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 8,
+      "mean_mase": 4.753510256827488,
+      "mean_mae": 137216.83266222768,
+      "mean_mape": 1240.184116882182
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 9,
+      "mean_mase": 4.341968420431301,
+      "mean_mae": 132209.96682553407,
+      "mean_mape": 40299.43588159475
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 10,
+      "mean_mase": 4.1331569405005215,
+      "mean_mae": 134294.3660097144,
+      "mean_mape": 62587.57437566008
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 11,
+      "mean_mase": 4.025584364352241,
+      "mean_mae": 128270.85532231112,
+      "mean_mape": 10260.89236022139
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 12,
+      "mean_mase": 4.423386775658858,
+      "mean_mae": 141714.81778578798,
+      "mean_mape": 8080.360431899506
+    }
+  ],
+  "backtest_ensemble_recovery_horizon": [
+    {
+      "model": "E2-50/50",
+      "horizon": 1,
+      "mean_mase": 0.15875289483539937,
+      "mean_mae": 6780.4518837828755,
+      "mean_mape": 51.527859315796995
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 2,
+      "mean_mase": 0.2129075878626358,
+      "mean_mae": 9907.73761221473,
+      "mean_mape": 84.62042683768226
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 3,
+      "mean_mase": 0.36151908893799195,
+      "mean_mae": 19955.971218476778,
+      "mean_mape": 76.72137494144805
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 4,
+      "mean_mase": 0.28936445044225,
+      "mean_mae": 15766.714466242658,
+      "mean_mape": 66.32381579499005
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 5,
+      "mean_mase": 0.5163305654361362,
+      "mean_mae": 30008.403893954346,
+      "mean_mape": 106.06291923671337
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 6,
+      "mean_mase": 0.3593582540469583,
+      "mean_mae": 19648.339999394306,
+      "mean_mape": 90.9801513983808
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 7,
+      "mean_mase": 0.42668277984191105,
+      "mean_mae": 27624.296641802255,
+      "mean_mape": 70.29983688540364
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 8,
+      "mean_mase": 0.5138985977502374,
+      "mean_mae": 20931.65016712077,
+      "mean_mape": 96.78486012955352
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 9,
+      "mean_mase": 0.4651076181815231,
+      "mean_mae": 13336.099126073912,
+      "mean_mape": 84.44939550014037
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 10,
+      "mean_mase": 0.4391128059108677,
+      "mean_mae": 21222.37919747846,
+      "mean_mape": 92.4339772421026
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 11,
+      "mean_mase": 0.4109957036427607,
+      "mean_mae": 16732.793709456368,
+      "mean_mape": 87.68482815106566
+    },
+    {
+      "model": "E2-50/50",
+      "horizon": 12,
+      "mean_mase": 0.6084966221133961,
+      "mean_mae": 21066.313776382412,
+      "mean_mape": 89.51415151811689
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 1,
+      "mean_mase": 0.1933975028875014,
+      "mean_mae": 10516.545586232742,
+      "mean_mape": 53.12627429819304
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 2,
+      "mean_mase": 0.20981330064507878,
+      "mean_mae": 9248.544738597078,
+      "mean_mape": 82.95099562067243
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 3,
+      "mean_mase": 0.4084312533159167,
+      "mean_mae": 24833.487764928745,
+      "mean_mape": 80.50310513296756
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 4,
+      "mean_mase": 0.3354667038502801,
+      "mean_mae": 21135.818855832607,
+      "mean_mape": 67.77532947175328
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 5,
+      "mean_mase": 0.5670728104691953,
+      "mean_mae": 35755.01019696874,
+      "mean_mape": 106.2296771161552
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 6,
+      "mean_mase": 0.3711063694922265,
+      "mean_mae": 20551.42978417037,
+      "mean_mape": 89.99853824114221
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 7,
+      "mean_mase": 0.47746536537454487,
+      "mean_mae": 33385.192913011415,
+      "mean_mape": 70.67044830489101
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 8,
+      "mean_mase": 0.5064346954835824,
+      "mean_mae": 19950.190044435698,
+      "mean_mape": 94.45422757448829
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 9,
+      "mean_mase": 0.49679478010398564,
+      "mean_mae": 17335.697108972145,
+      "mean_mape": 85.91775643761169
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 10,
+      "mean_mase": 0.42554620371349594,
+      "mean_mae": 19402.033190517577,
+      "mean_mape": 92.28803348308003
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 11,
+      "mean_mase": 0.43377040173593945,
+      "mean_mae": 20574.64481696035,
+      "mean_mape": 85.24352485922508
+    },
+    {
+      "model": "E2-75/25",
+      "horizon": 12,
+      "mean_mase": 0.632281222096849,
+      "mean_mae": 24640.597368549345,
+      "mean_mape": 86.42753903835026
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 1,
+      "mean_mase": 0.14287607707439845,
+      "mean_mae": 5091.654051415667,
+      "mean_mape": 56.06691026310973
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 2,
+      "mean_mase": 0.1894417443498262,
+      "mean_mae": 7806.375546453204,
+      "mean_mape": 89.7192045001531
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 3,
+      "mean_mase": 0.32957720171328286,
+      "mean_mae": 17961.17696124246,
+      "mean_mape": 75.05979327219234
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 4,
+      "mean_mase": 0.2698427236838546,
+      "mean_mae": 14561.306341363463,
+      "mean_mape": 69.35552745978883
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 5,
+      "mean_mase": 0.4936675106456016,
+      "mean_mae": 28634.740053294718,
+      "mean_mape": 102.2241967979104
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 6,
+      "mean_mase": 0.29842755772696317,
+      "mean_mae": 13681.582985148454,
+      "mean_mape": 87.53939725019755
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 7,
+      "mean_mase": 0.37865308840636497,
+      "mean_mae": 23111.269092031063,
+      "mean_mape": 70.52254846660844
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 8,
+      "mean_mase": 0.47125351901202767,
+      "mean_mae": 17640.991853867217,
+      "mean_mape": 98.69499503712862
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 9,
+      "mean_mase": 0.4427022325798754,
+      "mean_mae": 10357.721743019038,
+      "mean_mape": 84.74071073297854
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 10,
+      "mean_mase": 0.39272325642539213,
+      "mean_mae": 17211.92187777316,
+      "mean_mape": 91.01545261351214
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 11,
+      "mean_mase": 0.38255847724840913,
+      "mean_mae": 14764.546785951567,
+      "mean_mape": 88.69323609983735
+    },
+    {
+      "model": "E3-equal",
+      "horizon": 12,
+      "mean_mase": 0.5927903803709904,
+      "mean_mae": 18922.367423869873,
+      "mean_mape": 90.81629886105712
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 1,
+      "mean_mase": 0.9980071147412694,
+      "mean_mae": 31529.699768064507,
+      "mean_mape": 2193.009459500479
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 2,
+      "mean_mase": 0.35535958048431593,
+      "mean_mae": 10477.805916114907,
+      "mean_mape": 950.5626988318371
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 3,
+      "mean_mase": 0.3726985813517166,
+      "mean_mae": 17617.84141310867,
+      "mean_mape": 1054.5546728574216
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 4,
+      "mean_mase": 0.4245554187357467,
+      "mean_mae": 17938.403992999465,
+      "mean_mape": 871.8462770562521
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 5,
+      "mean_mase": 0.6497912551512097,
+      "mean_mae": 32026.509208619846,
+      "mean_mape": 996.0117052116078
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 6,
+      "mean_mase": 0.4602249597313376,
+      "mean_mae": 16624.445764811513,
+      "mean_mape": 1420.987912525626
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 7,
+      "mean_mase": 0.48632349248620116,
+      "mean_mae": 25629.054830745765,
+      "mean_mape": 375.409163654417
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 8,
+      "mean_mase": 0.5058743331150011,
+      "mean_mae": 13642.58795464002,
+      "mean_mape": 425.9921003112181
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 9,
+      "mean_mase": 0.4964009933613592,
+      "mean_mae": 9887.144363569865,
+      "mean_mape": 467.92751213380586
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 10,
+      "mean_mase": 0.35763315225420966,
+      "mean_mae": 11252.369369887874,
+      "mean_mape": 87.48348344366052
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 11,
+      "mean_mase": 0.3747106674845946,
+      "mean_mae": 12080.120717050295,
+      "mean_mape": 79.42123158089994
+    },
+    {
+      "model": "E4-equal",
+      "horizon": 12,
+      "mean_mase": 0.5946207072536251,
+      "mean_mae": 17776.89112922854,
+      "mean_mape": 85.08912659336733
+    }
+  ],
+  "backtest_origins": [
+    "2017M07",
+    "2018M07",
+    "2019M07",
+    "2020M12",
+    "2021M03"
+  ],
+  "backtest_runtime_seconds": {
+    "naive_lag1": 0.52,
+    "naive_lag12": 0.524,
+    "recent_ma_3": 0.214,
+    "recent_ma_6": 0.211,
+    "damped_trend": 10.33,
+    "adaptive_seasonal": 2.748,
+    "global_ridge": 102.124,
+    "global_hgb": 124.081
+  },
+  "total_runtime_seconds": 303.704,
+  "seed": 742
+}

@@ -1,0 +1,68 @@
+{
+  "seed": 742,
+  "data": {
+    "url": "https://raw.githubusercontent.com/tulip-lab/open-data/main/ISF-TDF2023/ISF-TDF2023.csv",
+    "local_filename": "ISF-TDF2023.csv",
+    "env_var": "TOURISM_DATA_PATH"
+  },
+  "split": {
+    "train_end": "2022M07",
+    "validation_start": "2022M08",
+    "validation_end": "2023M02",
+    "audit_start": "2023M03",
+    "audit_end": "2023M07",
+    "final_start": "2023M08",
+    "final_end": "2024M07"
+  },
+  "validation_origin": "2022M07",
+  "models": {
+    "recent_ma": {
+      "windows": [3, 6]
+    },
+    "damped_trend": {
+      "windows": [6, 12],
+      "dampings": [0.7, 0.85, 0.95],
+      "trend_caps": [0.1, 0.15],
+      "max_total_log_growth": 2.5,
+      "min_points": 4
+    },
+    "adaptive_seasonal": {
+      "windows": [3, 6],
+      "ratio_caps": [[0.5, 2.0], [0.5, 3.0]],
+      "min_pairs": 2,
+      "fallback_years": 3
+    },
+    "global_ridge": {
+      "alphas": [0.1, 1.0, 10.0, 100.0],
+      "min_history_months": 12
+    },
+    "global_hgb": {
+      "param_sets": [
+        {"max_iter": 100, "max_leaf_nodes": 7, "l2_regularization": 1.0, "learning_rate": 0.1},
+        {"max_iter": 200, "max_leaf_nodes": 7, "l2_regularization": 10.0, "learning_rate": 0.1},
+        {"max_iter": 100, "max_leaf_nodes": 15, "l2_regularization": 1.0, "learning_rate": 0.1},
+        {"max_iter": 200, "max_leaf_nodes": 15, "l2_regularization": 10.0, "learning_rate": 0.1}
+      ],
+      "min_history_months": 12,
+      "min_samples_leaf": 20
+    },
+    "ensemble": {
+      "members": ["adaptive_seasonal", "damped_trend", "global_ridge", "global_hgb"],
+      "weight_sets_2": [[0.5, 0.5], [0.25, 0.75], [0.75, 0.25]],
+      "weight_sets_3": [
+        [0.3333333333333333, 0.3333333333333333, 0.3333333333333333],
+        [0.25, 0.25, 0.5],
+        [0.5, 0.25, 0.25],
+        [0.25, 0.5, 0.25]
+      ]
+    }
+  },
+  "backtest": {
+    "origins": ["2017M07", "2018M07", "2019M07", "2020M12", "2021M03"],
+    "max_horizon": 12
+  },
+  "selection": {
+    "top_backtest_candidates": 2,
+    "primary_metric": "mean_mase"
+  }
+}

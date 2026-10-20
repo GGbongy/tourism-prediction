@@ -1,0 +1,654 @@
+{
+  "started_at": "2026-10-20T21:28:49.389245",
+  "seed": 742,
+  "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "jupyterlab": "4.6.4",
+    "nbformat": "5.11.1"
+  },
+  "config": {
+    "seed": 742,
+    "data": {
+      "url": "https://raw.githubusercontent.com/tulip-lab/open-data/main/ISF-TDF2023/ISF-TDF2023.csv",
+      "local_filename": "ISF-TDF2023.csv",
+      "env_var": "TOURISM_DATA_PATH"
+    },
+    "split": {
+      "train_end": "2022M07",
+      "validation_start": "2022M08",
+      "validation_end": "2023M02",
+      "audit_start": "2023M03",
+      "audit_end": "2023M07",
+      "final_start": "2023M08",
+      "final_end": "2024M07"
+    },
+    "validation_origin": "2022M07",
+    "models": {
+      "recent_ma": {
+        "windows": [
+          3,
+          6
+        ]
+      },
+      "damped_trend": {
+        "windows": [
+          6,
+          12
+        ],
+        "dampings": [
+          0.7,
+          0.85,
+          0.95
+        ],
+        "trend_caps": [
+          0.1,
+          0.15
+        ],
+        "max_total_log_growth": 2.5,
+        "min_points": 4
+      },
+      "adaptive_seasonal": {
+        "windows": [
+          3,
+          6
+        ],
+        "ratio_caps": [
+          [
+            0.5,
+            2.0
+          ],
+          [
+            0.5,
+            3.0
+          ]
+        ],
+        "min_pairs": 2,
+        "fallback_years": 3
+      },
+      "global_ridge": {
+        "alphas": [
+          0.1,
+          1.0,
+          10.0,
+          100.0
+        ],
+        "min_history_months": 12
+      },
+      "global_hgb": {
+        "param_sets": [
+          {
+            "max_iter": 100,
+            "max_leaf_nodes": 7,
+            "l2_regularization": 1.0,
+            "learning_rate": 0.1
+          },
+          {
+            "max_iter": 200,
+            "max_leaf_nodes": 7,
+            "l2_regularization": 10.0,
+            "learning_rate": 0.1
+          },
+          {
+            "max_iter": 100,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1.0,
+            "learning_rate": 0.1
+          },
+          {
+            "max_iter": 200,
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10.0,
+            "learning_rate": 0.1
+          }
+        ],
+        "min_history_months": 12,
+        "min_samples_leaf": 20
+      },
+      "ensemble": {
+        "members": [
+          "adaptive_seasonal",
+          "damped_trend",
+          "global_ridge",
+          "global_hgb"
+        ],
+        "weight_sets_2": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.25,
+            0.75
+          ],
+          [
+            0.75,
+            0.25
+          ]
+        ],
+        "weight_sets_3": [
+          [
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.25,
+            0.25,
+            0.5
+          ],
+          [
+            0.5,
+            0.25,
+            0.25
+          ],
+          [
+            0.25,
+            0.5,
+            0.25
+          ]
+        ]
+      }
+    },
+    "backtest": {
+      "origins": [
+        "2017M07",
+        "2018M07",
+        "2019M07",
+        "2020M12",
+        "2021M03"
+      ],
+      "max_horizon": 12
+    },
+    "selection": {
+      "top_backtest_candidates": 2,
+      "primary_metric": "mean_mase"
+    }
+  },
+  "data": {
+    "source": "local:E:\\Code\\tourism-prediction\\.claude\\worktrees\\docs-requirements-review-e29098\\ISF-TDF2023.csv",
+    "sha256": "8884485b0f5f772bd78f412c56f688251f38c6377b663363503a3fedd613cb1e",
+    "raw_shape": [
+      427,
+      21
+    ],
+    "history_shape": [
+      403,
+      21
+    ],
+    "validation_shape": [
+      7,
+      21
+    ],
+    "raw_date_range": [
+      "1989M01",
+      "2024M07"
+    ],
+    "history_date_range": [
+      "1989M01",
+      "2022M07"
+    ],
+    "validation_months": [
+      "2022M08",
+      "2022M09",
+      "2022M10",
+      "2022M11",
+      "2022M12",
+      "2023M01",
+      "2023M02"
+    ],
+    "destinations": [
+      "Canada",
+      "Chile",
+      "Mexico",
+      "Taiwan China",
+      "Hong Kong China",
+      "Japan",
+      "South Korea",
+      "Macao China",
+      "Maldives",
+      "Cambodia",
+      "Indonesia",
+      "Singapore",
+      "New Zealand",
+      "USA",
+      "Thailand",
+      "Turkey",
+      "Australia",
+      "Hawaii",
+      "Austria",
+      "Czech"
+    ],
+    "missing_report": {
+      "Canada": {
+        "missing_before_cutoff": 156,
+        "first_valid": "2002M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Chile": {
+        "missing_before_cutoff": 291,
+        "first_valid": "2012M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 15,
+        "internal_gap_dates": [
+          "2017M11",
+          "2017M12",
+          "2020M04",
+          "2020M05",
+          "2020M06",
+          "2020M07",
+          "2020M08",
+          "2020M09",
+          "2020M10",
+          "2021M04",
+          "2021M05",
+          "2021M06",
+          "2021M07",
+          "2021M08",
+          "2021M09"
+        ]
+      },
+      "Mexico": {
+        "missing_before_cutoff": 192,
+        "first_valid": "2005M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Taiwan China": {
+        "missing_before_cutoff": 234,
+        "first_valid": "2008M07",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Hong Kong China": {
+        "missing_before_cutoff": 120,
+        "first_valid": "1999M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Japan": {
+        "missing_before_cutoff": 96,
+        "first_valid": "1997M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "South Korea": {
+        "missing_before_cutoff": 108,
+        "first_valid": "1998M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Macao China": {
+        "missing_before_cutoff": 120,
+        "first_valid": "1999M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Maldives": {
+        "missing_before_cutoff": 111,
+        "first_valid": "1998M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 3,
+        "internal_gap_dates": [
+          "2020M04",
+          "2020M05",
+          "2020M06"
+        ]
+      },
+      "Cambodia": {
+        "missing_before_cutoff": 168,
+        "first_valid": "2003M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Indonesia": {
+        "missing_before_cutoff": 288,
+        "first_valid": "2013M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Singapore": {
+        "missing_before_cutoff": 156,
+        "first_valid": "2002M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "New Zealand": {
+        "missing_before_cutoff": 156,
+        "first_valid": "2002M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "USA": {
+        "missing_before_cutoff": 132,
+        "first_valid": "2000M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Thailand": {
+        "missing_before_cutoff": 78,
+        "first_valid": "1995M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 6,
+        "internal_gap_dates": [
+          "2020M04",
+          "2020M05",
+          "2020M06",
+          "2020M07",
+          "2020M08",
+          "2020M09"
+        ]
+      },
+      "Turkey": {
+        "missing_before_cutoff": 84,
+        "first_valid": "1996M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Australia": {
+        "missing_before_cutoff": 0,
+        "first_valid": "1989M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Hawaii": {
+        "missing_before_cutoff": 0,
+        "first_valid": "1989M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Austria": {
+        "missing_before_cutoff": 172,
+        "first_valid": "2003M05",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      },
+      "Czech": {
+        "missing_before_cutoff": 276,
+        "first_valid": "2012M01",
+        "last_valid": "2022M07",
+        "internal_gap_count": 0,
+        "internal_gap_dates": []
+      }
+    }
+  },
+  "audit_used": false,
+  "audit_isolation": {
+    "history_max_date": "2022M07",
+    "validation_months": [
+      "2022M08",
+      "2022M09",
+      "2022M10",
+      "2022M11",
+      "2022M12",
+      "2023M01",
+      "2023M02"
+    ],
+    "note": "locked audit and final-period actuals are not loaded into the experiment object"
+  },
+  "failures": [],
+  "notebook_baseline_check": {
+    "naive_lag1": {
+      "computed_mean_mase": 0.8669132790407004,
+      "notebook_mean_mase": 0.866913,
+      "abs_diff": 2.7904070032391814e-07,
+      "matches": true,
+      "valid_samples": 140
+    },
+    "naive_lag12": {
+      "computed_mean_mase": 1.4139211469069088,
+      "notebook_mean_mase": 1.413921,
+      "abs_diff": 1.4690690885998947e-07,
+      "matches": true,
+      "valid_samples": 138
+    }
+  },
+  "selected_candidates_by_backtest": {
+    "damped_trend": [
+      {
+        "damping": 0.7,
+        "trend_cap": 0.1,
+        "window": 12
+      },
+      {
+        "damping": 0.7,
+        "trend_cap": 0.15,
+        "window": 12
+      }
+    ],
+    "adaptive_seasonal": [
+      {
+        "ratio_cap": [
+          0.5,
+          2.0
+        ],
+        "window": 3
+      },
+      {
+        "ratio_cap": [
+          0.5,
+          3.0
+        ],
+        "window": 3
+      }
+    ],
+    "global_ridge": [
+      {
+        "alpha": 1.0
+      },
+      {
+        "alpha": 0.1
+      }
+    ],
+    "global_hgb": [
+      {
+        "l2_regularization": 1.0,
+        "learning_rate": 0.1,
+        "max_iter": 100,
+        "max_leaf_nodes": 15
+      },
+      {
+        "l2_regularization": 10.0,
+        "learning_rate": 0.1,
+        "max_iter": 200,
+        "max_leaf_nodes": 15
+      }
+    ]
+  },
+  "family_best_validation": {
+    "adaptive_seasonal": "adaptive_seasonal_w3_cap0.5-3.0",
+    "damped_trend": "damped_trend_w12_phi0.7_cap0.15",
+    "global_ridge": "global_ridge_a0.1",
+    "global_hgb": "global_hgb_i100_l15_l21.0"
+  },
+  "finished_at": "2026-10-20T21:33:53.082536",
+  "total_runtime_seconds": 303.704,
+  "backtest_runtime_seconds": {
+    "naive_lag1": 0.52,
+    "naive_lag12": 0.524,
+    "recent_ma_3": 0.214,
+    "recent_ma_6": 0.211,
+    "damped_trend": 10.33,
+    "adaptive_seasonal": 2.748,
+    "global_ridge": 102.124,
+    "global_hgb": 124.081
+  },
+  "backtest_failures": [],
+  "validation_failures": [],
+  "models_completed": [
+    "recent_ma_3",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15+global_hgb_i100_l15_l21.0+adaptive_seasonal_w3_cap0.5-3.0_w0.25_0.25_0.25_0.25",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15+global_hgb_i100_l15_l21.0_w0.33_0.33_0.33",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15+global_hgb_i100_l15_l21.0_w0.50_0.25_0.25",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15+global_hgb_i100_l15_l21.0_w0.25_0.50_0.25",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15+global_hgb_i100_l15_l21.0_w0.25_0.25_0.50",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15_w0.75_0.25",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15_w0.50_0.50",
+    "ensemble_global_ridge_a0.1+damped_trend_w12_phi0.7_cap0.15_w0.25_0.75",
+    "global_ridge_a0.1",
+    "global_ridge_a1.0",
+    "naive_lag1",
+    "damped_trend_w12_phi0.7_cap0.15",
+    "damped_trend_w12_phi0.7_cap0.1",
+    "global_hgb_i100_l15_l21.0",
+    "global_hgb_i200_l15_l210.0",
+    "recent_ma_6",
+    "adaptive_seasonal_w3_cap0.5-3.0",
+    "adaptive_seasonal_w3_cap0.5-2.0",
+    "naive_lag12"
+  ],
+  "best_model": "recent_ma_3",
+  "best_model_metrics": {
+    "MAE_macro": 31297.747619047626,
+    "MAE_pooled": 31297.747619047623,
+    "mean_MASE": 0.8051351791108188,
+    "median_MASE": 0.5605696678578174,
+    "mean_MAPE": 39.71128000230261,
+    "valid_samples": 140,
+    "runtime_seconds": 0.0072
+  },
+  "backtest_aggregate_top": [
+    {
+      "model": "global_hgb({\"l2_regularization\": 1.0, \"learning_rate\": 0.1, \"max_iter\": 100, \"max_leaf_nodes\": 15})",
+      "params": "{\"l2_regularization\": 1.0, \"learning_rate\": 0.1, \"max_iter\": 100, \"max_leaf_nodes\": 15}",
+      "n_origins": 5,
+      "mean_mae": 100338.27720913796,
+      "mean_mase": 3.15221746031004,
+      "median_mase": 1.709800056486636,
+      "mean_mape": 10114.677449587514,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_hgb"
+    },
+    {
+      "model": "global_hgb({\"l2_regularization\": 10.0, \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 15})",
+      "params": "{\"l2_regularization\": 10.0, \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 15}",
+      "n_origins": 5,
+      "mean_mae": 99279.62241911174,
+      "mean_mase": 3.1569864388205673,
+      "median_mase": 1.9242321991663482,
+      "mean_mape": 9824.415798707925,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_hgb"
+    },
+    {
+      "model": "global_hgb({\"l2_regularization\": 10.0, \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 7})",
+      "params": "{\"l2_regularization\": 10.0, \"learning_rate\": 0.1, \"max_iter\": 200, \"max_leaf_nodes\": 7}",
+      "n_origins": 5,
+      "mean_mae": 102671.29417116869,
+      "mean_mase": 3.2544468962260438,
+      "median_mase": 1.898980295277589,
+      "mean_mape": 10135.765481496537,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_hgb"
+    },
+    {
+      "model": "global_hgb({\"l2_regularization\": 1.0, \"learning_rate\": 0.1, \"max_iter\": 100, \"max_leaf_nodes\": 7})",
+      "params": "{\"l2_regularization\": 1.0, \"learning_rate\": 0.1, \"max_iter\": 100, \"max_leaf_nodes\": 7}",
+      "n_origins": 5,
+      "mean_mae": 104754.56706855043,
+      "mean_mase": 3.2924224381784923,
+      "median_mase": 1.8217534747736834,
+      "mean_mape": 10332.507471391391,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_hgb"
+    },
+    {
+      "model": "recent_ma_6({})",
+      "params": "{}",
+      "n_origins": 5,
+      "mean_mae": 102027.73563888887,
+      "mean_mase": 3.3150176571710523,
+      "median_mase": 2.743563091750362,
+      "mean_mape": 9006.482514107352,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "recent_ma_6"
+    },
+    {
+      "model": "global_ridge({\"alpha\": 1.0})",
+      "params": "{\"alpha\": 1.0}",
+      "n_origins": 5,
+      "mean_mae": 109187.0350785947,
+      "mean_mase": 3.33860940910064,
+      "median_mase": 2.704497444929832,
+      "mean_mape": 9316.982993264404,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_ridge"
+    },
+    {
+      "model": "global_ridge({\"alpha\": 0.1})",
+      "params": "{\"alpha\": 0.1}",
+      "n_origins": 5,
+      "mean_mae": 109196.67827318252,
+      "mean_mase": 3.338768794696274,
+      "median_mase": 2.7048333938606106,
+      "mean_mape": 9311.390615767199,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_ridge"
+    },
+    {
+      "model": "global_ridge({\"alpha\": 10.0})",
+      "params": "{\"alpha\": 10.0}",
+      "n_origins": 5,
+      "mean_mae": 109256.90241085722,
+      "mean_mase": 3.3424765385973445,
+      "median_mase": 2.673531800773029,
+      "mean_mape": 9369.206892399936,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_ridge"
+    },
+    {
+      "model": "recent_ma_3({})",
+      "params": "{}",
+      "n_origins": 5,
+      "mean_mae": 99439.96630555553,
+      "mean_mase": 3.350455158716124,
+      "median_mase": 2.9783616684717686,
+      "mean_mape": 9154.690213329222,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "recent_ma_3"
+    },
+    {
+      "model": "global_ridge({\"alpha\": 100.0})",
+      "params": "{\"alpha\": 100.0}",
+      "n_origins": 5,
+      "mean_mae": 110472.00014881787,
+      "mean_mase": 3.392270742476863,
+      "median_mase": 2.5154494855131784,
+      "mean_mape": 9656.863330585376,
+      "total_valid_samples": 1175,
+      "mean_horizon_max": 12.0,
+      "family": "global_ridge"
+    }
+  ]
+}
