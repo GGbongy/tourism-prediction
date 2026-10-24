@@ -9,6 +9,14 @@ import run as sarima
 
 
 class SarimaChecks(unittest.TestCase):
+    def test_global_selection_uses_one_configuration_for_every_destination(self):
+        rows=[]
+        for candidate,values in [('ar1_sar1',[.1,5.]),('ar1_d1_sar1',[1.,1.])]:
+            for country,value in zip(['A','B'],values):
+                rows.append(dict(candidate_id=candidate,destination=country,converged=True,
+                                 n_scored=7,mase=value,mape_percent=value*10))
+        self.assertEqual(sarima.select_global_candidate(rows,['A','B']),'ar1_d1_sar1')
+
     def setUp(self):
         self.history = {d: {'A': 100 + 10*math.sin(i*2*math.pi/12) + i*.1}
                         for i, d in enumerate(sarima.dates('2010M01', '2021M12'))}

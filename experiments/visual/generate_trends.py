@@ -27,7 +27,8 @@ SPLITS = [('Training', None, '2022M07', '#f4f6f8'),
           ('Test', '2023M08', '2024M07', '#e3f0e9')]
 COLORS = ['#21618c', '#b03a2e', '#148f77', '#7d3c98', '#b9770e',
           '#34495e', '#d35400', '#2874a6', '#a9326f', '#558b2f',
-          '#6c5b4c', '#00838f', '#5c6bc0', '#c0392b', '#455a64']
+          '#6c5b4c', '#00838f', '#5c6bc0', '#c0392b', '#455a64',
+          '#827717', '#ad1457', '#00695c', '#4527a0', '#9e5200']
 
 
 def ordinal(label):
@@ -62,46 +63,60 @@ def read_csv(path):
     return columns[1:], rows
 
 
-def figure(countries, rows, output, title):
+def figure(countries, rows, output, title, *, series_specs=None, legend_specs=None,
+           splits=None, auto_scale_y=False, y_label='Tourist arrivals',
+           zero_based=True, reference_lines=()):
     esc = html.escape
     months = sorted(rows)
     start = min(m for m in months if any(rows[m][c] is not None for c in countries))
     end = ordinal('2024M07')
     months = list(range(start, end + 1))
     width, left, right, top, bottom = 1440, 110, 1390, 125, 575
-    legend_rows = math.ceil(len(countries) / 4)
+    series_specs = series_specs or {}
+    custom_legends = legend_specs is not None
+    legend_specs = legend_specs if custom_legends else [
+        {'label': country, 'series_keys': [country], 'color': COLORS[i % len(COLORS)]}
+        for i, country in enumerate(countries)]
+    partitions = SPLITS if splits is None else splits
+    legend_rows = math.ceil(len(legend_specs) / 4)
     height = 670 + 28 * legend_rows
-    maximum = max(rows[m][c] for m in months for c in countries
-                  if m in rows and rows[m][c] is not None)
-    raw_step = maximum / 5 if maximum else 1
+    values = [rows[m][c] for m in months for c in countries
+              if m in rows and rows[m][c] is not None]
+    maximum = max(max(values), 0)
+    minimum = 0 if zero_based else min(min(values), 0)
+    raw_step = (maximum-minimum) / 5 if maximum != minimum else 1
     power = 10 ** math.floor(math.log10(raw_step))
     step = next(n * power for n in (1, 2, 2.5, 5, 10) if n * power >= raw_step)
-    ymax = math.ceil(maximum / step) * step or step
+    ymax = math.ceil(maximum / step) * step
+    ymin = math.floor(minimum / step) * step
+    if ymax == ymin:
+        ymax = ymin+step
     x = lambda m: left + (m - start + .5) / (end - start + 1) * (right - left)
-    y = lambda value: bottom - value / ymax * (bottom - top)
+    y = lambda value: bottom - (value-ymin) / (ymax-ymin) * (bottom - top)
     svg = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="group" aria-label="{esc(title)}">',
            '<style>text{font-family:Georgia,"Times New Roman",serif;fill:#222} .tick{font-size:15px}'
-           '.legend-item{cursor:pointer;user-select:none}.legend-item[aria-pressed="false"]{opacity:.3}'
+           '.legend-item{cursor:pointer;user-select:none;outline:none}.legend-item[aria-pressed="false"]{opacity:.3}'
            '.legend-item:focus-visible{outline:1px dotted #545b63}.series-group.is-hidden{display:none}</style>',
            f'<rect width="{width}" height="{height}" fill="white"/>',
            f'<text x="{width/2}" y="38" text-anchor="middle" font-size="25">{esc(title)}</text>']
-    for i, (name, a, b, color) in enumerate(SPLITS):
+    for i, (name, a, b, color) in enumerate(partitions):
         lo = max(start, ordinal(a)) if a else start
         hi = min(end, ordinal(b))
         svg.append(f'<rect class="partition-band" x="{x(lo)-.5*(right-left)/(end-start+1):.2f}" y="{top}" width="{(hi-lo+1)*(right-left)/(end-start+1):.2f}" height="{bottom-top}" fill="{color}"/>')
-        lx = left + i * 322
+        lx = left + i * (322 if splits is None else (right-left)/len(partitions))
         svg += [f'<rect x="{lx}" y="64" width="15" height="15" fill="{color}" stroke="#aaa"/>',
                 f'<text x="{lx+23}" y="77" font-size="16">{name}</text>',
                 f'<text x="{lx+23}" y="99" font-size="13">{label(lo)} – {label(hi)}</text>']
     svg.append('<g class="y-grid">')
-    for tick in range(round(ymax / step) + 1):
-        value = tick * step
+    for tick in range(round((ymax-ymin) / step) + 1):
+        value = ymin + tick * step
+        tick_label = f'{value:,.6f}'.rstrip('0').rstrip('.')
         yy = y(value)
         svg += [f'<line x1="{left}" x2="{right}" y1="{yy:.2f}" y2="{yy:.2f}" stroke="#d9dfe4" stroke-width=".7"/>',
-                f'<text x="{left-14}" y="{yy+5:.2f}" text-anchor="end" class="tick">{value:,.0f}</text>']
+                f'<text x="{left-14}" y="{yy+5:.2f}" text-anchor="end" class="tick">{tick_label}</text>']
     svg += ['</g>', f'<line x1="{left}" x2="{right}" y1="{bottom}" y2="{bottom}" stroke="#333"/>',
             f'<line x1="{left}" x2="{left}" y1="{top}" y2="{bottom}" stroke="#333"/>',
-            f'<text transform="translate(29 {(top+bottom)/2}) rotate(-90)" text-anchor="middle" font-size="18">Tourist arrivals</text>',
+            f'<text transform="translate(14 {(top+bottom)/2}) rotate(-90)" text-anchor="middle" font-size="18">{esc(y_label)}</text>',
             f'<text x="{(left+right)/2}" y="641" text-anchor="middle" font-size="18">Month</text>']
     stride = max(1, math.ceil((end-start+1) / 12 / 9))
     ticks = [start] + [m for m in months if m % 12 == 0 and (m//12-start//12) % stride == 0 and m > start+9 and m < end-9] + [end]
@@ -112,12 +127,21 @@ def figure(countries, rows, output, title):
                 f'<text x="{xx:.2f}" y="{bottom+27}" text-anchor="middle" class="tick">{label(m).replace("M", "-")}</text>']
     svg.append('</g>')
     svg.append(f'<defs><clipPath id="plot-clip"><rect x="{left}" y="{top}" width="{right-left}" height="{bottom-top}"/></clipPath></defs>')
-    for _, a, _, _ in SPLITS[1:]:
+    for value, name in reference_lines:
+        svg.append(f'<line class="reference-line" x1="{left}" x2="{right}" y1="{y(value):.2f}" y2="{y(value):.2f}" stroke="#737a80" stroke-width="1" stroke-dasharray="3 4"><title>{esc(name)}</title></line>')
+    for _, a, _, _ in partitions[1:]:
         xx = x(ordinal(a)-.5)
         svg.append(f'<line class="split-boundary" x1="{xx:.2f}" x2="{xx:.2f}" y1="{top}" y2="{bottom}" stroke="#545b63" stroke-width="1.3" stroke-dasharray="6 5"><title>{a}</title></line>')
     for i, country in enumerate(countries):
-        color = COLORS[i % len(COLORS)]
-        svg.append(f'<g id="destination-{i}" class="series-group" clip-path="url(#plot-clip)">')
+        spec = series_specs.get(country, {})
+        color = spec.get('color', COLORS[i % len(COLORS)])
+        dash = spec.get('dash', '')
+        series_label = spec.get('label', country)
+        series_max = max((rows[m][country] for m in months
+                          if m in rows and rows[m][country] is not None), default=0)
+        series_min = min((rows[m][country] for m in months
+                          if m in rows and rows[m][country] is not None), default=0)
+        svg.append(f'<g id="destination-{i}" class="series-group" data-key="{esc(country)}" data-max="{series_max}" data-min="{series_min}" clip-path="url(#plot-clip)">')
         segments, segment = [], []
         for m in months:
             value = rows.get(m, {}).get(country)
@@ -131,24 +155,40 @@ def figure(countries, rows, output, title):
             segments.append(segment)
         for segment in segments:
             points = ' '.join(f'{x(m):.2f},{y(v):.2f}' for m, v in segment)
-            svg.append(f'<polyline class="series" points="{points}" fill="none" stroke="{color}" stroke-width="1.6" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>')
+            svg.append(f'<polyline class="series" points="{points}" fill="none" stroke="{color}" stroke-width="1.6" stroke-dasharray="{dash}" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>')
             for m, v in segment:
-                svg.append(f'<circle cx="{x(m):.2f}" cy="{y(v):.2f}" r="{1.8 if len(countries)==1 else 1.1}" fill="{color}"><title>{esc(country)} | {label(m)} | {v:,.0f}</title></circle>')
+                display_value = f'{v:,.4f}' if spec.get('decimal_values') else f'{v:,.0f}'
+                svg.append(f'<circle cx="{x(m):.2f}" cy="{y(v):.2f}" r="{1.8 if len(countries)==1 else 1.1}" fill="{color}"><title>{esc(series_label)} | {label(m)} | {display_value}</title></circle>')
         svg.append('</g>')
+    indices = {key: i for i, key in enumerate(countries)}
+    for i, legend in enumerate(legend_specs):
+        color = legend.get('color', '#545b63')
+        controls = ' '.join(f'destination-{indices[key]}' for key in legend['series_keys'])
+        family = f' data-family="{esc(legend["family"])}"' if legend.get('family') else ''
         lx, ly = left + (i % 4) * 322, 674 + (i // 4) * 28
-        svg += [f'<g class="legend-item" tabindex="0" role="button" aria-label="{esc(country)}" aria-pressed="true" aria-controls="destination-{i}">',
+        svg += [f'<g class="legend-item" tabindex="0" role="button" aria-label="{esc(legend["label"])}" aria-pressed="true" aria-controls="{controls}"{family}>',
                 f'<rect x="{lx-5}" y="{ly-19}" width="300" height="26" fill="transparent"/>',
-                f'<line x1="{lx}" x2="{lx+23}" y1="{ly-5}" y2="{ly-5}" stroke="{color}" stroke-width="2"/>',
-                f'<text x="{lx+31}" y="{ly}" font-size="16">{esc(country)}</text>', '</g>']
+                f'<line x1="{lx}" x2="{lx+23}" y1="{ly-5}" y2="{ly-5}" stroke="{color}" stroke-width="2" stroke-dasharray="{legend.get("dash", "")}"/>',
+                f'<text x="{lx+31}" y="{ly}" font-size="16">{esc(legend["label"])}</text>', '</g>']
     svg.append('</svg>')
     interaction = '<script>\n(() => {\nconst geometry = ' + json.dumps({
         'left': left, 'right': right, 'top': top, 'bottom': bottom,
-        'start': start, 'months': end-start+1, 'ymax': ymax}) + ';\n' + '''
+        'start': start, 'months': end-start+1, 'ymax': ymax, 'ymin': ymin,
+        'zeroBased': zero_based, 'autoScaleY': auto_scale_y}) + ';\n' + '''
+const legendItems = [...document.querySelectorAll('.legend-item')];
+function updateVisibility() {
+  document.querySelectorAll('.series-group').forEach(group => {
+    const hidden = legendItems.some(item => item.getAttribute('aria-controls').split(' ').includes(group.id)
+      && item.getAttribute('aria-pressed') !== 'true');
+    group.classList.toggle('is-hidden', hidden);
+  });
+  if (geometry.autoScaleY) {fitVisibleY();schedule();}
+}
 document.querySelectorAll('.legend-item').forEach(item => {
   const toggle = () => {
     const visible = item.getAttribute('aria-pressed') === 'true';
-    document.getElementById(item.getAttribute('aria-controls')).classList.toggle('is-hidden', visible);
     item.setAttribute('aria-pressed', String(!visible));
+    updateVisibility();
   };
   item.addEventListener('click', toggle);
   item.addEventListener('keydown', event => {
@@ -157,10 +197,17 @@ document.querySelectorAll('.legend-item').forEach(item => {
       toggle();
     }
   });
+  if (item.dataset.family) item.addEventListener('dblclick', event => {
+    event.stopPropagation();
+    const peers=legendItems.filter(other=>other.dataset.family===item.dataset.family);
+    const isolated=peers.every(other=>other===item || other.getAttribute('aria-pressed')==='false');
+    peers.forEach(other=>other.setAttribute('aria-pressed',String(isolated || other===item)));
+    updateVisibility();
+  });
 });
 
 const svg = document.querySelector('svg');
-const {left, right, top, bottom, start, months, ymax} = geometry;
+const {left, right, top, bottom, start, months, ymax, ymin} = geometry;
 const full = {x0:left, x1:right, y0:top, y1:bottom};
 let view = {...full};
 let drag = null;
@@ -174,10 +221,23 @@ const bands = [...svg.querySelectorAll('.partition-band')].map(el => ({
 const boundaries = [...svg.querySelectorAll('.split-boundary')].map(el => ({
   el, x:Number(el.getAttribute('x1'))
 }));
+const references = [...svg.querySelectorAll('.reference-line')].map(el => ({el, y:Number(el.getAttribute('y1'))}));
 const points = [...svg.querySelectorAll('.series-group circle')].map(el => ({
   el, x:Number(el.getAttribute('cx')), y:Number(el.getAttribute('cy'))
 }));
 const lines = [...svg.querySelectorAll('polyline.series')];
+function fitVisibleY() {
+  const visible=[...svg.querySelectorAll('.series-group:not(.is-hidden)')];
+  const maxima=visible.map(el=>Number(el.dataset.max));
+  const maximum=Math.max(0,...maxima);
+  const minimum=geometry.zeroBased ? 0 : Math.min(0,...visible.map(el=>Number(el.dataset.min)));
+  if(maximum===minimum){view.y0=top;view.y1=bottom;return;}
+  const raw=(maximum-minimum)/5,power=10**Math.floor(Math.log10(raw));
+  const step=[1,2,2.5,5,10].map(n=>n*power).find(n=>n>=raw);
+  const bound=Math.ceil(maximum/step)*step,lower=Math.floor(minimum/step)*step;
+  view.y0=Math.max(top,bottom-(bound-ymin)/(ymax-ymin)*(bottom-top));
+  view.y1=Math.min(bottom,bottom-(lower-ymin)/(ymax-ymin)*(bottom-top));
+}
 const sx = value => left + (value-view.x0)/(view.x1-view.x0)*(right-left);
 const sy = value => top + (value-view.y0)/(view.y1-view.y0)*(bottom-top);
 function position(event) {
@@ -204,6 +264,10 @@ function render() {
     const xx=sx(x);el.setAttribute('x1',xx);el.setAttribute('x2',xx);
     el.style.display=xx<left || xx>right ? 'none' : '';
   });
+  references.forEach(({el,y}) => {
+    const yy=sy(y);el.setAttribute('y1',yy);el.setAttribute('y2',yy);
+    el.style.display=yy<top || yy>bottom ? 'none' : '';
+  });
   if (view.x0===left && view.x1===right && view.y0===top && view.y1===bottom) {
     xTicks.innerHTML=originalX;yGrid.innerHTML=originalY;
     return;
@@ -218,11 +282,11 @@ function render() {
     xTicks.append(element('line',{x1:xx,x2:xx,y1:bottom,y2:bottom+6,stroke:'#333'}),
       element('text',{x:xx,y:bottom+27,'text-anchor':'middle',class:'tick'},label));
   }
-  const min=ymax*(bottom-view.y1)/(bottom-top), max=ymax*(bottom-view.y0)/(bottom-top);
+  const min=ymin+(ymax-ymin)*(bottom-view.y1)/(bottom-top), max=ymin+(ymax-ymin)*(bottom-view.y0)/(bottom-top);
   const raw=(max-min)/5, power=10**Math.floor(Math.log10(raw));
   const step=[1,2,2.5,5,10].map(n=>n*power).find(n=>n>=raw);
   for(let v=Math.ceil(min/step)*step;v<=max+step*1e-9;v+=step) {
-    const yy=sy(bottom-v/ymax*(bottom-top));
+    const yy=sy(bottom-(v-ymin)/(ymax-ymin)*(bottom-top));
     yGrid.append(element('line',{x1:left,x2:right,y1:yy,y2:yy,stroke:'#d9dfe4','stroke-width':'.7'}),
       element('text',{x:left-14,y:yy+5,'text-anchor':'end',class:'tick'},
         v.toLocaleString('en-US',{notation:'compact',maximumFractionDigits:2})));
@@ -241,7 +305,7 @@ svg.addEventListener('wheel',event=>{
   const cx=view.x0+(p.x-left)/(right-left)*(view.x1-view.x0);
   const cy=view.y0+(p.y-top)/(bottom-top)*(view.y1-view.y0);
   const wx=Math.max((right-left)/60,Math.min(right-left,(view.x1-view.x0)*factor));
-  const wy=Math.max((bottom-top)/60,Math.min(bottom-top,(view.y1-view.y0)*factor));
+  const wy=Math.max((bottom-top)/(geometry.autoScaleY ? 1000000 : 60),Math.min(bottom-top,(view.y1-view.y0)*factor));
   const x0=cx-(p.x-left)/(right-left)*wx, y0=cy-(p.y-top)/(bottom-top)*wy;
   [view.x0,view.x1]=bounded(x0,x0+wx,left,right);
   [view.y0,view.y1]=bounded(y0,y0+wy,top,bottom);
@@ -267,7 +331,7 @@ svg.addEventListener('pointercancel',stopDrag);
 svg.addEventListener('lostpointercapture',stopDrag);
 svg.addEventListener('dblclick',event=>{
   if(!inside(position(event)))return;
-  event.preventDefault();view={...full};schedule();
+  event.preventDefault();view={...full};if(geometry.autoScaleY)fitVisibleY();schedule();
 });
 })();
 </script>'''

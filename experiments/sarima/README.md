@@ -1,182 +1,44 @@
-# SARIMA 点预测实验
+# 固定配置 SARIMA 点预测
 
-每个目的地独立拟合月度 SARIMA；季节周期固定为 12，无外生变量。
+全部目的地统一采用 SARIMA(0, 1, 1)×(1, 0, 0, 12)，trend=n。系数各自拟合。
 
-## 运行
+配置 ID：`ma1_d1_sar1`。从已有 8 个候选中按验证集宏平均 MASE 选择；所有目的地均需收敛且验证预测完整。测试不参与选择。
 
-```powershell
-python -m pip install --target experiments/sarima/.deps -r experiments/sarima/requirements.txt
-python experiments/sarima/run.py
-```
+当前结果位于 `fixed_global/validation/` 和 `fixed_global/test/`，各自包含 outputs 与 metrics。`outputs/fixed_global_config.json` 记录固定规则。旧的逐目的地混合选型输出仅作为历史记录，不用于当前图表或首页对比。
 
-依赖仅安装在本方法的 `.deps/` 中；也可在自行配置的 Python 环境安装依赖。准确版本见 `requirements-lock.txt`。
-
-已有验证与选中模型结果时，可用 `python experiments/sarima/run.py --complete-candidate-reports` 补齐全参数测试报告，保留原选型配置文件。默认命令也会生成完整的两个时段全参数报告。
-
-## 方法与时间划分
-
-- 训练截止 2022M07；每个目的地比较预先指定的 8 组 SARIMA 参数，用 2022M08–2023M02 七步预测的 MAE 选型。对同一目的地，此排序也等价于 MASE 排序。
-- 仅收敛且七个验证预测都有效的候选可入选；MAE 相同先选阶数总和更小的模型，再按候选 ID 排序。未用 AIC 或测试结果选型。
-- 去除前导空白，保留完整月度索引和内部缺失，由状态空间滤波处理，不补零、不按行删除内部缺失。仅用拟合期观测均值做数值缩放，预测后还原。
-- 不做对数变换；原始尺度预测小于零时截为零，并保存 raw_point 与 clipped_negative。
-- 固定平稳性、可逆性约束。先用 L-BFGS（200 次迭代），未收敛则用 Powell（100 次迭代）重试。所有警告和收敛情况保留。
-- 验证选型保存到 `outputs/validation/selected_configs.json` 后，使用截至 2023M07 的公开历史重拟合相同模型，生成 2023M08–2024M07 的 12 步预测。
-- 测试真实值只在所有最终预测已生成并保存后读取，用于本地探索性评分；不参与本轮参数、缩放或模型选择。未评估锁定审核期。
-- 所有 8 组参数都分别报告验证和测试表现，每个时段保留 20×8=160 条目的地—参数指标记录；无测试真实值的目的地保留记录，指标留空。
-- 全参数测试报告是探索性比较，不按测试结果重新选择模型；原验证选型及其独立报告保留。
-- 本地数据趋势已在先前的探索图中展示，包括审核期，因此本实验不能作为尚未查看审核数据的预注册结果。
-- MAE、MASE、MAPE 与基线共享计算代码。MASE 分母仅用相应拟合截止之前历史的 lag-1 平均绝对差（先去缺失再求差）；MAPE 排除真实值为零的样本。
-- 缺失测试真实值不计分；测试有效 164 条。SARIMA 验证完整 140 条；和 lag-1、lag-12 公平比较时只使用共同有效的 138 条。
-- micro 是有效目的地—月份等权；macro_destination 是各目的地指标等权。验证和测试单独保存，不能直接视为同条件比较。
-
-## 候选参数
-
-| candidate_id | order | seasonal_order | trend |
-| --- | --- | --- | --- |
-| ar1_sar1 | (1, 0, 0) | (1, 0, 0, 12) | c |
-| ar1_d1_sar1 | (1, 1, 0) | (1, 0, 0, 12) | n |
-| ma1_d1_sar1 | (0, 1, 1) | (1, 0, 0, 12) | n |
-| arma11_d1_sar1 | (1, 1, 1) | (1, 0, 0, 12) | n |
-| ma1_d1_sma1_D1 | (0, 1, 1) | (0, 1, 1, 12) | n |
-| ar1_d1_sma1_D1 | (1, 1, 0) | (0, 1, 1, 12) | n |
-| arma11_d1_sma1_D1 | (1, 1, 1) | (0, 1, 1, 12) | n |
-| ma1_d1_sar1_drift | (0, 1, 1) | (1, 0, 0, 12) | c |
-
-trend=c 表示常数项，trend=n 表示无常数项。
-
-## 各目的地选型
-
-| destination | candidate_id | mae | mase | mape_percent |
-| --- | --- | --- | --- | --- |
-| Canada | ar1_sar1 | 1,858.2429 | 0.2911 | 27.8820 |
-| Chile | ar1_sar1 | 222.1737 | 0.7574 | 21.3124 |
-| Mexico | ma1_d1_sma1_D1 | 2,462.7811 | 1.6042 | 21.1164 |
-| Taiwan China | ar1_d1_sar1 | 3,089.8323 | 0.1211 | 46.1353 |
-| Hong Kong China | ar1_sar1 | 193,207.5694 | 0.8116 | 133.6141 |
-| Japan | ar1_sar1 | 8,738.0501 | 0.3090 | 39.7524 |
-| South Korea | ma1_d1_sar1_drift | 9,710.3614 | 0.3515 | 30.2224 |
-| Macao China | ar1_sar1 | 393,164.7005 | 3.0744 | 66.1178 |
-| Maldives | ma1_d1_sar1_drift | 1,275.1392 | 0.4736 | 30.2912 |
-| Cambodia | ar1_sar1 | 8,924.6691 | 1.4770 | 26.9518 |
-| Indonesia | ar1_sar1 | 6,532.4883 | 0.3876 | 33.5522 |
-| Singapore | ar1_d1_sar1 | 7,992.3694 | 0.3030 | 30.7798 |
-| New Zealand | ar1_d1_sar1 | 1,998.2772 | 0.5339 | 54.4234 |
-| USA | ar1_d1_sar1 | 10,559.6269 | 0.4105 | 20.0644 |
-| Thailand | ar1_sar1 | 22,184.1335 | 0.6140 | 25.7351 |
-| Turkey | ar1_sar1 | 1,155.2694 | 0.8441 | 13.2808 |
-| Australia | ma1_d1_sar1_drift | 5,545.8119 | 0.6383 | 22.9127 |
-| Hawaii | ar1_d1_sar1 | 273.0852 | 0.2167 | 43.8973 |
-| Austria | ma1_d1_sar1 | 965.3860 | 0.1440 | 19.7065 |
-| Czech | ma1_d1_sar1 | 2,773.7419 | 0.3506 | 36.7039 |
-
-## 文件组织
-
-| 路径 | 内容 |
-| --- | --- |
-| `run.py` | 数据准备、候选搜索、预测、评分和本报告生成。 |
-| `outputs/validation/` | 验证期预测、逐条误差、缩放分母、全部候选预测、拟合日志、固定选型配置。 |
-| `outputs/test/` | 测试期选中模型及全部候选的预测、误差和拟合日志。 |
-| `metrics/validation/`、`metrics/test/` | 两个时段各自独立保存选中模型及全部候选指标，不混在同一个文件中。 |
-| `metrics/<时段>/candidate_metrics.csv` | 全部 20×8 个目的地—参数组合的 MAE、MASE、MAPE、样本数、收敛状态和失败原因。 |
-| `metrics/<时段>/candidate_summary.csv` | 每组参数跨目的地的 micro 与 macro 汇总；列出参数阶数和收敛目的地数。 |
-| `metrics/<时段>/candidate_by_horizon.csv` | 每组参数按预测步长的全部指标。 |
-| `outputs/<时段>/candidate_predictions_long.csv` | 每组参数的原始点预测，含未截断预测值；可供可视化读取。 |
-| `outputs/<时段>/candidate_scored_predictions.csv` | 全部候选预测与真实值配对后的逐条误差。 |
-| `outputs/<时段>/candidate_fits.json` | 所有候选的拟合参数、警告、优化重试及收敛记录。 |
-| `outputs/<时段>/candidate_report_metadata.json` | 全参数报告的数据与代码哈希、样本范围及用途。 |
-| `metrics/<时段>/common_support/` | 三种方法共同有效样本上的 SARIMA 指标。 |
-| `metrics/<时段>/comparison_common_support.csv` | 同一时段、相同样本上的三种方法汇总指标。 |
-| `metrics/<时段>/comparison_by_destination.csv` | 同一时段、相同样本上的三种方法按目的地指标。 |
-| `metrics/<时段>/improvement_common_support.csv` | 相对每个基线的指标降幅（正值改善，负值变差）。 |
-| `outputs/<时段>/run_metadata.json` | 数据与代码哈希、运行环境、时间与用途。 |
-
-可视化应直接读取以上 CSV，不重复拟合模型。
+完整复现：`python experiments/run_retained.py --clean`。从头重跑候选：`python experiments/sarima/run.py`；随后运行 comparison/run.py 汇总。结果 CSV、PNG、JSON 日志已清理并忽略，指标快照和自包含 HTML 保留。所有预测从各自截止时点一次生成，内部缺失由状态空间模型处理。
 
 ## 验证集
 
-共同有效样本、micro 口径下，相对 lag-1：mae 下降 22.24%，mase 下降 20.88%，mape_percent 下降 1.08%。
+### 当前固定配置
 
-### SARIMA 全部有效样本
-
-| aggregation | n_predictions | n_scored | mape_valid_n | mae | mase | mape_percent |
-| --- | --- | --- | --- | --- | --- | --- |
-| micro | 140 | 140 | 140 | 34,131.6855 | 0.6857 | 37.2226 |
-| macro_destination | 140 | 140 | 140 | 34,131.6855 | 0.6857 | 37.2226 |
-
-### 与基线比较（共同有效样本）
-
-| method | aggregation | n_scored | mae | mase | mape_percent |
-| --- | --- | --- | --- | --- | --- |
-| lag-1 | micro | 138 | 44,529.9203 | 0.8757 | 38.0403 |
-| lag-1 | macro_destination | 138 | 43,900.7443 | 0.8869 | 38.1526 |
-| lag-12 | micro | 138 | 37,217.2971 | 1.3947 | 71.0176 |
-| lag-12 | macro_destination | 138 | 36,697.1100 | 1.4139 | 71.1226 |
-| sarima | micro | 138 | 34,625.5283 | 0.6928 | 37.6298 |
-| sarima | macro_destination | 138 | 34,134.9984 | 0.6970 | 37.4664 |
-
-### 按目的地
-
-| destination | n_scored | mae | mase | mape_percent |
+| aggregation | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- |
-| Canada | 7 | 1,858.2429 | 0.2911 | 27.8820 |
-| Chile | 7 | 222.1737 | 0.7574 | 21.3124 |
-| Mexico | 7 | 2,462.7811 | 1.6042 | 21.1164 |
-| Taiwan China | 7 | 3,089.8323 | 0.1211 | 46.1353 |
-| Hong Kong China | 7 | 193,207.5694 | 0.8116 | 133.6141 |
-| Japan | 7 | 8,738.0501 | 0.3090 | 39.7524 |
-| South Korea | 7 | 9,710.3614 | 0.3515 | 30.2224 |
-| Macao China | 7 | 393,164.7005 | 3.0744 | 66.1178 |
-| Maldives | 7 | 1,275.1392 | 0.4736 | 30.2912 |
-| Cambodia | 7 | 8,924.6691 | 1.4770 | 26.9518 |
-| Indonesia | 7 | 6,532.4883 | 0.3876 | 33.5522 |
-| Singapore | 7 | 7,992.3694 | 0.3030 | 30.7798 |
-| New Zealand | 7 | 1,998.2772 | 0.5339 | 54.4234 |
-| USA | 7 | 10,559.6269 | 0.4105 | 20.0644 |
-| Thailand | 7 | 22,184.1335 | 0.6140 | 25.7351 |
-| Turkey | 7 | 1,155.2694 | 0.8441 | 13.2808 |
-| Australia | 7 | 5,545.8119 | 0.6383 | 22.9127 |
-| Hawaii | 7 | 273.0852 | 0.2167 | 43.8973 |
-| Austria | 7 | 965.3860 | 0.1440 | 19.7065 |
-| Czech | 7 | 2,773.7419 | 0.3506 | 36.7039 |
+| micro | 140 | 40,577.0044 | 0.8141 | 36.8679 |
+| macro_destination | 140 | 40,577.0044 | 0.8141 | 36.8679 |
 
-### 按预测步长
+### 全部候选固定配置
 
-| horizon | Date | n_scored | mae | mase | mape_percent |
+| candidate_id | aggregation | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- | --- |
-| 1 | 2022M08 | 20 | 18,815.2426 | 0.3596 | 26.9139 |
-| 2 | 2022M09 | 20 | 27,344.3164 | 0.4070 | 30.3101 |
-| 3 | 2022M10 | 20 | 32,743.2859 | 0.4791 | 39.8221 |
-| 4 | 2022M11 | 20 | 13,603.6475 | 0.4394 | 37.4116 |
-| 5 | 2022M12 | 20 | 12,834.4097 | 0.6721 | 37.2185 |
-| 6 | 2023M01 | 20 | 44,175.9785 | 0.9228 | 38.1023 |
-| 7 | 2023M02 | 20 | 89,404.9178 | 1.5199 | 50.7797 |
+| ar1_sar1 | micro | 140 | 35,395.6234 | 0.8421 | 72.3112 |
+| ar1_sar1 | macro_destination | 140 | 35,395.6234 | 0.8421 | 72.3112 |
+| ar1_d1_sar1 | micro | 140 | 41,424.8623 | 0.8180 | 36.7908 |
+| ar1_d1_sar1 | macro_destination | 140 | 41,424.8623 | 0.8180 | 36.7908 |
+| ma1_d1_sar1 | micro | 140 | 40,577.0044 | 0.8141 | 36.8679 |
+| ma1_d1_sar1 | macro_destination | 140 | 40,577.0044 | 0.8141 | 36.8679 |
+| arma11_d1_sar1 | micro | 140 | 41,468.4867 | 0.8929 | 40.5628 |
+| arma11_d1_sar1 | macro_destination | 140 | 41,468.4867 | 0.8929 | 40.5628 |
+| ma1_d1_sma1_D1 | micro | 140 | 43,298.6973 | 1.1004 | 68.7364 |
+| ma1_d1_sma1_D1 | macro_destination | 140 | 43,298.6973 | 1.1004 | 68.7364 |
+| ar1_d1_sma1_D1 | micro | 140 | 44,113.6041 | 1.1301 | 71.4821 |
+| ar1_d1_sma1_D1 | macro_destination | 140 | 44,113.6041 | 1.1301 | 71.4821 |
+| arma11_d1_sma1_D1 | micro | 140 | 43,589.5740 | 1.0749 | 67.3894 |
+| arma11_d1_sma1_D1 | macro_destination | 140 | 43,589.5740 | 1.0749 | 67.3894 |
+| ma1_d1_sar1_drift | micro | 140 | 40,781.2553 | 0.8195 | 37.5690 |
+| ma1_d1_sar1_drift | macro_destination | 140 | 40,781.2553 | 0.8195 | 37.5690 |
 
-MASE 较差的目的地：Macao China（3.0744）、Mexico（1.6042）、Cambodia（1.4770）。
-
-### 全部参数：跨目的地汇总
-
-每一行对应将同一组参数用于所有目的地；这些结果与前面的“每个目的地按验证集单独选型”系统不同。验证期每组最多 140 条配对，测试期每组最多 164 条；缺失或失败预测不计分，收敛情况单列。
-
-| candidate_id | aggregation | converged_destinations | n_scored | mae | mase | mape_percent |
-| --- | --- | --- | --- | --- | --- | --- |
-| ar1_sar1 | micro | 20 | 140 | 35,395.6234 | 0.8421 | 72.3112 |
-| ar1_sar1 | macro_destination | 20 | 140 | 35,395.6234 | 0.8421 | 72.3112 |
-| ar1_d1_sar1 | micro | 20 | 140 | 41,424.8623 | 0.8180 | 36.7908 |
-| ar1_d1_sar1 | macro_destination | 20 | 140 | 41,424.8623 | 0.8180 | 36.7908 |
-| ma1_d1_sar1 | micro | 20 | 140 | 40,577.0044 | 0.8141 | 36.8679 |
-| ma1_d1_sar1 | macro_destination | 20 | 140 | 40,577.0044 | 0.8141 | 36.8679 |
-| arma11_d1_sar1 | micro | 20 | 140 | 41,468.4867 | 0.8929 | 40.5628 |
-| arma11_d1_sar1 | macro_destination | 20 | 140 | 41,468.4867 | 0.8929 | 40.5628 |
-| ma1_d1_sma1_D1 | micro | 20 | 140 | 43,298.6973 | 1.1004 | 68.7364 |
-| ma1_d1_sma1_D1 | macro_destination | 20 | 140 | 43,298.6973 | 1.1004 | 68.7364 |
-| ar1_d1_sma1_D1 | micro | 20 | 140 | 44,113.6041 | 1.1301 | 71.4821 |
-| ar1_d1_sma1_D1 | macro_destination | 20 | 140 | 44,113.6041 | 1.1301 | 71.4821 |
-| arma11_d1_sma1_D1 | micro | 20 | 140 | 43,589.5740 | 1.0749 | 67.3894 |
-| arma11_d1_sma1_D1 | macro_destination | 20 | 140 | 43,589.5740 | 1.0749 | 67.3894 |
-| ma1_d1_sar1_drift | micro | 20 | 140 | 40,781.2553 | 0.8195 | 37.5690 |
-| ma1_d1_sar1_drift | macro_destination | 20 | 140 | 40,781.2553 | 0.8195 | 37.5690 |
-
-### 全部参数：按目的地完整报告
+### 全部参数按目的地
 
 | destination | candidate_id | converged | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -341,7 +203,7 @@ MASE 较差的目的地：Macao China（3.0744）、Mexico（1.6042）、Cambodi
 | Austria | ma1_d1_sar1_drift | True | 7 | 1,074.9311 | 0.1604 | 22.3969 |
 | Czech | ma1_d1_sar1_drift | True | 7 | 2,898.4258 | 0.3663 | 38.3244 |
 
-### 全部参数：按预测步长完整报告
+### 全部参数按步长
 
 | candidate_id | horizon | Date | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -402,96 +264,37 @@ MASE 较差的目的地：Macao China（3.0744）、Mexico（1.6042）、Cambodi
 | ma1_d1_sar1_drift | 6 | 2023M01 | 20 | 66,947.2773 | 1.2202 | 50.1541 |
 | ma1_d1_sar1_drift | 7 | 2023M02 | 20 | 116,752.3263 | 1.9061 | 63.1414 |
 
-## 测试集（本地探索性）
+## 测试集：本地诊断
 
-共同有效样本、micro 口径下，相对 lag-1：mae 上升 11.30%，mase 下降 8.24%，mape_percent 下降 15.90%。
+### 当前固定配置
 
-### SARIMA 全部有效样本
-
-| aggregation | n_predictions | n_scored | mape_valid_n | mae | mase | mape_percent |
-| --- | --- | --- | --- | --- | --- | --- |
-| micro | 240 | 164 | 164 | 88,831.5593 | 2.4492 | 21.9912 |
-| macro_destination | 240 | 164 | 164 | 90,425.9653 | 2.4932 | 22.1730 |
-
-### 与基线比较（共同有效样本）
-
-| method | aggregation | n_scored | mae | mase | mape_percent |
-| --- | --- | --- | --- | --- | --- |
-| lag-1 | micro | 164 | 79,810.2378 | 2.6692 | 26.1497 |
-| lag-1 | macro_destination | 164 | 81,356.7292 | 2.7008 | 26.2012 |
-| lag-12 | micro | 164 | 277,658.8659 | 6.2913 | 62.1947 |
-| lag-12 | macro_destination | 164 | 278,709.2827 | 6.3530 | 62.2817 |
-| sarima | micro | 164 | 88,831.5593 | 2.4492 | 21.9912 |
-| sarima | macro_destination | 164 | 90,425.9653 | 2.4932 | 22.1730 |
-
-### 按目的地
-
-| destination | n_scored | mae | mase | mape_percent |
+| aggregation | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- |
-| Canada | 0 | — | — | — |
-| Chile | 0 | — | — | — |
-| Mexico | 12 | 2,341.3638 | 1.4681 | 12.9650 |
-| Taiwan China | 12 | 3,237.2120 | 0.1351 | 10.6033 |
-| Hong Kong China | 12 | 517,471.8779 | 2.1615 | 19.6385 |
-| Japan | 12 | 177,396.1623 | 6.2950 | 33.4119 |
-| South Korea | 12 | 75,606.6799 | 2.7710 | 20.1269 |
-| Macao China | 12 | 221,595.2121 | 1.6956 | 10.7451 |
-| Maldives | 12 | 8,406.2823 | 3.1254 | 50.4712 |
-| Cambodia | 12 | 7,324.8107 | 1.2148 | 11.8380 |
-| Indonesia | 12 | 11,282.2357 | 0.7105 | 11.0259 |
-| Singapore | 12 | 56,913.3175 | 2.1889 | 34.0928 |
-| New Zealand | 12 | 5,567.5017 | 1.5247 | 24.2583 |
-| USA | 0 | — | — | — |
-| Thailand | 8 | 155,796.6120 | 4.2999 | 29.6301 |
-| Turkey | 12 | 7,730.8223 | 5.5550 | 22.4039 |
-| Australia | 12 | 15,293.4240 | 1.7601 | 19.2116 |
-| Hawaii | 0 | — | — | — |
-| Austria | 0 | — | — | — |
-| Czech | 0 | — | — | — |
+| micro | 164 | 101,864.8253 | 2.2126 | 21.1049 |
+| macro_destination | 164 | 101,773.3935 | 2.2244 | 21.0791 |
 
-### 按预测步长
+### 全部候选固定配置
 
-| horizon | Date | n_scored | mae | mase | mape_percent |
+| candidate_id | aggregation | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- | --- |
-| 1 | 2023M08 | 14 | 79,924.3777 | 1.0697 | 10.2986 |
-| 2 | 2023M09 | 14 | 86,290.5437 | 1.7882 | 20.5267 |
-| 3 | 2023M10 | 13 | 22,236.4821 | 1.1434 | 15.5940 |
-| 4 | 2023M11 | 13 | 30,473.7405 | 1.3963 | 24.6743 |
-| 5 | 2023M12 | 13 | 71,369.1403 | 1.7142 | 23.7996 |
-| 6 | 2024M01 | 14 | 76,623.9777 | 1.5861 | 15.6872 |
-| 7 | 2024M02 | 14 | 135,930.9118 | 4.0237 | 30.0216 |
-| 8 | 2024M03 | 14 | 99,460.1630 | 2.7402 | 24.6985 |
-| 9 | 2024M04 | 14 | 117,166.0139 | 3.1312 | 24.9891 |
-| 10 | 2024M05 | 14 | 100,962.7968 | 3.2544 | 25.5650 |
-| 11 | 2024M06 | 14 | 118,685.7049 | 3.3424 | 25.4200 |
-| 12 | 2024M07 | 13 | 118,824.7039 | 4.0971 | 22.5212 |
+| ar1_sar1 | micro | 164 | 95,104.9811 | 2.7798 | 27.1372 |
+| ar1_sar1 | macro_destination | 164 | 96,550.0199 | 2.8160 | 27.1966 |
+| ar1_d1_sar1 | micro | 164 | 105,821.6440 | 2.2884 | 22.8102 |
+| ar1_d1_sar1 | macro_destination | 164 | 105,628.2146 | 2.2981 | 22.7430 |
+| ma1_d1_sar1 | micro | 164 | 101,864.8253 | 2.2126 | 21.1049 |
+| ma1_d1_sar1 | macro_destination | 164 | 101,773.3935 | 2.2244 | 21.0791 |
+| arma11_d1_sar1 | micro | 164 | 108,142.3192 | 2.4130 | 22.5977 |
+| arma11_d1_sar1 | macro_destination | 164 | 108,819.1956 | 2.4453 | 22.6893 |
+| ma1_d1_sma1_D1 | micro | 164 | 85,866.4085 | 2.6759 | 27.7822 |
+| ma1_d1_sma1_D1 | macro_destination | 164 | 87,686.3796 | 2.7188 | 27.8299 |
+| ar1_d1_sma1_D1 | micro | 164 | 86,516.7796 | 2.6201 | 27.4958 |
+| ar1_d1_sma1_D1 | macro_destination | 164 | 88,320.4476 | 2.6643 | 27.5503 |
+| arma11_d1_sma1_D1 | micro | 164 | 87,690.3252 | 2.6540 | 28.3773 |
+| arma11_d1_sma1_D1 | macro_destination | 164 | 89,389.4261 | 2.6953 | 28.4005 |
+| ma1_d1_sar1_drift | micro | 164 | 105,078.1059 | 2.1911 | 21.2080 |
+| ma1_d1_sar1_drift | macro_destination | 164 | 104,753.8009 | 2.1991 | 21.1537 |
 
-MASE 较差的目的地：Japan（6.2950）、Turkey（5.5550）、Thailand（4.2999）。
-
-### 全部参数：跨目的地汇总
-
-每一行对应将同一组参数用于所有目的地；这些结果与前面的“每个目的地按验证集单独选型”系统不同。验证期每组最多 140 条配对，测试期每组最多 164 条；缺失或失败预测不计分，收敛情况单列。
-
-| candidate_id | aggregation | converged_destinations | n_scored | mae | mase | mape_percent |
-| --- | --- | --- | --- | --- | --- | --- |
-| ar1_sar1 | micro | 20 | 164 | 95,104.9811 | 2.7798 | 27.1372 |
-| ar1_sar1 | macro_destination | 20 | 164 | 96,550.0199 | 2.8160 | 27.1966 |
-| ar1_d1_sar1 | micro | 20 | 164 | 105,821.6440 | 2.2884 | 22.8102 |
-| ar1_d1_sar1 | macro_destination | 20 | 164 | 105,628.2146 | 2.2981 | 22.7430 |
-| ma1_d1_sar1 | micro | 20 | 164 | 101,864.8253 | 2.2126 | 21.1049 |
-| ma1_d1_sar1 | macro_destination | 20 | 164 | 101,773.3935 | 2.2244 | 21.0791 |
-| arma11_d1_sar1 | micro | 20 | 164 | 108,142.3192 | 2.4130 | 22.5977 |
-| arma11_d1_sar1 | macro_destination | 20 | 164 | 108,819.1956 | 2.4453 | 22.6893 |
-| ma1_d1_sma1_D1 | micro | 20 | 164 | 85,866.4085 | 2.6759 | 27.7822 |
-| ma1_d1_sma1_D1 | macro_destination | 20 | 164 | 87,686.3796 | 2.7188 | 27.8299 |
-| ar1_d1_sma1_D1 | micro | 20 | 164 | 86,516.7796 | 2.6201 | 27.4958 |
-| ar1_d1_sma1_D1 | macro_destination | 20 | 164 | 88,320.4476 | 2.6643 | 27.5503 |
-| arma11_d1_sma1_D1 | micro | 20 | 164 | 87,690.3252 | 2.6540 | 28.3773 |
-| arma11_d1_sma1_D1 | macro_destination | 20 | 164 | 89,389.4261 | 2.6953 | 28.4005 |
-| ma1_d1_sar1_drift | micro | 20 | 164 | 105,078.1059 | 2.1911 | 21.2080 |
-| ma1_d1_sar1_drift | macro_destination | 20 | 164 | 104,753.8009 | 2.1991 | 21.1537 |
-
-### 全部参数：按目的地完整报告
+### 全部参数按目的地
 
 | destination | candidate_id | converged | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -656,7 +459,7 @@ MASE 较差的目的地：Japan（6.2950）、Turkey（5.5550）、Thailand（4.
 | Austria | ma1_d1_sar1_drift | True | 0 | — | — | — |
 | Czech | ma1_d1_sar1_drift | True | 0 | — | — | — |
 
-### 全部参数：按预测步长完整报告
+### 全部参数按步长
 
 | candidate_id | horizon | Date | n_scored | mae | mase | mape_percent |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -756,20 +559,3 @@ MASE 较差的目的地：Japan（6.2950）、Turkey（5.5550）、Thailand（4.
 | ma1_d1_sar1_drift | 10 | 2024M05 | 14 | 159,594.0030 | 2.7633 | 23.0253 |
 | ma1_d1_sar1_drift | 11 | 2024M06 | 14 | 194,702.6681 | 2.9047 | 23.8348 |
 | ma1_d1_sar1_drift | 12 | 2024M07 | 13 | 165,164.8601 | 3.5130 | 20.3343 |
-
-## 稳定性、开销与局限
-
-- 验证期 160 个候选拟合中 0 个未成功收敛；测试期 160 个候选拟合中 0 个未成功收敛。两个时段共 1 次触发优化器重试。
-- 本次全流程约 24.38 秒；Python 与库版本、平台、CPU 信息和分阶段耗时见运行记录。无 GPU、无付费服务，无随机采样。
-- 仅七个月的验证数据用于每个目的地的八选一，验证表现存在选择偏差。不能据此证明长期泛化能力。
-- 全历史拟合假设相对稳定的动态结构，疫情与恢复期的结构变化可能破坏这一假设；本轮没有专门建模干预变量，也没有使用预测区间。
-- 本轮结果是预先限定候选范围的一次 SARIMA 实验，不代表所有 SARIMA 配置的最佳效果；不会根据测试成绩回头修改参数。
-
-## 来源与复现记录
-
-- 历史数据：[TULIP Lab ISF-TDF2023](https://github.com/tulip-lab/open-data/tree/main/ISF-TDF2023)，本地缓存 `../data/ISF-TDF2023.csv`。
-- 实现依据：[statsmodels SARIMAX 官方文档](https://www.statsmodels.org/v0.14.6/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html)。
-- 代码检查：`python -m unittest discover -s experiments/sarima -p "test_*.py"`，覆盖未来真实值隔离、内部缺失、候选收敛与选型规则。
-- Codex 辅助实现与核查。未修改提交 notebook；测试真值只用于本地评分。
-
-本次在已有结果基础上补齐全参数测试报告约耗时 17.66 秒；复用了此前验证拟合和 20 个选中模型的测试拟合。上述全流程耗时指原先验证选型与选中模型预测的运行。

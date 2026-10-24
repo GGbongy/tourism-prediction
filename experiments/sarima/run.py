@@ -116,6 +116,17 @@ def select_candidate(candidates):
     return min(eligible, key=lambda c: (c['mae'], c['complexity'], c['candidate_id']))
 
 
+def select_global_candidate(metrics, countries):
+    eligible=[]
+    for candidate in CANDIDATES:
+        subset=[r for r in metrics if r['candidate_id']==candidate['id']]
+        if (len(subset)==len(countries) and {r['destination'] for r in subset}==set(countries)
+                and all(r['converged'] and r['n_scored']==7 and r['mase'] is not None for r in subset)):
+            eligible.append((mean([r['mase'] for r in subset]),mean([r['mape_percent'] for r in subset]),candidate['id']))
+    if not eligible:raise RuntimeError('No globally converged full-coverage SARIMA configuration')
+    return min(eligible)[2]
+
+
 def all_test_candidates(history, countries, targets, selected_predictions, selected_fits):
     """Reuse the saved selected models; fit every remaining configuration."""
     cached = {(r['destination'], r['candidate_id']): r for r in selected_fits}
@@ -256,8 +267,8 @@ def report(reports, selected, validation_fits, final_fits, elapsed, candidate_ex
                '依赖仅安装在本方法的 `.deps/` 中；也可在自行配置的 Python 环境安装依赖。准确版本见 `requirements-lock.txt`。', '',
                '已有验证与选中模型结果时，可用 `python experiments/sarima/run.py --complete-candidate-reports` 补齐全参数测试报告，保留原选型配置文件。默认命令也会生成完整的两个时段全参数报告。', '',
                '## 方法与时间划分', '',
-               '- 训练截止 2022M07；每个目的地比较预先指定的 8 组 SARIMA 参数，用 2022M08–2023M02 七步预测的 MAE 选型。对同一目的地，此排序也等价于 MASE 排序。',
-               '- 仅收敛且七个验证预测都有效的候选可入选；MAE 相同先选阶数总和更小的模型，再按候选 ID 排序。未用 AIC 或测试结果选型。',
+               '- 训练截止 2022M07；比较预先指定的 8 组 SARIMA 参数，以 2022M08–2023M02 的宏平均 MASE 选择一组全局配置，全部目的地采用相同阶数与趋势设置，系数各自拟合。',
+               '- 候选必须在全部目的地收敛、验证预测完整；宏平均 MASE 并列时按宏平均 MAPE、候选 ID 排序。未用 AIC 或测试结果选型。',
                '- 去除前导空白，保留完整月度索引和内部缺失，由状态空间滤波处理，不补零、不按行删除内部缺失。仅用拟合期观测均值做数值缩放，预测后还原。',
                '- 不做对数变换；原始尺度预测小于零时截为零，并保存 raw_point 与 clipped_negative。',
                '- 固定平稳性、可逆性约束。先用 L-BFGS（200 次迭代），未收敛则用 Powell（100 次迭代）重试。所有警告和收敛情况保留。',
@@ -274,7 +285,7 @@ def report(reports, selected, validation_fits, final_fits, elapsed, candidate_ex
                     'seasonal_order': str(tuple(c['seasonal_order'])), 'trend': c['trend']}
                    for c in CANDIDATES], ['candidate_id', 'order', 'seasonal_order', 'trend']), '',
                'trend=c 表示常数项，trend=n 表示无常数项。', '',
-               '## 各目的地选型', '', md_table(selected, ['destination', 'candidate_id', 'mae', 'mase', 'mape_percent']), '',
+               '## 全局固定配置的目的地指标', '', md_table(selected, ['destination', 'candidate_id', 'mae', 'mase', 'mape_percent']), '',
                '## 文件组织', '', '| 路径 | 内容 |', '| --- | --- |',
                '| `run.py` | 数据准备、候选搜索、预测、评分和本报告生成。 |',
                '| `outputs/validation/` | 验证期预测、逐条误差、缩放分母、全部候选预测、拟合日志、固定选型配置。 |',
@@ -326,7 +337,7 @@ def report(reports, selected, validation_fits, final_fits, elapsed, candidate_ex
     content += ['', '## 稳定性、开销与局限', '',
                 f'- 验证期 {total_candidates} 个候选拟合中 {failed} 个未成功收敛；测试期 {len(final_fits)} 个候选拟合中 {sum(not r.get("converged", False) for r in final_fits)} 个未成功收敛。两个时段共 {retries} 次触发优化器重试。',
                 f'- 本次全流程约 {elapsed:.2f} 秒；Python 与库版本、平台、CPU 信息和分阶段耗时见运行记录。无 GPU、无付费服务，无随机采样。',
-                '- 仅七个月的验证数据用于每个目的地的八选一，验证表现存在选择偏差。不能据此证明长期泛化能力。',
+                '- 仅七个月的验证数据用于八组配置的全局选择，验证表现存在选择偏差。不能据此证明长期泛化能力。',
                 '- 全历史拟合假设相对稳定的动态结构，疫情与恢复期的结构变化可能破坏这一假设；本轮没有专门建模干预变量，也没有使用预测区间。',
                 '- 本轮结果是预先限定候选范围的一次 SARIMA 实验，不代表所有 SARIMA 配置的最佳效果；不会根据测试成绩回头修改参数。', '',
                 '## 来源与复现记录', '',
@@ -438,11 +449,13 @@ def main():
                    'converged': fit['converged'], 'fit_seconds': fit['fit_seconds'], **metrics}
             candidate_metrics.append(row)
             local.append(row)
-        chosen = select_candidate(local)
-        selected.append(chosen)
-        configs[country] = next(c for c in CANDIDATES if c['id']==chosen['candidate_id'])
-        validation_predictions += predictions_by_id[chosen['candidate_id']]
-        print(f'Validation {len(selected)}/20: {country}: {chosen["candidate_id"]}, MAE={chosen["mae"]:.2f}', flush=True)
+        print(f'Validation candidates complete: {country}', flush=True)
+    global_id=select_global_candidate(candidate_metrics,countries)
+    global_config=next(c for c in CANDIDATES if c['id']==global_id)
+    configs={country:global_config for country in countries}
+    selected=[r for r in candidate_metrics if r['candidate_id']==global_id]
+    validation_predictions=[r for r in candidate_predictions if r['candidate_id']==global_id]
+    print(f'Fixed global SARIMA configuration: {global_id}',flush=True)
     versions = {'numpy': np.__version__, 'pandas': pd.__version__, 'scipy': scipy.__version__,
                 'statsmodels': statsmodels.__version__}
     metadata = {'method': 'sarima', 'history_sha256': digest(args.history),
@@ -451,7 +464,7 @@ def main():
                 'platform': platform.platform(), 'processor': platform.processor(), 'logical_cpu_count': os.cpu_count(),
                 'seed': None, 'generated_at_utc': datetime.now(timezone.utc).isoformat()}
     write_json(HERE/'outputs/validation/selected_configs.json', {
-        'selection_rule': 'Per-destination lowest validation MAE among converged full-coverage candidates; then complexity and ID.',
+        'selection_rule': 'One global configuration: validation macro MASE, then macro MAPE, then candidate ID; all destinations converged.',
         'fit_cutoff': '2022M07', 'validation_targets': validation_targets,
         'candidates': CANDIDATES, 'selected': configs, 'test_data_read_before_freeze': False, **metadata})
     write_json(HERE/'outputs/validation/candidate_fits.json', validation_fits)

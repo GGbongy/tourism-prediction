@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>12-month linear recovery trend, no damping</title><style>body{margin:0;background:white}main{max-width:1600px;margin:20px auto}svg{display:block;width:100%;height:auto}@media print{main{margin:0;max-width:none}@page{size:landscape;margin:8mm}}</style></head><body><main><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 838" role="group" aria-label="12-month linear recovery trend, no damping">
+<style>text{font-family:Georgia,"Times New Roman",serif;fill:#222} .tick{font-size:15px}.legend-item{cursor:pointer;user-select:none;outline:none}.legend-item[aria-pressed="false"]{opacity:.3}.legend-item:focus-visible{outline:1px dotted #545b63}.series-group.is-hidden{display:none}</style>
+<rect width="1440" height="838" fill="white"/>
+<text x="720.0" y="38" text-anchor="middle" font-size="25">12-month linear recovery trend, no damping</text>
+<rect class="partition-band" x="110.00" y="125" width="289.03" height="450" fill="#f4f6f8"/>
+<rect x="110.0" y="64" width="15" height="15" fill="#f4f6f8" stroke="#aaa"/>
+<text x="133.0" y="77" font-size="16">Training</text>
+<text x="133.0" y="99" font-size="13">2022M01 – 2022M07</text>
+<rect class="partition-band" x="399.03" y="125" width="289.03" height="450" fill="#e6eff8"/>
+<rect x="430.0" y="64" width="15" height="15" fill="#e6eff8" stroke="#aaa"/>
+<text x="453.0" y="77" font-size="16">Validation</text>
+<text x="453.0" y="99" font-size="13">2022M08 – 2023M02</text>
+<rect class="partition-band" x="688.06" y="125" width="206.45" height="450" fill="#f5ecdc"/>
+<rect x="750.0" y="64" width="15" height="15" fill="#f5ecdc" stroke="#aaa"/>
+<text x="773.0" y="77" font-size="16">Locked audit</text>
+<text x="773.0" y="99" font-size="13">2023M03 – 2023M07</text>
+<rect class="partition-band" x="894.52" y="125" width="495.48" height="450" fill="#e3f0e9"/>
+<rect x="1070.0" y="64" width="15" height="15" fill="#e3f0e9" stroke="#aaa"/>
+<text x="1093.0" y="77" font-size="16">Test</text>
+<text x="1093.0" y="99" font-size="13">2023M08 – 2024M07</text>
+<g class="y-grid">
+<line x1="110" x2="1390" y1="575.00" y2="575.00" stroke="#d9dfe4" stroke-width=".7"/>
+<text x="96" y="580.00" text-anchor="end" class="tick">0</text>
+<line x1="110" x2="1390" y1="462.50" y2="462.50" stroke="#d9dfe4" stroke-width=".7"/>
+<text x="96" y="467.50" text-anchor="end" class="tick">2,000,000</text>
+<line x1="110" x2="1390" y1="350.00" y2="350.00" stroke="#d9dfe4" stroke-width=".7"/>
+<text x="96" y="355.00" text-anchor="end" class="tick">4,000,000</text>
+<line x1="110" x2="1390" y1="237.50" y2="237.50" stroke="#d9dfe4" stroke-width=".7"/>
+<text x="96" y="242.50" text-anchor="end" class="tick">6,000,000</text>
+<line x1="110" x2="1390" y1="125.00" y2="125.00" stroke="#d9dfe4" stroke-width=".7"/>
+<text x="96" y="130.00" text-anchor="end" class="tick">8,000,000</text>
+</g>
+<line x1="110" x2="1390" y1="575" y2="575" stroke="#333"/>
+<line x1="110" x2="110" y1="125" y2="575" stroke="#333"/>
+<text transform="translate(14 350.0) rotate(-90)" text-anchor="middle" font-size="18">Tourist arrivals</text>
+<text x="750.0" y="641" text-anchor="middle" font-size="18">Month</text>
+<g class="x-ticks">
+<line x1="130.65" x2="130.65" y1="575" y2="581" stroke="#333"/>
+<text x="130.65" y="602" text-anchor="middle" class="tick">2022-01</text>
+<line x1="626.13" x2="626.13" y1="575" y2="581" stroke="#333"/>
+<text x="626.13" y="602" text-anchor="middle" class="tick">2023-01</text>
+<line x1="1369.35" x2="1369.35" y1="575" y2="581" stroke="#333"/>
+<text x="1369.35" y="602" text-anchor="middle" class="tick">2024-07</text>
+</g>
+<defs><clipPath id="plot-clip"><rect x="110" y="125" width="1280" height="450"/></clipPath></defs>
+<line class="split-boundary" x1="399.03" x2="399.03" y1="125" y2="575" stroke="#545b63" stroke-width="1.3" stroke-dasharray="6 5"><title>2022M08</title></line>
+<line class="split-boundary" x1="688.06" x2="688.06" y1="125" y2="575" stroke="#545b63" stroke-width="1.3" stroke-dasharray="6 5"><title>2023M03</title></line>
+<line class="split-boundary" x1="894.52" x2="894.52" y1="125" y2="575" stroke="#545b63" stroke-width="1.3" stroke-dasharray="6 5"><title>2023M08</title></line>
+<g id="destination-0" class="series-group" data-key="Canada::observed" data-max="24185.0" data-min="2344.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.84 171.94,574.87 213.23,574.83 254.52,574.83 295.81,574.74 337.10,574.69 378.39,574.64 419.68,574.70 460.97,574.68 502.26,574.50 543.55,574.59 584.84,574.48 626.13,574.48 667.42,574.54 708.71,574.43 750.00,574.38 791.29,574.08 832.58,573.81 873.87,573.64" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.84" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M01 | 2,931</title></circle>
+<circle cx="171.94" cy="574.87" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M02 | 2,344</title></circle>
+<circle cx="213.23" cy="574.83" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M03 | 3,104</title></circle>
+<circle cx="254.52" cy="574.83" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M04 | 3,024</title></circle>
+<circle cx="295.81" cy="574.74" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M05 | 4,648</title></circle>
+<circle cx="337.10" cy="574.69" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M06 | 5,454</title></circle>
+<circle cx="378.39" cy="574.64" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M07 | 6,336</title></circle>
+<circle cx="419.68" cy="574.70" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M08 | 5,386</title></circle>
+<circle cx="460.97" cy="574.68" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M09 | 5,752</title></circle>
+<circle cx="502.26" cy="574.50" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M10 | 8,817</title></circle>
+<circle cx="543.55" cy="574.59" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M11 | 7,216</title></circle>
+<circle cx="584.84" cy="574.48" r="1.1" fill="#c0392b"><title>Canada | Observed | 2022M12 | 9,217</title></circle>
+<circle cx="626.13" cy="574.48" r="1.1" fill="#c0392b"><title>Canada | Observed | 2023M01 | 9,244</title></circle>
+<circle cx="667.42" cy="574.54" r="1.1" fill="#c0392b"><title>Canada | Observed | 2023M02 | 8,132</title></circle>
+<circle cx="708.71" cy="574.43" r="1.1" fill="#c0392b"><title>Canada | Observed | 2023M03 | 10,053</title></circle>
+<circle cx="750.00" cy="574.38" r="1.1" fill="#c0392b"><title>Canada | Observed | 2023M04 | 11,072</title></circle>
+<circle cx="791.29" cy="574.08" r="1.1" fill="#c0392b"><title>Canada | Observed | 2023M05 | 16,401</title></circle>
+<circle cx="832.58" cy="573.81" r="1.1" fill="#c0392b"><title>Canada | Observed | 2023M06 | 21,216</title></circle>
+<circle cx="873.87" cy="573.64" r="1.1" fill="#c0392b"><title>Canada | Observed | 2023M07 | 24,185</title></circle>
+</g>
+<g id="destination-1" class="series-group" data-key="Canada::validation" data-max="7732.324095511395" data-min="1724.210013039547" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.57 460.97,574.62 502.26,574.76 543.55,574.90 584.84,574.86 626.13,574.82 667.42,574.85" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.57" r="1.1" fill="#c0392b"><title>Canada | Validation forecast | 2022M08 | 7,732</title></circle>
+<circle cx="460.97" cy="574.62" r="1.1" fill="#c0392b"><title>Canada | Validation forecast | 2022M09 | 6,701</title></circle>
+<circle cx="502.26" cy="574.76" r="1.1" fill="#c0392b"><title>Canada | Validation forecast | 2022M10 | 4,188</title></circle>
+<circle cx="543.55" cy="574.90" r="1.1" fill="#c0392b"><title>Canada | Validation forecast | 2022M11 | 1,724</title></circle>
+<circle cx="584.84" cy="574.86" r="1.1" fill="#c0392b"><title>Canada | Validation forecast | 2022M12 | 2,533</title></circle>
+<circle cx="626.13" cy="574.82" r="1.1" fill="#c0392b"><title>Canada | Validation forecast | 2023M01 | 3,245</title></circle>
+<circle cx="667.42" cy="574.85" r="1.1" fill="#c0392b"><title>Canada | Validation forecast | 2023M02 | 2,695</title></circle>
+</g>
+<g id="destination-2" class="series-group" data-key="Canada::test" data-max="56684.66447263669" data-min="9090.457843306762" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,572.99 956.45,573.13 997.74,573.77 1039.03,574.49 1080.32,574.17 1121.61,573.84 1162.90,573.98 1204.19,574.35 1245.48,574.06 1286.77,573.41 1328.06,572.82 1369.35,571.81" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="572.99" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2023M08 | 35,688</title></circle>
+<circle cx="956.45" cy="573.13" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2023M09 | 33,188</title></circle>
+<circle cx="997.74" cy="573.77" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2023M10 | 21,926</title></circle>
+<circle cx="1039.03" cy="574.49" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2023M11 | 9,090</title></circle>
+<circle cx="1080.32" cy="574.17" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2023M12 | 14,817</title></circle>
+<circle cx="1121.61" cy="573.84" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2024M01 | 20,617</title></circle>
+<circle cx="1162.90" cy="573.98" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2024M02 | 18,092</title></circle>
+<circle cx="1204.19" cy="574.35" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2024M03 | 11,588</title></circle>
+<circle cx="1245.48" cy="574.06" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2024M04 | 16,641</title></circle>
+<circle cx="1286.77" cy="573.41" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2024M05 | 28,306</title></circle>
+<circle cx="1328.06" cy="572.82" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2024M06 | 38,842</title></circle>
+<circle cx="1369.35" cy="571.81" r="1.1" fill="#c0392b"><title>Canada | Test forecast | 2024M07 | 56,685</title></circle>
+</g>
+<g id="destination-3" class="series-group" data-key="Chile::observed" data-max="1622.0" data-min="232.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.99 171.94,574.99 213.23,574.98 254.52,574.98 295.81,574.98 337.10,574.98 378.39,574.97 419.68,574.96 460.97,574.97 502.26,574.95 543.55,574.94 584.84,574.92 626.13,574.95 667.42,574.94 708.71,574.91 750.00,574.91 791.29,574.93 832.58,574.93 873.87,574.92" fill="none" stroke="#455a64" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.99" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M01 | 232</title></circle>
+<circle cx="171.94" cy="574.99" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M02 | 233</title></circle>
+<circle cx="213.23" cy="574.98" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M03 | 294</title></circle>
+<circle cx="254.52" cy="574.98" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M04 | 380</title></circle>
+<circle cx="295.81" cy="574.98" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M05 | 404</title></circle>
+<circle cx="337.10" cy="574.98" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M06 | 430</title></circle>
+<circle cx="378.39" cy="574.97" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M07 | 537</title></circle>
+<circle cx="419.68" cy="574.96" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M08 | 648</title></circle>
+<circle cx="460.97" cy="574.97" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M09 | 579</title></circle>
+<circle cx="502.26" cy="574.95" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M10 | 822</title></circle>
+<circle cx="543.55" cy="574.94" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M11 | 1,023</title></circle>
+<circle cx="584.84" cy="574.92" r="1.1" fill="#455a64"><title>Chile | Observed | 2022M12 | 1,372</title></circle>
+<circle cx="626.13" cy="574.95" r="1.1" fill="#455a64"><title>Chile | Observed | 2023M01 | 872</title></circle>
+<circle cx="667.42" cy="574.94" r="1.1" fill="#455a64"><title>Chile | Observed | 2023M02 | 1,034</title></circle>
+<circle cx="708.71" cy="574.91" r="1.1" fill="#455a64"><title>Chile | Observed | 2023M03 | 1,622</title></circle>
+<circle cx="750.00" cy="574.91" r="1.1" fill="#455a64"><title>Chile | Observed | 2023M04 | 1,549</title></circle>
+<circle cx="791.29" cy="574.93" r="1.1" fill="#455a64"><title>Chile | Observed | 2023M05 | 1,251</title></circle>
+<circle cx="832.58" cy="574.93" r="1.1" fill="#455a64"><title>Chile | Observed | 2023M06 | 1,326</title></circle>
+<circle cx="873.87" cy="574.92" r="1.1" fill="#455a64"><title>Chile | Observed | 2023M07 | 1,410</title></circle>
+</g>
+<g id="destination-4" class="series-group" data-key="Chile::validation" data-max="1317.2629770550855" data-min="496.6149154741661" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.97 460.97,574.96 502.26,574.96 543.55,574.95 584.84,574.93 626.13,574.94 667.42,574.93" fill="none" stroke="#455a64" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.97" r="1.1" fill="#455a64"><title>Chile | Validation forecast | 2022M08 | 497</title></circle>
+<circle cx="460.97" cy="574.96" r="1.1" fill="#455a64"><title>Chile | Validation forecast | 2022M09 | 650</title></circle>
+<circle cx="502.26" cy="574.96" r="1.1" fill="#455a64"><title>Chile | Validation forecast | 2022M10 | 796</title></circle>
+<circle cx="543.55" cy="574.95" r="1.1" fill="#455a64"><title>Chile | Validation forecast | 2022M11 | 942</title></circle>
+<circle cx="584.84" cy="574.93" r="1.1" fill="#455a64"><title>Chile | Validation forecast | 2022M12 | 1,229</title></circle>
+<circle cx="626.13" cy="574.94" r="1.1" fill="#455a64"><title>Chile | Validation forecast | 2023M01 | 1,098</title></circle>
+<circle cx="667.42" cy="574.93" r="1.1" fill="#455a64"><title>Chile | Validation forecast | 2023M02 | 1,317</title></circle>
+</g>
+<g id="destination-5" class="series-group" data-key="Chile::test" data-max="3445.05868709174" data-min="1360.582204680343" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,574.92 956.45,574.90 997.74,574.88 1039.03,574.87 1080.32,574.83 1121.61,574.85 1162.90,574.82 1204.19,574.81 1245.48,574.84 1286.77,574.85 1328.06,574.88 1369.35,574.89" fill="none" stroke="#455a64" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="574.92" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2023M08 | 1,361</title></circle>
+<circle cx="956.45" cy="574.90" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2023M09 | 1,730</title></circle>
+<circle cx="997.74" cy="574.88" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2023M10 | 2,066</title></circle>
+<circle cx="1039.03" cy="574.87" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2023M11 | 2,392</title></circle>
+<circle cx="1080.32" cy="574.83" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2023M12 | 3,062</title></circle>
+<circle cx="1121.61" cy="574.85" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2024M01 | 2,680</title></circle>
+<circle cx="1162.90" cy="574.82" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2024M02 | 3,164</title></circle>
+<circle cx="1204.19" cy="574.81" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2024M03 | 3,445</title></circle>
+<circle cx="1245.48" cy="574.84" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2024M04 | 2,903</title></circle>
+<circle cx="1286.77" cy="574.85" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2024M05 | 2,629</title></circle>
+<circle cx="1328.06" cy="574.88" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2024M06 | 2,080</title></circle>
+<circle cx="1369.35" cy="574.89" r="1.1" fill="#455a64"><title>Chile | Test forecast | 2024M07 | 2,011</title></circle>
+</g>
+<g id="destination-6" class="series-group" data-key="Mexico::observed" data-max="26062.0" data-min="2620.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.85 171.94,574.83 213.23,574.63 254.52,574.70 295.81,574.62 337.10,574.61 378.39,574.62 419.68,574.52 460.97,574.65 502.26,574.61 543.55,574.42 584.84,574.01 626.13,574.42 667.42,574.48 708.71,574.20 750.00,574.35 791.29,574.34 832.58,574.37 873.87,574.38 915.16,574.35 956.45,574.29 997.74,574.25 1039.03,573.95 1080.32,573.53 1121.61,574.14 1162.90,574.17 1204.19,573.76 1245.48,574.09 1286.77,574.09 1328.06,574.19 1369.35,574.14" fill="none" stroke="#21618c" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.85" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M01 | 2,620</title></circle>
+<circle cx="171.94" cy="574.83" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M02 | 2,976</title></circle>
+<circle cx="213.23" cy="574.63" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M03 | 6,641</title></circle>
+<circle cx="254.52" cy="574.70" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M04 | 5,378</title></circle>
+<circle cx="295.81" cy="574.62" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M05 | 6,697</title></circle>
+<circle cx="337.10" cy="574.61" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M06 | 6,867</title></circle>
+<circle cx="378.39" cy="574.62" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M07 | 6,804</title></circle>
+<circle cx="419.68" cy="574.52" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M08 | 8,453</title></circle>
+<circle cx="460.97" cy="574.65" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M09 | 6,284</title></circle>
+<circle cx="502.26" cy="574.61" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M10 | 6,888</title></circle>
+<circle cx="543.55" cy="574.42" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M11 | 10,359</title></circle>
+<circle cx="584.84" cy="574.01" r="1.1" fill="#21618c"><title>Mexico | Observed | 2022M12 | 17,627</title></circle>
+<circle cx="626.13" cy="574.42" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M01 | 10,303</title></circle>
+<circle cx="667.42" cy="574.48" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M02 | 9,296</title></circle>
+<circle cx="708.71" cy="574.20" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M03 | 14,175</title></circle>
+<circle cx="750.00" cy="574.35" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M04 | 11,569</title></circle>
+<circle cx="791.29" cy="574.34" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M05 | 11,657</title></circle>
+<circle cx="832.58" cy="574.37" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M06 | 11,206</title></circle>
+<circle cx="873.87" cy="574.38" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M07 | 11,062</title></circle>
+<circle cx="915.16" cy="574.35" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M08 | 11,468</title></circle>
+<circle cx="956.45" cy="574.29" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M09 | 12,618</title></circle>
+<circle cx="997.74" cy="574.25" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M10 | 13,281</title></circle>
+<circle cx="1039.03" cy="573.95" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M11 | 18,619</title></circle>
+<circle cx="1080.32" cy="573.53" r="1.1" fill="#21618c"><title>Mexico | Observed | 2023M12 | 26,062</title></circle>
+<circle cx="1121.61" cy="574.14" r="1.1" fill="#21618c"><title>Mexico | Observed | 2024M01 | 15,353</title></circle>
+<circle cx="1162.90" cy="574.17" r="1.1" fill="#21618c"><title>Mexico | Observed | 2024M02 | 14,682</title></circle>
+<circle cx="1204.19" cy="573.76" r="1.1" fill="#21618c"><title>Mexico | Observed | 2024M03 | 22,105</title></circle>
+<circle cx="1245.48" cy="574.09" r="1.1" fill="#21618c"><title>Mexico | Observed | 2024M04 | 16,162</title></circle>
+<circle cx="1286.77" cy="574.09" r="1.1" fill="#21618c"><title>Mexico | Observed | 2024M05 | 16,256</title></circle>
+<circle cx="1328.06" cy="574.19" r="1.1" fill="#21618c"><title>Mexico | Observed | 2024M06 | 14,405</title></circle>
+<circle cx="1369.35" cy="574.14" r="1.1" fill="#21618c"><title>Mexico | Observed | 2024M07 | 15,373</title></circle>
+</g>
+<g id="destination-7" class="series-group" data-key="Mexico::validation" data-max="16142.346644927564" data-min="6832.894456534559" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.62 460.97,574.57 502.26,574.52 543.55,574.38 584.84,574.09 626.13,574.43 667.42,574.24" fill="none" stroke="#21618c" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.62" r="1.1" fill="#21618c"><title>Mexico | Validation forecast | 2022M08 | 6,833</title></circle>
+<circle cx="460.97" cy="574.57" r="1.1" fill="#21618c"><title>Mexico | Validation forecast | 2022M09 | 7,697</title></circle>
+<circle cx="502.26" cy="574.52" r="1.1" fill="#21618c"><title>Mexico | Validation forecast | 2022M10 | 8,465</title></circle>
+<circle cx="543.55" cy="574.38" r="1.1" fill="#21618c"><title>Mexico | Validation forecast | 2022M11 | 11,064</title></circle>
+<circle cx="584.84" cy="574.09" r="1.1" fill="#21618c"><title>Mexico | Validation forecast | 2022M12 | 16,142</title></circle>
+<circle cx="626.13" cy="574.43" r="1.1" fill="#21618c"><title>Mexico | Validation forecast | 2023M01 | 10,188</title></circle>
+<circle cx="667.42" cy="574.24" r="1.1" fill="#21618c"><title>Mexico | Validation forecast | 2023M02 | 13,589</title></circle>
+</g>
+<g id="destination-8" class="series-group" data-key="Mexico::test" data-max="28214.300508838813" data-min="11382.183208698745" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,574.36 956.45,574.30 997.74,574.25 1039.03,574.05 1080.32,573.65 1121.61,574.16 1162.90,573.91 1204.19,573.41 1245.48,574.10 1286.77,574.06 1328.06,574.10 1369.35,574.17" fill="none" stroke="#21618c" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="574.36" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2023M08 | 11,382</title></circle>
+<circle cx="956.45" cy="574.30" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2023M09 | 12,415</title></circle>
+<circle cx="997.74" cy="574.25" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2023M10 | 13,263</title></circle>
+<circle cx="1039.03" cy="574.05" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2023M11 | 16,867</title></circle>
+<circle cx="1080.32" cy="573.65" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2023M12 | 23,993</title></circle>
+<circle cx="1121.61" cy="574.16" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2024M01 | 14,844</title></circle>
+<circle cx="1162.90" cy="573.91" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2024M02 | 19,378</title></circle>
+<circle cx="1204.19" cy="573.41" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2024M03 | 28,214</title></circle>
+<circle cx="1245.48" cy="574.10" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2024M04 | 15,999</title></circle>
+<circle cx="1286.77" cy="574.06" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2024M05 | 16,794</title></circle>
+<circle cx="1328.06" cy="574.10" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2024M06 | 15,947</title></circle>
+<circle cx="1369.35" cy="574.17" r="1.1" fill="#21618c"><title>Mexico | Test forecast | 2024M07 | 14,722</title></circle>
+</g>
+<g id="destination-9" class="series-group" data-key="Taiwan China::observed" data-max="37719.0" data-min="707.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.94 171.94,574.92 213.23,574.93 254.52,574.96 295.81,574.96 337.10,574.95 378.39,574.90 419.68,574.87 460.97,574.85 502.26,574.86 543.55,574.79 584.84,574.69 626.13,574.46 667.42,574.47 708.71,574.39 750.00,574.16 791.29,574.23 832.58,574.15 873.87,573.50 915.16,573.56 956.45,573.71 997.74,573.70 1039.03,573.76 1080.32,573.17 1121.61,573.27 1162.90,572.88 1204.19,573.30 1245.48,573.41 1286.77,573.30 1328.06,573.26 1369.35,572.97" fill="none" stroke="#b03a2e" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.94" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M01 | 1,077</title></circle>
+<circle cx="171.94" cy="574.92" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M02 | 1,380</title></circle>
+<circle cx="213.23" cy="574.93" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M03 | 1,182</title></circle>
+<circle cx="254.52" cy="574.96" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M04 | 764</title></circle>
+<circle cx="295.81" cy="574.96" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M05 | 707</title></circle>
+<circle cx="337.10" cy="574.95" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M06 | 974</title></circle>
+<circle cx="378.39" cy="574.90" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M07 | 1,813</title></circle>
+<circle cx="419.68" cy="574.87" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M08 | 2,305</title></circle>
+<circle cx="460.97" cy="574.85" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M09 | 2,633</title></circle>
+<circle cx="502.26" cy="574.86" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M10 | 2,461</title></circle>
+<circle cx="543.55" cy="574.79" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M11 | 3,645</title></circle>
+<circle cx="584.84" cy="574.69" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2022M12 | 5,437</title></circle>
+<circle cx="626.13" cy="574.46" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M01 | 9,633</title></circle>
+<circle cx="667.42" cy="574.47" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M02 | 9,346</title></circle>
+<circle cx="708.71" cy="574.39" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M03 | 10,800</title></circle>
+<circle cx="750.00" cy="574.16" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M04 | 14,944</title></circle>
+<circle cx="791.29" cy="574.23" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M05 | 13,601</title></circle>
+<circle cx="832.58" cy="574.15" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M06 | 15,117</title></circle>
+<circle cx="873.87" cy="573.50" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M07 | 26,661</title></circle>
+<circle cx="915.16" cy="573.56" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M08 | 25,600</title></circle>
+<circle cx="956.45" cy="573.71" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M09 | 22,952</title></circle>
+<circle cx="997.74" cy="573.70" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M10 | 23,120</title></circle>
+<circle cx="1039.03" cy="573.76" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M11 | 22,036</title></circle>
+<circle cx="1080.32" cy="573.17" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2023M12 | 32,459</title></circle>
+<circle cx="1121.61" cy="573.27" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2024M01 | 30,736</title></circle>
+<circle cx="1162.90" cy="572.88" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2024M02 | 37,719</title></circle>
+<circle cx="1204.19" cy="573.30" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2024M03 | 30,219</title></circle>
+<circle cx="1245.48" cy="573.41" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2024M04 | 28,269</title></circle>
+<circle cx="1286.77" cy="573.30" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2024M05 | 30,208</title></circle>
+<circle cx="1328.06" cy="573.26" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2024M06 | 30,918</title></circle>
+<circle cx="1369.35" cy="572.97" r="1.1" fill="#b03a2e"><title>Taiwan China | Observed | 2024M07 | 36,034</title></circle>
+</g>
+<g id="destination-10" class="series-group" data-key="Taiwan China::validation" data-max="929.1789428171743" data-min="508.8527207316561" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.95 460.97,574.96 502.26,574.96 543.55,574.97 584.84,574.97 626.13,574.97 667.42,574.97" fill="none" stroke="#b03a2e" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.95" r="1.1" fill="#b03a2e"><title>Taiwan China | Validation forecast | 2022M08 | 929</title></circle>
+<circle cx="460.97" cy="574.96" r="1.1" fill="#b03a2e"><title>Taiwan China | Validation forecast | 2022M09 | 680</title></circle>
+<circle cx="502.26" cy="574.96" r="1.1" fill="#b03a2e"><title>Taiwan China | Validation forecast | 2022M10 | 679</title></circle>
+<circle cx="543.55" cy="574.97" r="1.1" fill="#b03a2e"><title>Taiwan China | Validation forecast | 2022M11 | 557</title></circle>
+<circle cx="584.84" cy="574.97" r="1.1" fill="#b03a2e"><title>Taiwan China | Validation forecast | 2022M12 | 509</title></circle>
+<circle cx="626.13" cy="574.97" r="1.1" fill="#b03a2e"><title>Taiwan China | Validation forecast | 2023M01 | 556</title></circle>
+<circle cx="667.42" cy="574.97" r="1.1" fill="#b03a2e"><title>Taiwan China | Validation forecast | 2023M02 | 547</title></circle>
+</g>
+<g id="destination-11" class="series-group" data-key="Taiwan China::test" data-max="43054.89246562494" data-min="18934.117351487926" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,573.76 956.45,573.93 997.74,573.75 1039.03,573.78 1080.32,573.67 1121.61,573.26 1162.90,572.91 1204.19,573.18 1245.48,572.83 1286.77,572.83 1328.06,573.03 1369.35,572.58" fill="none" stroke="#b03a2e" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="573.76" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2023M08 | 21,964</title></circle>
+<circle cx="956.45" cy="573.93" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2023M09 | 18,934</title></circle>
+<circle cx="997.74" cy="573.75" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2023M10 | 22,283</title></circle>
+<circle cx="1039.03" cy="573.78" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2023M11 | 21,669</title></circle>
+<circle cx="1080.32" cy="573.67" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2023M12 | 23,573</title></circle>
+<circle cx="1121.61" cy="573.26" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2024M01 | 31,017</title></circle>
+<circle cx="1162.90" cy="572.91" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2024M02 | 37,202</title></circle>
+<circle cx="1204.19" cy="573.18" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2024M03 | 32,345</title></circle>
+<circle cx="1245.48" cy="572.83" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2024M04 | 38,647</title></circle>
+<circle cx="1286.77" cy="572.83" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2024M05 | 38,556</title></circle>
+<circle cx="1328.06" cy="573.03" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2024M06 | 35,058</title></circle>
+<circle cx="1369.35" cy="572.58" r="1.1" fill="#b03a2e"><title>Taiwan China | Test forecast | 2024M07 | 43,055</title></circle>
+</g>
+<g id="destination-12" class="series-group" data-key="Hong Kong China::observed" data-max="3435296.0" data-min="997.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.67 171.94,574.90 213.23,574.94 254.52,574.80 295.81,574.19 337.10,573.01 378.39,572.75 419.68,572.28 460.97,572.12 502.26,572.32 543.55,571.70 584.84,571.22 626.13,559.22 667.42,512.57 708.71,464.14 750.00,445.14 791.29,446.42 832.58,453.77 873.87,407.61 915.16,381.76 956.45,453.31 997.74,422.95 1039.03,438.45 1080.32,409.36 1121.61,407.14 1162.90,392.29 1204.19,436.49 1245.48,435.35 1286.77,427.28 1328.06,443.53 1369.35,398.37" fill="none" stroke="#148f77" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.67" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M01 | 5,792</title></circle>
+<circle cx="171.94" cy="574.90" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M02 | 1,809</title></circle>
+<circle cx="213.23" cy="574.94" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M03 | 997</title></circle>
+<circle cx="254.52" cy="574.80" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M04 | 3,608</title></circle>
+<circle cx="295.81" cy="574.19" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M05 | 14,403</title></circle>
+<circle cx="337.10" cy="573.01" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M06 | 35,348</title></circle>
+<circle cx="378.39" cy="572.75" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M07 | 40,083</title></circle>
+<circle cx="419.68" cy="572.28" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M08 | 48,269</title></circle>
+<circle cx="460.97" cy="572.12" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M09 | 51,276</title></circle>
+<circle cx="502.26" cy="572.32" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M10 | 47,607</title></circle>
+<circle cx="543.55" cy="571.70" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M11 | 58,694</title></circle>
+<circle cx="584.84" cy="571.22" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2022M12 | 67,244</title></circle>
+<circle cx="626.13" cy="559.22" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M01 | 280,525</title></circle>
+<circle cx="667.42" cy="512.57" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M02 | 1,109,885</title></circle>
+<circle cx="708.71" cy="464.14" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M03 | 1,970,777</title></circle>
+<circle cx="750.00" cy="445.14" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M04 | 2,308,561</title></circle>
+<circle cx="791.29" cy="446.42" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M05 | 2,285,859</title></circle>
+<circle cx="832.58" cy="453.77" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M06 | 2,155,143</title></circle>
+<circle cx="873.87" cy="407.61" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M07 | 2,975,846</title></circle>
+<circle cx="915.16" cy="381.76" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M08 | 3,435,296</title></circle>
+<circle cx="956.45" cy="453.31" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M09 | 2,163,389</title></circle>
+<circle cx="997.74" cy="422.95" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M10 | 2,703,066</title></circle>
+<circle cx="1039.03" cy="438.45" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M11 | 2,427,471</title></circle>
+<circle cx="1080.32" cy="409.36" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2023M12 | 2,944,635</title></circle>
+<circle cx="1121.61" cy="407.14" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2024M01 | 2,984,259</title></circle>
+<circle cx="1162.90" cy="392.29" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2024M02 | 3,248,231</title></circle>
+<circle cx="1204.19" cy="436.49" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2024M03 | 2,462,406</title></circle>
+<circle cx="1245.48" cy="435.35" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2024M04 | 2,482,581</title></circle>
+<circle cx="1286.77" cy="427.28" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2024M05 | 2,626,081</title></circle>
+<circle cx="1328.06" cy="443.53" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2024M06 | 2,337,305</title></circle>
+<circle cx="1369.35" cy="398.37" r="1.1" fill="#148f77"><title>Hong Kong China | Observed | 2024M07 | 3,140,143</title></circle>
+</g>
+<g id="destination-13" class="series-group" data-key="Hong Kong China::validation" data-max="43101.044146282715" data-min="24115.216627574133" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,573.48 460.97,573.64 502.26,573.34 543.55,573.38 584.84,573.04 626.13,572.58 667.42,572.72" fill="none" stroke="#148f77" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="573.48" r="1.1" fill="#148f77"><title>Hong Kong China | Validation forecast | 2022M08 | 27,090</title></circle>
+<circle cx="460.97" cy="573.64" r="1.1" fill="#148f77"><title>Hong Kong China | Validation forecast | 2022M09 | 24,115</title></circle>
+<circle cx="502.26" cy="573.34" r="1.1" fill="#148f77"><title>Hong Kong China | Validation forecast | 2022M10 | 29,524</title></circle>
+<circle cx="543.55" cy="573.38" r="1.1" fill="#148f77"><title>Hong Kong China | Validation forecast | 2022M11 | 28,881</title></circle>
+<circle cx="584.84" cy="573.04" r="1.1" fill="#148f77"><title>Hong Kong China | Validation forecast | 2022M12 | 34,928</title></circle>
+<circle cx="626.13" cy="572.58" r="1.1" fill="#148f77"><title>Hong Kong China | Validation forecast | 2023M01 | 43,101</title></circle>
+<circle cx="667.42" cy="572.72" r="1.1" fill="#148f77"><title>Hong Kong China | Validation forecast | 2023M02 | 40,548</title></circle>
+</g>
+<g id="destination-14" class="series-group" data-key="Hong Kong China::test" data-max="6773223.972894572" data-min="2908979.203403773" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,393.33 956.45,411.37 997.74,372.67 1039.03,375.38 1080.32,331.79 1121.61,272.93 1162.90,289.20 1204.19,306.25 1245.48,271.80 1286.77,254.90 1328.06,267.83 1369.35,194.01" fill="none" stroke="#148f77" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="393.33" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2023M08 | 3,229,643</title></circle>
+<circle cx="956.45" cy="411.37" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2023M09 | 2,908,979</title></circle>
+<circle cx="997.74" cy="372.67" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2023M10 | 3,596,980</title></circle>
+<circle cx="1039.03" cy="375.38" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2023M11 | 3,548,827</title></circle>
+<circle cx="1080.32" cy="331.79" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2023M12 | 4,323,776</title></circle>
+<circle cx="1121.61" cy="272.93" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2024M01 | 5,370,078</title></circle>
+<circle cx="1162.90" cy="289.20" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2024M02 | 5,080,881</title></circle>
+<circle cx="1204.19" cy="306.25" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2024M03 | 4,777,827</title></circle>
+<circle cx="1245.48" cy="271.80" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2024M04 | 5,390,298</title></circle>
+<circle cx="1286.77" cy="254.90" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2024M05 | 5,690,719</title></circle>
+<circle cx="1328.06" cy="267.83" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2024M06 | 5,460,821</title></circle>
+<circle cx="1369.35" cy="194.01" r="1.1" fill="#148f77"><title>Hong Kong China | Test forecast | 2024M07 | 6,773,224</title></circle>
+</g>
+<g id="destination-15" class="series-group" data-key="Japan::observed" data-max="776520.0" data-min="1490.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.92 171.94,574.87 213.23,574.45 254.52,573.74 295.81,574.01 337.10,574.18 378.39,574.17 419.68,574.31 460.97,574.01 502.26,573.79 543.55,573.82 584.84,573.11 626.13,573.25 667.42,572.96 708.71,570.74 750.00,568.91 791.29,567.43 832.58,563.27 873.87,557.38 915.16,554.51 956.45,556.68 997.74,560.58 1039.03,560.47 1080.32,557.42 1121.61,551.60 1162.90,549.16 1204.19,549.55 1245.48,544.98 1286.77,544.31 1328.06,537.56 1369.35,531.32" fill="none" stroke="#7d3c98" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.92" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M01 | 1,490</title></circle>
+<circle cx="171.94" cy="574.87" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M02 | 2,359</title></circle>
+<circle cx="213.23" cy="574.45" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M03 | 9,799</title></circle>
+<circle cx="254.52" cy="573.74" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M04 | 22,371</title></circle>
+<circle cx="295.81" cy="574.01" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M05 | 17,643</title></circle>
+<circle cx="337.10" cy="574.18" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M06 | 14,657</title></circle>
+<circle cx="378.39" cy="574.17" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M07 | 14,803</title></circle>
+<circle cx="419.68" cy="574.31" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M08 | 12,332</title></circle>
+<circle cx="460.97" cy="574.01" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M09 | 17,590</title></circle>
+<circle cx="502.26" cy="573.79" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M10 | 21,498</title></circle>
+<circle cx="543.55" cy="573.82" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M11 | 21,016</title></circle>
+<circle cx="584.84" cy="573.11" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2022M12 | 33,567</title></circle>
+<circle cx="626.13" cy="573.25" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M01 | 31,200</title></circle>
+<circle cx="667.42" cy="572.96" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M02 | 36,200</title></circle>
+<circle cx="708.71" cy="570.74" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M03 | 75,700</title></circle>
+<circle cx="750.00" cy="568.91" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M04 | 108,295</title></circle>
+<circle cx="791.29" cy="567.43" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M05 | 134,510</title></circle>
+<circle cx="832.58" cy="563.27" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M06 | 208,573</title></circle>
+<circle cx="873.87" cy="557.38" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M07 | 313,328</title></circle>
+<circle cx="915.16" cy="554.51" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M08 | 364,228</title></circle>
+<circle cx="956.45" cy="556.68" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M09 | 325,645</title></circle>
+<circle cx="997.74" cy="560.58" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M10 | 256,371</title></circle>
+<circle cx="1039.03" cy="560.47" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M11 | 258,343</title></circle>
+<circle cx="1080.32" cy="557.42" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2023M12 | 312,474</title></circle>
+<circle cx="1121.61" cy="551.60" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2024M01 | 416,088</title></circle>
+<circle cx="1162.90" cy="549.16" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2024M02 | 459,463</title></circle>
+<circle cx="1204.19" cy="549.55" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2024M03 | 452,525</title></circle>
+<circle cx="1245.48" cy="544.98" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2024M04 | 533,611</title></circle>
+<circle cx="1286.77" cy="544.31" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2024M05 | 545,552</title></circle>
+<circle cx="1328.06" cy="537.56" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2024M06 | 665,617</title></circle>
+<circle cx="1369.35" cy="531.32" r="1.1" fill="#7d3c98"><title>Japan | Observed | 2024M07 | 776,520</title></circle>
+</g>
+<g id="destination-16" class="series-group" data-key="Japan::validation" data-max="27809.71492534921" data-min="19551.86322710576" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,573.82 460.97,573.90 502.26,573.85 543.55,573.81 584.84,573.77 626.13,573.52 667.42,573.44" fill="none" stroke="#7d3c98" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="573.82" r="1.1" fill="#7d3c98"><title>Japan | Validation forecast | 2022M08 | 20,962</title></circle>
+<circle cx="460.97" cy="573.90" r="1.1" fill="#7d3c98"><title>Japan | Validation forecast | 2022M09 | 19,552</title></circle>
+<circle cx="502.26" cy="573.85" r="1.1" fill="#7d3c98"><title>Japan | Validation forecast | 2022M10 | 20,392</title></circle>
+<circle cx="543.55" cy="573.81" r="1.1" fill="#7d3c98"><title>Japan | Validation forecast | 2022M11 | 21,149</title></circle>
+<circle cx="584.84" cy="573.77" r="1.1" fill="#7d3c98"><title>Japan | Validation forecast | 2022M12 | 21,937</title></circle>
+<circle cx="626.13" cy="573.52" r="1.1" fill="#7d3c98"><title>Japan | Validation forecast | 2023M01 | 26,380</title></circle>
+<circle cx="667.42" cy="573.44" r="1.1" fill="#7d3c98"><title>Japan | Validation forecast | 2023M02 | 27,810</title></circle>
+</g>
+<g id="destination-17" class="series-group" data-key="Japan::test" data-max="551645.521231711" data-min="236458.44081240662" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,561.06 956.45,561.70 997.74,560.96 1039.03,560.28 1080.32,559.58 1121.61,556.53 1162.90,555.41 1204.19,555.02 1245.48,553.10 1286.77,551.72 1328.06,548.50 1369.35,543.97" fill="none" stroke="#7d3c98" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="561.06" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2023M08 | 247,892</title></circle>
+<circle cx="956.45" cy="561.70" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2023M09 | 236,458</title></circle>
+<circle cx="997.74" cy="560.96" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2023M10 | 249,634</title></circle>
+<circle cx="1039.03" cy="560.28" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2023M11 | 261,759</title></circle>
+<circle cx="1080.32" cy="559.58" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2023M12 | 274,109</title></circle>
+<circle cx="1121.61" cy="556.53" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2024M01 | 328,380</title></circle>
+<circle cx="1162.90" cy="555.41" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2024M02 | 348,224</title></circle>
+<circle cx="1204.19" cy="555.02" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2024M03 | 355,153</title></circle>
+<circle cx="1245.48" cy="553.10" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2024M04 | 389,296</title></circle>
+<circle cx="1286.77" cy="551.72" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2024M05 | 413,793</title></circle>
+<circle cx="1328.06" cy="548.50" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2024M06 | 471,129</title></circle>
+<circle cx="1369.35" cy="543.97" r="1.1" fill="#7d3c98"><title>Japan | Test forecast | 2024M07 | 551,646</title></circle>
+</g>
+<g id="destination-18" class="series-group" data-key="South Korea::observed" data-max="459069.0" data-min="9489.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.47 171.94,574.06 213.23,574.17 254.52,574.42 295.81,574.37 337.10,574.28 378.39,573.99 419.68,573.30 460.97,573.34 502.26,573.71 543.55,573.64 584.84,573.46 626.13,573.60 667.42,572.42 708.71,570.87 750.00,569.04 791.29,567.79 832.58,565.55 873.87,562.35 915.16,560.39 956.45,560.15 997.74,560.97 1039.03,562.54 1080.32,560.73 1121.61,559.25 1162.90,555.67 1204.19,552.99 1245.48,551.86 1286.77,552.77 1328.06,552.65 1369.35,549.18" fill="none" stroke="#b9770e" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.47" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M01 | 9,489</title></circle>
+<circle cx="171.94" cy="574.06" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M02 | 16,752</title></circle>
+<circle cx="213.23" cy="574.17" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M03 | 14,726</title></circle>
+<circle cx="254.52" cy="574.42" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M04 | 10,230</title></circle>
+<circle cx="295.81" cy="574.37" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M05 | 11,253</title></circle>
+<circle cx="337.10" cy="574.28" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M06 | 12,741</title></circle>
+<circle cx="378.39" cy="573.99" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M07 | 17,907</title></circle>
+<circle cx="419.68" cy="573.30" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M08 | 30,248</title></circle>
+<circle cx="460.97" cy="573.34" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M09 | 29,531</title></circle>
+<circle cx="502.26" cy="573.71" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M10 | 22,940</title></circle>
+<circle cx="543.55" cy="573.64" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M11 | 24,174</title></circle>
+<circle cx="584.84" cy="573.46" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2022M12 | 27,367</title></circle>
+<circle cx="626.13" cy="573.60" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M01 | 24,946</title></circle>
+<circle cx="667.42" cy="572.42" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M02 | 45,884</title></circle>
+<circle cx="708.71" cy="570.87" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M03 | 73,390</title></circle>
+<circle cx="750.00" cy="569.04" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M04 | 105,967</title></circle>
+<circle cx="791.29" cy="567.79" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M05 | 128,171</title></circle>
+<circle cx="832.58" cy="565.55" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M06 | 168,035</title></circle>
+<circle cx="873.87" cy="562.35" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M07 | 224,805</title></circle>
+<circle cx="915.16" cy="560.39" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M08 | 259,659</title></circle>
+<circle cx="956.45" cy="560.15" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M09 | 263,940</title></circle>
+<circle cx="997.74" cy="560.97" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M10 | 249,483</title></circle>
+<circle cx="1039.03" cy="562.54" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M11 | 221,469</title></circle>
+<circle cx="1080.32" cy="560.73" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2023M12 | 253,675</title></circle>
+<circle cx="1121.61" cy="559.25" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2024M01 | 280,035</title></circle>
+<circle cx="1162.90" cy="555.67" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2024M02 | 343,719</title></circle>
+<circle cx="1204.19" cy="552.99" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2024M03 | 391,347</title></circle>
+<circle cx="1245.48" cy="551.86" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2024M04 | 411,331</title></circle>
+<circle cx="1286.77" cy="552.77" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2024M05 | 395,222</title></circle>
+<circle cx="1328.06" cy="552.65" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2024M06 | 397,325</title></circle>
+<circle cx="1369.35" cy="549.18" r="1.1" fill="#b9770e"><title>South Korea | Observed | 2024M07 | 459,069</title></circle>
+</g>
+<g id="destination-19" class="series-group" data-key="South Korea::validation" data-max="15776.57982180258" data-min="12223.928889204846" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.11 460.97,574.17 502.26,574.14 543.55,574.29 584.84,574.29 626.13,574.31 667.42,574.23" fill="none" stroke="#b9770e" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.11" r="1.1" fill="#b9770e"><title>South Korea | Validation forecast | 2022M08 | 15,777</title></circle>
+<circle cx="460.97" cy="574.17" r="1.1" fill="#b9770e"><title>South Korea | Validation forecast | 2022M09 | 14,778</title></circle>
+<circle cx="502.26" cy="574.14" r="1.1" fill="#b9770e"><title>South Korea | Validation forecast | 2022M10 | 15,352</title></circle>
+<circle cx="543.55" cy="574.29" r="1.1" fill="#b9770e"><title>South Korea | Validation forecast | 2022M11 | 12,581</title></circle>
+<circle cx="584.84" cy="574.29" r="1.1" fill="#b9770e"><title>South Korea | Validation forecast | 2022M12 | 12,694</title></circle>
+<circle cx="626.13" cy="574.31" r="1.1" fill="#b9770e"><title>South Korea | Validation forecast | 2023M01 | 12,224</title></circle>
+<circle cx="667.42" cy="574.23" r="1.1" fill="#b9770e"><title>South Korea | Validation forecast | 2023M02 | 13,726</title></circle>
+</g>
+<g id="destination-20" class="series-group" data-key="South Korea::test" data-max="374313.3188171565" data-min="218006.0670521804" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,562.74 956.45,562.44 997.74,560.83 1039.03,562.46 1080.32,561.41 1121.61,561.01 1162.90,558.27 1204.19,557.89 1245.48,556.61 1286.77,555.35 1328.06,556.59 1369.35,553.94" fill="none" stroke="#b9770e" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="562.74" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2023M08 | 218,006</title></circle>
+<circle cx="956.45" cy="562.44" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2023M09 | 223,327</title></circle>
+<circle cx="997.74" cy="560.83" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2023M10 | 251,955</title></circle>
+<circle cx="1039.03" cy="562.46" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2023M11 | 222,895</title></circle>
+<circle cx="1080.32" cy="561.41" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2023M12 | 241,540</title></circle>
+<circle cx="1121.61" cy="561.01" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2024M01 | 248,693</title></circle>
+<circle cx="1162.90" cy="558.27" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2024M02 | 297,408</title></circle>
+<circle cx="1204.19" cy="557.89" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2024M03 | 304,153</title></circle>
+<circle cx="1245.48" cy="556.61" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2024M04 | 326,919</title></circle>
+<circle cx="1286.77" cy="555.35" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2024M05 | 349,352</title></circle>
+<circle cx="1328.06" cy="556.59" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2024M06 | 327,226</title></circle>
+<circle cx="1369.35" cy="553.94" r="1.1" fill="#b9770e"><title>South Korea | Test forecast | 2024M07 | 374,313</title></circle>
+</g>
+<g id="destination-21" class="series-group" data-key="Macao China::observed" data-max="2449243.0" data-min="7321.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,538.89 171.94,540.73 213.23,548.62 254.52,544.91 295.81,544.71 337.10,556.07 378.39,574.59 419.68,558.68 460.97,546.72 502.26,545.82 543.55,556.98 584.84,556.07 626.13,519.22 667.42,518.53 708.71,505.12 750.00,496.98 791.29,492.07 832.58,493.72 873.87,467.54 915.16,444.35 956.45,485.59 997.74,465.34 1039.03,475.39 1080.32,464.62 1121.61,459.34 1162.90,437.23 1204.19,474.51 1245.48,477.28 1286.77,470.58 1328.06,482.05 1369.35,452.18" fill="none" stroke="#34495e" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="538.89" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M01 | 642,016</title></circle>
+<circle cx="171.94" cy="540.73" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M02 | 609,249</title></circle>
+<circle cx="213.23" cy="548.62" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M03 | 468,995</title></circle>
+<circle cx="254.52" cy="544.91" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M04 | 534,899</title></circle>
+<circle cx="295.81" cy="544.71" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M05 | 538,458</title></circle>
+<circle cx="337.10" cy="556.07" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M06 | 336,488</title></circle>
+<circle cx="378.39" cy="574.59" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M07 | 7,321</title></circle>
+<circle cx="419.68" cy="558.68" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M08 | 290,138</title></circle>
+<circle cx="460.97" cy="546.72" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M09 | 502,668</title></circle>
+<circle cx="502.26" cy="545.82" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M10 | 518,843</title></circle>
+<circle cx="543.55" cy="556.98" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M11 | 320,267</title></circle>
+<circle cx="584.84" cy="556.07" r="1.1" fill="#34495e"><title>Macao China | Observed | 2022M12 | 336,593</title></circle>
+<circle cx="626.13" cy="519.22" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M01 | 991,641</title></circle>
+<circle cx="667.42" cy="518.53" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M02 | 1,003,999</title></circle>
+<circle cx="708.71" cy="505.12" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M03 | 1,242,358</title></circle>
+<circle cx="750.00" cy="496.98" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M04 | 1,386,944</title></circle>
+<circle cx="791.29" cy="492.07" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M05 | 1,474,304</title></circle>
+<circle cx="832.58" cy="493.72" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M06 | 1,444,933</title></circle>
+<circle cx="873.87" cy="467.54" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M07 | 1,910,371</title></circle>
+<circle cx="915.16" cy="444.35" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M08 | 2,322,580</title></circle>
+<circle cx="956.45" cy="485.59" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M09 | 1,589,423</title></circle>
+<circle cx="997.74" cy="465.34" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M10 | 1,949,510</title></circle>
+<circle cx="1039.03" cy="475.39" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M11 | 1,770,861</title></circle>
+<circle cx="1080.32" cy="464.62" r="1.1" fill="#34495e"><title>Macao China | Observed | 2023M12 | 1,962,223</title></circle>
+<circle cx="1121.61" cy="459.34" r="1.1" fill="#34495e"><title>Macao China | Observed | 2024M01 | 2,056,133</title></circle>
+<circle cx="1162.90" cy="437.23" r="1.1" fill="#34495e"><title>Macao China | Observed | 2024M02 | 2,449,243</title></circle>
+<circle cx="1204.19" cy="474.51" r="1.1" fill="#34495e"><title>Macao China | Observed | 2024M03 | 1,786,536</title></circle>
+<circle cx="1245.48" cy="477.28" r="1.1" fill="#34495e"><title>Macao China | Observed | 2024M04 | 1,737,314</title></circle>
+<circle cx="1286.77" cy="470.58" r="1.1" fill="#34495e"><title>Macao China | Observed | 2024M05 | 1,856,283</title></circle>
+<circle cx="1328.06" cy="482.05" r="1.1" fill="#34495e"><title>Macao China | Observed | 2024M06 | 1,652,490</title></circle>
+<circle cx="1369.35" cy="452.18" r="1.1" fill="#34495e"><title>Macao China | Observed | 2024M07 | 2,183,397</title></circle>
+</g>
+<g id="destination-22" class="series-group" data-key="Macao China::validation" data-max="405972.2014631862" data-min="237466.22440605384" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,552.16 460.97,558.31 502.26,556.65 543.55,558.89 584.84,559.73 626.13,560.75 667.42,561.64" fill="none" stroke="#34495e" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="552.16" r="1.1" fill="#34495e"><title>Macao China | Validation forecast | 2022M08 | 405,972</title></circle>
+<circle cx="460.97" cy="558.31" r="1.1" fill="#34495e"><title>Macao China | Validation forecast | 2022M09 | 296,781</title></circle>
+<circle cx="502.26" cy="556.65" r="1.1" fill="#34495e"><title>Macao China | Validation forecast | 2022M10 | 326,235</title></circle>
+<circle cx="543.55" cy="558.89" r="1.1" fill="#34495e"><title>Macao China | Validation forecast | 2022M11 | 286,319</title></circle>
+<circle cx="584.84" cy="559.73" r="1.1" fill="#34495e"><title>Macao China | Validation forecast | 2022M12 | 271,455</title></circle>
+<circle cx="626.13" cy="560.75" r="1.1" fill="#34495e"><title>Macao China | Validation forecast | 2023M01 | 253,360</title></circle>
+<circle cx="667.42" cy="561.64" r="1.1" fill="#34495e"><title>Macao China | Validation forecast | 2023M02 | 237,466</title></circle>
+</g>
+<g id="destination-23" class="series-group" data-key="Macao China::test" data-max="3815948.065411131" data-min="1833305.7009104812" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,452.86 956.45,471.88 997.74,445.41 1039.03,444.20 1080.32,432.33 1121.61,421.22 1162.90,407.68 1204.19,414.55 1245.48,400.28 1286.77,394.24 1328.06,402.02 1369.35,360.35" fill="none" stroke="#34495e" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="452.86" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2023M08 | 2,171,425</title></circle>
+<circle cx="956.45" cy="471.88" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2023M09 | 1,833,306</title></circle>
+<circle cx="997.74" cy="445.41" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2023M10 | 2,303,734</title></circle>
+<circle cx="1039.03" cy="444.20" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2023M11 | 2,325,377</title></circle>
+<circle cx="1080.32" cy="432.33" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2023M12 | 2,536,293</title></circle>
+<circle cx="1121.61" cy="421.22" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2024M01 | 2,733,930</title></circle>
+<circle cx="1162.90" cy="407.68" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2024M02 | 2,974,633</title></circle>
+<circle cx="1204.19" cy="414.55" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2024M03 | 2,852,393</title></circle>
+<circle cx="1245.48" cy="400.28" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2024M04 | 3,106,049</title></circle>
+<circle cx="1286.77" cy="394.24" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2024M05 | 3,213,550</title></circle>
+<circle cx="1328.06" cy="402.02" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2024M06 | 3,075,117</title></circle>
+<circle cx="1369.35" cy="360.35" r="1.1" fill="#34495e"><title>Macao China | Test forecast | 2024M07 | 3,815,948</title></circle>
+</g>
+<g id="destination-24" class="series-group" data-key="Maldives::observed" data-max="38338.0" data-min="282.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.98 171.94,574.98 213.23,574.98 254.52,574.96 295.81,574.96 337.10,574.94 378.39,574.91 419.68,574.93 460.97,574.94 502.26,574.93 543.55,574.93 584.84,574.86 626.13,574.67 667.42,574.76 708.71,574.57 750.00,574.24 791.29,574.14 832.58,574.04 873.87,573.37 915.16,573.40 956.45,573.59 997.74,574.00 1039.03,574.33 1080.32,574.35 1121.61,573.88 1162.90,573.09 1204.19,574.23 1245.48,574.08 1286.77,574.05 1328.06,573.87 1369.35,572.84" fill="none" stroke="#d35400" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.98" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M01 | 314</title></circle>
+<circle cx="171.94" cy="574.98" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M02 | 282</title></circle>
+<circle cx="213.23" cy="574.98" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M03 | 399</title></circle>
+<circle cx="254.52" cy="574.96" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M04 | 705</title></circle>
+<circle cx="295.81" cy="574.96" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M05 | 726</title></circle>
+<circle cx="337.10" cy="574.94" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M06 | 1,071</title></circle>
+<circle cx="378.39" cy="574.91" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M07 | 1,544</title></circle>
+<circle cx="419.68" cy="574.93" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M08 | 1,253</title></circle>
+<circle cx="460.97" cy="574.94" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M09 | 1,054</title></circle>
+<circle cx="502.26" cy="574.93" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M10 | 1,157</title></circle>
+<circle cx="543.55" cy="574.93" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M11 | 1,175</title></circle>
+<circle cx="584.84" cy="574.86" r="1.1" fill="#d35400"><title>Maldives | Observed | 2022M12 | 2,468</title></circle>
+<circle cx="626.13" cy="574.67" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M01 | 5,796</title></circle>
+<circle cx="667.42" cy="574.76" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M02 | 4,276</title></circle>
+<circle cx="708.71" cy="574.57" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M03 | 7,619</title></circle>
+<circle cx="750.00" cy="574.24" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M04 | 13,504</title></circle>
+<circle cx="791.29" cy="574.14" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M05 | 15,204</title></circle>
+<circle cx="832.58" cy="574.04" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M06 | 17,028</title></circle>
+<circle cx="873.87" cy="573.37" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M07 | 28,964</title></circle>
+<circle cx="915.16" cy="573.40" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M08 | 28,530</title></circle>
+<circle cx="956.45" cy="573.59" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M09 | 25,065</title></circle>
+<circle cx="997.74" cy="574.00" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M10 | 17,726</title></circle>
+<circle cx="1039.03" cy="574.33" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M11 | 11,880</title></circle>
+<circle cx="1080.32" cy="574.35" r="1.1" fill="#d35400"><title>Maldives | Observed | 2023M12 | 11,533</title></circle>
+<circle cx="1121.61" cy="573.88" r="1.1" fill="#d35400"><title>Maldives | Observed | 2024M01 | 19,895</title></circle>
+<circle cx="1162.90" cy="573.09" r="1.1" fill="#d35400"><title>Maldives | Observed | 2024M02 | 33,896</title></circle>
+<circle cx="1204.19" cy="574.23" r="1.1" fill="#d35400"><title>Maldives | Observed | 2024M03 | 13,608</title></circle>
+<circle cx="1245.48" cy="574.08" r="1.1" fill="#d35400"><title>Maldives | Observed | 2024M04 | 16,427</title></circle>
+<circle cx="1286.77" cy="574.05" r="1.1" fill="#d35400"><title>Maldives | Observed | 2024M05 | 16,864</title></circle>
+<circle cx="1328.06" cy="573.87" r="1.1" fill="#d35400"><title>Maldives | Observed | 2024M06 | 20,036</title></circle>
+<circle cx="1369.35" cy="572.84" r="1.1" fill="#d35400"><title>Maldives | Observed | 2024M07 | 38,338</title></circle>
+</g>
+<g id="destination-25" class="series-group" data-key="Maldives::validation" data-max="2184.3220344178285" data-min="904.3661146383273" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.91 460.97,574.92 502.26,574.92 543.55,574.95 584.84,574.95 626.13,574.91 667.42,574.88" fill="none" stroke="#d35400" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.91" r="1.1" fill="#d35400"><title>Maldives | Validation forecast | 2022M08 | 1,683</title></circle>
+<circle cx="460.97" cy="574.92" r="1.1" fill="#d35400"><title>Maldives | Validation forecast | 2022M09 | 1,373</title></circle>
+<circle cx="502.26" cy="574.92" r="1.1" fill="#d35400"><title>Maldives | Validation forecast | 2022M10 | 1,354</title></circle>
+<circle cx="543.55" cy="574.95" r="1.1" fill="#d35400"><title>Maldives | Validation forecast | 2022M11 | 912</title></circle>
+<circle cx="584.84" cy="574.95" r="1.1" fill="#d35400"><title>Maldives | Validation forecast | 2022M12 | 904</title></circle>
+<circle cx="626.13" cy="574.91" r="1.1" fill="#d35400"><title>Maldives | Validation forecast | 2023M01 | 1,616</title></circle>
+<circle cx="667.42" cy="574.88" r="1.1" fill="#d35400"><title>Maldives | Validation forecast | 2023M02 | 2,184</title></circle>
+</g>
+<g id="destination-26" class="series-group" data-key="Maldives::test" data-max="64056.65238766834" data-min="17233.613815937762" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,573.14 956.45,573.49 997.74,573.50 1039.03,574.02 1080.32,574.03 1121.61,573.17 1162.90,572.47 1204.19,573.85 1245.48,573.69 1286.77,573.34 1328.06,572.80 1369.35,571.40" fill="none" stroke="#d35400" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="573.14" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2023M08 | 33,120</title></circle>
+<circle cx="956.45" cy="573.49" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2023M09 | 26,933</title></circle>
+<circle cx="997.74" cy="573.50" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2023M10 | 26,686</title></circle>
+<circle cx="1039.03" cy="574.02" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2023M11 | 17,384</title></circle>
+<circle cx="1080.32" cy="574.03" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2023M12 | 17,234</title></circle>
+<circle cx="1121.61" cy="573.17" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2024M01 | 32,611</title></circle>
+<circle cx="1162.90" cy="572.47" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2024M02 | 45,036</title></circle>
+<circle cx="1204.19" cy="573.85" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2024M03 | 20,506</title></circle>
+<circle cx="1245.48" cy="573.69" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2024M04 | 23,318</title></circle>
+<circle cx="1286.77" cy="573.34" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2024M05 | 29,552</title></circle>
+<circle cx="1328.06" cy="572.80" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2024M06 | 39,049</title></circle>
+<circle cx="1369.35" cy="571.40" r="1.1" fill="#d35400"><title>Maldives | Test forecast | 2024M07 | 64,057</title></circle>
+</g>
+<g id="destination-27" class="series-group" data-key="Cambodia::observed" data-max="79971.0" data-min="2497.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.86 171.94,574.83 213.23,574.76 254.52,574.68 295.81,574.60 337.10,574.53 378.39,574.40 419.68,574.44 460.97,574.38 502.26,574.24 543.55,574.17 584.84,574.09 626.13,573.59 667.42,571.94 708.71,572.01 750.00,572.11 791.29,572.54 832.58,572.73 873.87,572.17 915.16,572.39 956.45,572.71 997.74,572.30 1039.03,572.49 1080.32,572.21 1121.61,572.37 1162.90,571.44 1204.19,570.50 1245.48,571.03 1286.77,571.31 1328.06,571.44 1369.35,570.80" fill="none" stroke="#2874a6" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.86" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M01 | 2,497</title></circle>
+<circle cx="171.94" cy="574.83" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M02 | 2,992</title></circle>
+<circle cx="213.23" cy="574.76" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M03 | 4,264</title></circle>
+<circle cx="254.52" cy="574.68" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M04 | 5,650</title></circle>
+<circle cx="295.81" cy="574.60" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M05 | 7,072</title></circle>
+<circle cx="337.10" cy="574.53" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M06 | 8,279</title></circle>
+<circle cx="378.39" cy="574.40" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M07 | 10,667</title></circle>
+<circle cx="419.68" cy="574.44" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M08 | 9,899</title></circle>
+<circle cx="460.97" cy="574.38" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M09 | 11,105</title></circle>
+<circle cx="502.26" cy="574.24" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M10 | 13,490</title></circle>
+<circle cx="543.55" cy="574.17" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M11 | 14,733</title></circle>
+<circle cx="584.84" cy="574.09" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2022M12 | 16,227</title></circle>
+<circle cx="626.13" cy="573.59" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M01 | 24,978</title></circle>
+<circle cx="667.42" cy="571.94" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M02 | 54,457</title></circle>
+<circle cx="708.71" cy="572.01" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M03 | 53,230</title></circle>
+<circle cx="750.00" cy="572.11" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M04 | 51,344</title></circle>
+<circle cx="791.29" cy="572.54" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M05 | 43,738</title></circle>
+<circle cx="832.58" cy="572.73" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M06 | 40,383</title></circle>
+<circle cx="873.87" cy="572.17" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M07 | 50,368</title></circle>
+<circle cx="915.16" cy="572.39" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M08 | 46,346</title></circle>
+<circle cx="956.45" cy="572.71" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M09 | 40,670</title></circle>
+<circle cx="997.74" cy="572.30" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M10 | 48,048</title></circle>
+<circle cx="1039.03" cy="572.49" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M11 | 44,688</title></circle>
+<circle cx="1080.32" cy="572.21" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2023M12 | 49,548</title></circle>
+<circle cx="1121.61" cy="572.37" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2024M01 | 46,781</title></circle>
+<circle cx="1162.90" cy="571.44" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2024M02 | 63,209</title></circle>
+<circle cx="1204.19" cy="570.50" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2024M03 | 79,971</title></circle>
+<circle cx="1245.48" cy="571.03" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2024M04 | 70,494</title></circle>
+<circle cx="1286.77" cy="571.31" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2024M05 | 65,548</title></circle>
+<circle cx="1328.06" cy="571.44" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2024M06 | 63,357</title></circle>
+<circle cx="1369.35" cy="570.80" r="1.1" fill="#2874a6"><title>Cambodia | Observed | 2024M07 | 74,620</title></circle>
+</g>
+<g id="destination-28" class="series-group" data-key="Cambodia::validation" data-max="14511.694012686583" data-min="8198.37657296033" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.49 460.97,574.54 502.26,574.49 543.55,574.46 584.84,574.37 626.13,574.37 667.42,574.18" fill="none" stroke="#2874a6" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.49" r="1.1" fill="#2874a6"><title>Cambodia | Validation forecast | 2022M08 | 9,066</title></circle>
+<circle cx="460.97" cy="574.54" r="1.1" fill="#2874a6"><title>Cambodia | Validation forecast | 2022M09 | 8,198</title></circle>
+<circle cx="502.26" cy="574.49" r="1.1" fill="#2874a6"><title>Cambodia | Validation forecast | 2022M10 | 9,067</title></circle>
+<circle cx="543.55" cy="574.46" r="1.1" fill="#2874a6"><title>Cambodia | Validation forecast | 2022M11 | 9,590</title></circle>
+<circle cx="584.84" cy="574.37" r="1.1" fill="#2874a6"><title>Cambodia | Validation forecast | 2022M12 | 11,263</title></circle>
+<circle cx="626.13" cy="574.37" r="1.1" fill="#2874a6"><title>Cambodia | Validation forecast | 2023M01 | 11,263</title></circle>
+<circle cx="667.42" cy="574.18" r="1.1" fill="#2874a6"><title>Cambodia | Validation forecast | 2023M02 | 14,512</title></circle>
+</g>
+<g id="destination-29" class="series-group" data-key="Cambodia::test" data-max="110069.99428144417" data-min="54070.061632718156" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,571.64 956.45,571.96 997.74,571.65 1039.03,571.46 1080.32,570.86 1121.61,570.86 1162.90,569.69 1204.19,568.81 1245.48,569.90 1286.77,569.46 1328.06,569.71 1369.35,568.92" fill="none" stroke="#2874a6" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="571.64" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2023M08 | 59,768</title></circle>
+<circle cx="956.45" cy="571.96" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2023M09 | 54,070</title></circle>
+<circle cx="997.74" cy="571.65" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2023M10 | 59,620</title></circle>
+<circle cx="1039.03" cy="571.46" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2023M11 | 62,938</title></circle>
+<circle cx="1080.32" cy="570.86" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2023M12 | 73,651</title></circle>
+<circle cx="1121.61" cy="570.86" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2024M01 | 73,604</title></circle>
+<circle cx="1162.90" cy="569.69" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2024M02 | 94,388</title></circle>
+<circle cx="1204.19" cy="568.81" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2024M03 | 110,070</title></circle>
+<circle cx="1245.48" cy="569.90" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2024M04 | 90,665</title></circle>
+<circle cx="1286.77" cy="569.46" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2024M05 | 98,549</title></circle>
+<circle cx="1328.06" cy="569.71" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2024M06 | 93,996</title></circle>
+<circle cx="1369.35" cy="568.92" r="1.1" fill="#2874a6"><title>Cambodia | Test forecast | 2024M07 | 108,016</title></circle>
+</g>
+<g id="destination-30" class="series-group" data-key="Indonesia::observed" data-max="126108.0" data-min="2523.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.86 171.94,574.82 213.23,574.71 254.52,574.70 295.81,574.61 337.10,574.36 378.39,574.24 419.68,574.22 460.97,574.12 502.26,574.03 543.55,573.87 584.84,573.33 626.13,573.48 667.42,572.95 708.71,571.93 750.00,571.90 791.29,571.40 832.58,571.48 873.87,570.22 915.16,570.21 956.45,570.01 997.74,570.76 1039.03,570.75 1080.32,570.75 1121.61,570.40 1162.90,568.79 1204.19,569.69 1245.48,570.16 1286.77,569.45 1328.06,569.47 1369.35,567.91" fill="none" stroke="#a9326f" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.86" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M01 | 2,523</title></circle>
+<circle cx="171.94" cy="574.82" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M02 | 3,126</title></circle>
+<circle cx="213.23" cy="574.71" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M03 | 5,124</title></circle>
+<circle cx="254.52" cy="574.70" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M04 | 5,300</title></circle>
+<circle cx="295.81" cy="574.61" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M05 | 6,853</title></circle>
+<circle cx="337.10" cy="574.36" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M06 | 11,362</title></circle>
+<circle cx="378.39" cy="574.24" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M07 | 13,541</title></circle>
+<circle cx="419.68" cy="574.22" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M08 | 13,800</title></circle>
+<circle cx="460.97" cy="574.12" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M09 | 15,653</title></circle>
+<circle cx="502.26" cy="574.03" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M10 | 17,166</title></circle>
+<circle cx="543.55" cy="573.87" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M11 | 20,065</title></circle>
+<circle cx="584.84" cy="573.33" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2022M12 | 29,642</title></circle>
+<circle cx="626.13" cy="573.48" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M01 | 27,080</title></circle>
+<circle cx="667.42" cy="572.95" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M02 | 36,434</title></circle>
+<circle cx="708.71" cy="571.93" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M03 | 54,549</title></circle>
+<circle cx="750.00" cy="571.90" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M04 | 55,090</title></circle>
+<circle cx="791.29" cy="571.40" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M05 | 64,056</title></circle>
+<circle cx="832.58" cy="571.48" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M06 | 62,499</title></circle>
+<circle cx="873.87" cy="570.22" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M07 | 84,955</title></circle>
+<circle cx="915.16" cy="570.21" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M08 | 85,198</title></circle>
+<circle cx="956.45" cy="570.01" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M09 | 88,758</title></circle>
+<circle cx="997.74" cy="570.76" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M10 | 75,326</title></circle>
+<circle cx="1039.03" cy="570.75" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M11 | 75,486</title></circle>
+<circle cx="1080.32" cy="570.75" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2023M12 | 75,537</title></circle>
+<circle cx="1121.61" cy="570.40" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2024M01 | 81,691</title></circle>
+<circle cx="1162.90" cy="568.79" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2024M02 | 110,320</title></circle>
+<circle cx="1204.19" cy="569.69" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2024M03 | 94,364</title></circle>
+<circle cx="1245.48" cy="570.16" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2024M04 | 85,957</title></circle>
+<circle cx="1286.77" cy="569.45" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2024M05 | 98,631</title></circle>
+<circle cx="1328.06" cy="569.47" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2024M06 | 98,228</title></circle>
+<circle cx="1369.35" cy="567.91" r="1.1" fill="#a9326f"><title>Indonesia | Observed | 2024M07 | 126,108</title></circle>
+</g>
+<g id="destination-31" class="series-group" data-key="Indonesia::validation" data-max="18063.10126817347" data-min="11496.314438178495" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.34 460.97,574.35 502.26,574.33 543.55,574.35 584.84,574.34 626.13,574.17 667.42,573.98" fill="none" stroke="#a9326f" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.34" r="1.1" fill="#a9326f"><title>Indonesia | Validation forecast | 2022M08 | 11,666</title></circle>
+<circle cx="460.97" cy="574.35" r="1.1" fill="#a9326f"><title>Indonesia | Validation forecast | 2022M09 | 11,496</title></circle>
+<circle cx="502.26" cy="574.33" r="1.1" fill="#a9326f"><title>Indonesia | Validation forecast | 2022M10 | 11,831</title></circle>
+<circle cx="543.55" cy="574.35" r="1.1" fill="#a9326f"><title>Indonesia | Validation forecast | 2022M11 | 11,607</title></circle>
+<circle cx="584.84" cy="574.34" r="1.1" fill="#a9326f"><title>Indonesia | Validation forecast | 2022M12 | 11,798</title></circle>
+<circle cx="626.13" cy="574.17" r="1.1" fill="#a9326f"><title>Indonesia | Validation forecast | 2023M01 | 14,815</title></circle>
+<circle cx="667.42" cy="573.98" r="1.1" fill="#a9326f"><title>Indonesia | Validation forecast | 2023M02 | 18,063</title></circle>
+</g>
+<g id="destination-32" class="series-group" data-key="Indonesia::test" data-max="170855.3979147971" data-min="87365.05243582038" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,570.06 956.45,570.09 997.74,569.91 1039.03,569.96 1080.32,569.84 1121.61,568.60 1162.90,567.25 1204.19,567.97 1245.48,567.56 1286.77,567.34 1328.06,566.74 1369.35,565.39" fill="none" stroke="#a9326f" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="570.06" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2023M08 | 87,763</title></circle>
+<circle cx="956.45" cy="570.09" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2023M09 | 87,365</title></circle>
+<circle cx="997.74" cy="569.91" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2023M10 | 90,480</title></circle>
+<circle cx="1039.03" cy="569.96" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2023M11 | 89,615</title></circle>
+<circle cx="1080.32" cy="569.84" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2023M12 | 91,665</title></circle>
+<circle cx="1121.61" cy="568.60" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2024M01 | 113,810</title></circle>
+<circle cx="1162.90" cy="567.25" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2024M02 | 137,691</title></circle>
+<circle cx="1204.19" cy="567.97" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2024M03 | 125,013</title></circle>
+<circle cx="1245.48" cy="567.56" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2024M04 | 132,266</title></circle>
+<circle cx="1286.77" cy="567.34" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2024M05 | 136,256</title></circle>
+<circle cx="1328.06" cy="566.74" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2024M06 | 146,900</title></circle>
+<circle cx="1369.35" cy="565.39" r="1.1" fill="#a9326f"><title>Indonesia | Test forecast | 2024M07 | 170,855</title></circle>
+</g>
+<g id="destination-33" class="series-group" data-key="Singapore::observed" data-max="412940.0" data-min="3823.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.75 171.94,574.78 213.23,574.77 254.52,574.72 295.81,574.60 337.10,574.43 378.39,574.07 419.68,574.17 460.97,574.21 502.26,574.16 543.55,574.10 584.84,573.89 626.13,573.40 667.42,573.01 708.71,571.58 750.00,569.90 791.29,569.62 832.58,568.63 873.87,561.99 915.16,562.93 956.45,567.37 997.74,568.09 1039.03,569.13 1080.32,567.68 1121.61,563.12 1162.90,556.61 1204.19,561.07 1245.48,562.60 1286.77,562.49 1328.06,562.76 1369.35,551.77" fill="none" stroke="#558b2f" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.75" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M01 | 4,361</title></circle>
+<circle cx="171.94" cy="574.78" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M02 | 3,823</title></circle>
+<circle cx="213.23" cy="574.77" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M03 | 4,131</title></circle>
+<circle cx="254.52" cy="574.72" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M04 | 5,048</title></circle>
+<circle cx="295.81" cy="574.60" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M05 | 7,150</title></circle>
+<circle cx="337.10" cy="574.43" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M06 | 10,191</title></circle>
+<circle cx="378.39" cy="574.07" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M07 | 16,622</title></circle>
+<circle cx="419.68" cy="574.17" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M08 | 14,735</title></circle>
+<circle cx="460.97" cy="574.21" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M09 | 14,127</title></circle>
+<circle cx="502.26" cy="574.16" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M10 | 14,971</title></circle>
+<circle cx="543.55" cy="574.10" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M11 | 16,024</title></circle>
+<circle cx="584.84" cy="573.89" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2022M12 | 19,684</title></circle>
+<circle cx="626.13" cy="573.40" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M01 | 28,363</title></circle>
+<circle cx="667.42" cy="573.01" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M02 | 35,300</title></circle>
+<circle cx="708.71" cy="571.58" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M03 | 60,888</title></circle>
+<circle cx="750.00" cy="569.90" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M04 | 90,725</title></circle>
+<circle cx="791.29" cy="569.62" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M05 | 95,613</title></circle>
+<circle cx="832.58" cy="568.63" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M06 | 113,290</title></circle>
+<circle cx="873.87" cy="561.99" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M07 | 231,331</title></circle>
+<circle cx="915.16" cy="562.93" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M08 | 214,491</title></circle>
+<circle cx="956.45" cy="567.37" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M09 | 135,677</title></circle>
+<circle cx="997.74" cy="568.09" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M10 | 122,764</title></circle>
+<circle cx="1039.03" cy="569.13" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M11 | 104,347</title></circle>
+<circle cx="1080.32" cy="567.68" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2023M12 | 130,207</title></circle>
+<circle cx="1121.61" cy="563.12" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2024M01 | 211,178</title></circle>
+<circle cx="1162.90" cy="556.61" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2024M02 | 326,900</title></circle>
+<circle cx="1204.19" cy="561.07" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2024M03 | 247,658</title></circle>
+<circle cx="1245.48" cy="562.60" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2024M04 | 220,435</title></circle>
+<circle cx="1286.77" cy="562.49" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2024M05 | 222,335</title></circle>
+<circle cx="1328.06" cy="562.76" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2024M06 | 217,655</title></circle>
+<circle cx="1369.35" cy="551.77" r="1.1" fill="#558b2f"><title>Singapore | Observed | 2024M07 | 412,940</title></circle>
+</g>
+<g id="destination-34" class="series-group" data-key="Singapore::validation" data-max="12115.18851923088" data-min="7805.2075316457685" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.39 460.97,574.56 502.26,574.53 543.55,574.53 584.84,574.50 626.13,574.38 667.42,574.32" fill="none" stroke="#558b2f" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.39" r="1.1" fill="#558b2f"><title>Singapore | Validation forecast | 2022M08 | 10,871</title></circle>
+<circle cx="460.97" cy="574.56" r="1.1" fill="#558b2f"><title>Singapore | Validation forecast | 2022M09 | 7,805</title></circle>
+<circle cx="502.26" cy="574.53" r="1.1" fill="#558b2f"><title>Singapore | Validation forecast | 2022M10 | 8,289</title></circle>
+<circle cx="543.55" cy="574.53" r="1.1" fill="#558b2f"><title>Singapore | Validation forecast | 2022M11 | 8,292</title></circle>
+<circle cx="584.84" cy="574.50" r="1.1" fill="#558b2f"><title>Singapore | Validation forecast | 2022M12 | 8,950</title></circle>
+<circle cx="626.13" cy="574.38" r="1.1" fill="#558b2f"><title>Singapore | Validation forecast | 2023M01 | 10,994</title></circle>
+<circle cx="667.42" cy="574.32" r="1.1" fill="#558b2f"><title>Singapore | Validation forecast | 2023M02 | 12,115</title></circle>
+</g>
+<g id="destination-35" class="series-group" data-key="Singapore::test" data-max="384529.4916698179" data-min="144586.78115804787" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,564.53 956.45,566.87 997.74,565.90 1039.03,565.44 1080.32,564.25 1121.61,561.39 1162.90,559.50 1204.19,560.39 1245.48,559.35 1286.77,559.44 1328.06,559.36 1369.35,553.37" fill="none" stroke="#558b2f" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="564.53" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2023M08 | 186,141</title></circle>
+<circle cx="956.45" cy="566.87" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2023M09 | 144,587</title></circle>
+<circle cx="997.74" cy="565.90" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2023M10 | 161,690</title></circle>
+<circle cx="1039.03" cy="565.44" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2023M11 | 170,012</title></circle>
+<circle cx="1080.32" cy="564.25" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2023M12 | 191,129</title></circle>
+<circle cx="1121.61" cy="561.39" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2024M01 | 241,983</title></circle>
+<circle cx="1162.90" cy="559.50" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2024M02 | 275,590</title></circle>
+<circle cx="1204.19" cy="560.39" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2024M03 | 259,733</title></circle>
+<circle cx="1245.48" cy="559.35" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2024M04 | 278,245</title></circle>
+<circle cx="1286.77" cy="559.44" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2024M05 | 276,622</title></circle>
+<circle cx="1328.06" cy="559.36" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2024M06 | 278,060</title></circle>
+<circle cx="1369.35" cy="553.37" r="1.1" fill="#558b2f"><title>Singapore | Test forecast | 2024M07 | 384,529</title></circle>
+</g>
+<g id="destination-36" class="series-group" data-key="New Zealand::observed" data-max="37891.0" data-min="48.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,575.00 171.94,575.00 213.23,574.99 254.52,574.99 295.81,574.95 337.10,574.95 378.39,574.92 419.68,574.92 460.97,574.89 502.26,574.87 543.55,574.84 584.84,574.73 626.13,574.72 667.42,574.76 708.71,574.60 750.00,574.37 791.29,574.52 832.58,574.51 873.87,574.10 915.16,574.13 956.45,573.93 997.74,574.09 1039.03,573.87 1080.32,573.90 1121.61,573.84 1162.90,572.87 1204.19,574.03 1245.48,573.78 1286.77,574.22 1328.06,574.25 1369.35,573.54" fill="none" stroke="#6c5b4c" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="575.00" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M01 | 76</title></circle>
+<circle cx="171.94" cy="575.00" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M02 | 48</title></circle>
+<circle cx="213.23" cy="574.99" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M03 | 135</title></circle>
+<circle cx="254.52" cy="574.99" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M04 | 184</title></circle>
+<circle cx="295.81" cy="574.95" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M05 | 917</title></circle>
+<circle cx="337.10" cy="574.95" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M06 | 942</title></circle>
+<circle cx="378.39" cy="574.92" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M07 | 1,375</title></circle>
+<circle cx="419.68" cy="574.92" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M08 | 1,403</title></circle>
+<circle cx="460.97" cy="574.89" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M09 | 1,892</title></circle>
+<circle cx="502.26" cy="574.87" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M10 | 2,327</title></circle>
+<circle cx="543.55" cy="574.84" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M11 | 2,866</title></circle>
+<circle cx="584.84" cy="574.73" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2022M12 | 4,731</title></circle>
+<circle cx="626.13" cy="574.72" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M01 | 4,949</title></circle>
+<circle cx="667.42" cy="574.76" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M02 | 4,212</title></circle>
+<circle cx="708.71" cy="574.60" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M03 | 7,119</title></circle>
+<circle cx="750.00" cy="574.37" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M04 | 11,237</title></circle>
+<circle cx="791.29" cy="574.52" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M05 | 8,541</title></circle>
+<circle cx="832.58" cy="574.51" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M06 | 8,681</title></circle>
+<circle cx="873.87" cy="574.10" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M07 | 15,920</title></circle>
+<circle cx="915.16" cy="574.13" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M08 | 15,548</title></circle>
+<circle cx="956.45" cy="573.93" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M09 | 19,061</title></circle>
+<circle cx="997.74" cy="574.09" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M10 | 16,257</title></circle>
+<circle cx="1039.03" cy="573.87" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M11 | 20,063</title></circle>
+<circle cx="1080.32" cy="573.90" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2023M12 | 19,556</title></circle>
+<circle cx="1121.61" cy="573.84" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2024M01 | 20,604</title></circle>
+<circle cx="1162.90" cy="572.87" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2024M02 | 37,891</title></circle>
+<circle cx="1204.19" cy="574.03" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2024M03 | 17,277</title></circle>
+<circle cx="1245.48" cy="573.78" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2024M04 | 21,639</title></circle>
+<circle cx="1286.77" cy="574.22" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2024M05 | 13,904</title></circle>
+<circle cx="1328.06" cy="574.25" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2024M06 | 13,269</title></circle>
+<circle cx="1369.35" cy="573.54" r="1.1" fill="#6c5b4c"><title>New Zealand | Observed | 2024M07 | 25,947</title></circle>
+</g>
+<g id="destination-37" class="series-group" data-key="New Zealand::validation" data-max="3192.214465920101" data-min="1132.54392741592" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.94 460.97,574.93 502.26,574.92 543.55,574.89 584.84,574.89 626.13,574.86 667.42,574.82" fill="none" stroke="#6c5b4c" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.94" r="1.1" fill="#6c5b4c"><title>New Zealand | Validation forecast | 2022M08 | 1,133</title></circle>
+<circle cx="460.97" cy="574.93" r="1.1" fill="#6c5b4c"><title>New Zealand | Validation forecast | 2022M09 | 1,244</title></circle>
+<circle cx="502.26" cy="574.92" r="1.1" fill="#6c5b4c"><title>New Zealand | Validation forecast | 2022M10 | 1,378</title></circle>
+<circle cx="543.55" cy="574.89" r="1.1" fill="#6c5b4c"><title>New Zealand | Validation forecast | 2022M11 | 1,946</title></circle>
+<circle cx="584.84" cy="574.89" r="1.1" fill="#6c5b4c"><title>New Zealand | Validation forecast | 2022M12 | 2,001</title></circle>
+<circle cx="626.13" cy="574.86" r="1.1" fill="#6c5b4c"><title>New Zealand | Validation forecast | 2023M01 | 2,432</title></circle>
+<circle cx="667.42" cy="574.82" r="1.1" fill="#6c5b4c"><title>New Zealand | Validation forecast | 2023M02 | 3,192</title></circle>
+</g>
+<g id="destination-38" class="series-group" data-key="New Zealand::test" data-max="36347.95239482628" data-min="13723.426066538828" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,574.23 956.45,574.16 997.74,574.08 1039.03,573.72 1080.32,573.70 1121.61,573.43 1162.90,572.96 1204.19,573.29 1245.48,573.24 1286.77,573.63 1328.06,574.00 1369.35,573.51" fill="none" stroke="#6c5b4c" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="574.23" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2023M08 | 13,723</title></circle>
+<circle cx="956.45" cy="574.16" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2023M09 | 14,879</title></circle>
+<circle cx="997.74" cy="574.08" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2023M10 | 16,307</title></circle>
+<circle cx="1039.03" cy="573.72" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2023M11 | 22,706</title></circle>
+<circle cx="1080.32" cy="573.70" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2023M12 | 23,187</title></circle>
+<circle cx="1121.61" cy="573.43" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2024M01 | 27,930</title></circle>
+<circle cx="1162.90" cy="572.96" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2024M02 | 36,348</title></circle>
+<circle cx="1204.19" cy="573.29" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2024M03 | 30,343</title></circle>
+<circle cx="1245.48" cy="573.24" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2024M04 | 31,327</title></circle>
+<circle cx="1286.77" cy="573.63" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2024M05 | 24,361</title></circle>
+<circle cx="1328.06" cy="574.00" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2024M06 | 17,789</title></circle>
+<circle cx="1369.35" cy="573.51" r="1.1" fill="#6c5b4c"><title>New Zealand | Test forecast | 2024M07 | 26,423</title></circle>
+</g>
+<g id="destination-39" class="series-group" data-key="USA::observed" data-max="118631.0" data-min="8545.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,573.83 171.94,574.52 213.23,574.08 254.52,574.20 295.81,573.81 337.10,573.57 378.39,573.14 419.68,570.73 460.97,572.74 502.26,573.19 543.55,573.22 584.84,572.28 626.13,571.43 667.42,572.70 708.71,571.21 750.00,568.33 791.29,570.07 832.58,570.14 873.87,568.78" fill="none" stroke="#827717" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="573.83" r="1.1" fill="#827717"><title>USA | Observed | 2022M01 | 20,848</title></circle>
+<circle cx="171.94" cy="574.52" r="1.1" fill="#827717"><title>USA | Observed | 2022M02 | 8,545</title></circle>
+<circle cx="213.23" cy="574.08" r="1.1" fill="#827717"><title>USA | Observed | 2022M03 | 16,415</title></circle>
+<circle cx="254.52" cy="574.20" r="1.1" fill="#827717"><title>USA | Observed | 2022M04 | 14,299</title></circle>
+<circle cx="295.81" cy="573.81" r="1.1" fill="#827717"><title>USA | Observed | 2022M05 | 21,237</title></circle>
+<circle cx="337.10" cy="573.57" r="1.1" fill="#827717"><title>USA | Observed | 2022M06 | 25,422</title></circle>
+<circle cx="378.39" cy="573.14" r="1.1" fill="#827717"><title>USA | Observed | 2022M07 | 33,041</title></circle>
+<circle cx="419.68" cy="570.73" r="1.1" fill="#827717"><title>USA | Observed | 2022M08 | 75,912</title></circle>
+<circle cx="460.97" cy="572.74" r="1.1" fill="#827717"><title>USA | Observed | 2022M09 | 40,169</title></circle>
+<circle cx="502.26" cy="573.19" r="1.1" fill="#827717"><title>USA | Observed | 2022M10 | 32,137</title></circle>
+<circle cx="543.55" cy="573.22" r="1.1" fill="#827717"><title>USA | Observed | 2022M11 | 31,651</title></circle>
+<circle cx="584.84" cy="572.28" r="1.1" fill="#827717"><title>USA | Observed | 2022M12 | 48,435</title></circle>
+<circle cx="626.13" cy="571.43" r="1.1" fill="#827717"><title>USA | Observed | 2023M01 | 63,386</title></circle>
+<circle cx="667.42" cy="572.70" r="1.1" fill="#827717"><title>USA | Observed | 2023M02 | 40,829</title></circle>
+<circle cx="708.71" cy="571.21" r="1.1" fill="#827717"><title>USA | Observed | 2023M03 | 67,440</title></circle>
+<circle cx="750.00" cy="568.33" r="1.1" fill="#827717"><title>USA | Observed | 2023M04 | 118,631</title></circle>
+<circle cx="791.29" cy="570.07" r="1.1" fill="#827717"><title>USA | Observed | 2023M05 | 87,622</title></circle>
+<circle cx="832.58" cy="570.14" r="1.1" fill="#827717"><title>USA | Observed | 2023M06 | 86,392</title></circle>
+<circle cx="873.87" cy="568.78" r="1.1" fill="#827717"><title>USA | Observed | 2023M07 | 110,533</title></circle>
+</g>
+<g id="destination-40" class="series-group" data-key="USA::validation" data-max="27165.437527336384" data-min="5792.709689617739" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,573.47 460.97,574.10 502.26,574.49 543.55,574.67 584.84,574.55 626.13,574.13 667.42,574.57" fill="none" stroke="#827717" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="573.47" r="1.1" fill="#827717"><title>USA | Validation forecast | 2022M08 | 27,165</title></circle>
+<circle cx="460.97" cy="574.10" r="1.1" fill="#827717"><title>USA | Validation forecast | 2022M09 | 15,920</title></circle>
+<circle cx="502.26" cy="574.49" r="1.1" fill="#827717"><title>USA | Validation forecast | 2022M10 | 9,118</title></circle>
+<circle cx="543.55" cy="574.67" r="1.1" fill="#827717"><title>USA | Validation forecast | 2022M11 | 5,793</title></circle>
+<circle cx="584.84" cy="574.55" r="1.1" fill="#827717"><title>USA | Validation forecast | 2022M12 | 8,004</title></circle>
+<circle cx="626.13" cy="574.13" r="1.1" fill="#827717"><title>USA | Validation forecast | 2023M01 | 15,416</title></circle>
+<circle cx="667.42" cy="574.57" r="1.1" fill="#827717"><title>USA | Validation forecast | 2023M02 | 7,622</title></circle>
+</g>
+<g id="destination-41" class="series-group" data-key="USA::test" data-max="228216.2209818754" data-min="51228.52897274927" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,564.13 956.45,568.03 997.74,570.72 1039.03,572.12 1080.32,570.16 1121.61,563.60 1162.90,568.84 1204.19,569.52 1245.48,569.60 1286.77,565.83 1328.06,565.74 1369.35,562.16" fill="none" stroke="#827717" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="564.13" r="1.1" fill="#827717"><title>USA | Test forecast | 2023M08 | 193,236</title></circle>
+<circle cx="956.45" cy="568.03" r="1.1" fill="#827717"><title>USA | Test forecast | 2023M09 | 123,843</title></circle>
+<circle cx="997.74" cy="570.72" r="1.1" fill="#827717"><title>USA | Test forecast | 2023M10 | 76,033</title></circle>
+<circle cx="1039.03" cy="572.12" r="1.1" fill="#827717"><title>USA | Test forecast | 2023M11 | 51,229</title></circle>
+<circle cx="1080.32" cy="570.16" r="1.1" fill="#827717"><title>USA | Test forecast | 2023M12 | 86,126</title></circle>
+<circle cx="1121.61" cy="563.60" r="1.1" fill="#827717"><title>USA | Test forecast | 2024M01 | 202,642</title></circle>
+<circle cx="1162.90" cy="568.84" r="1.1" fill="#827717"><title>USA | Test forecast | 2024M02 | 109,566</title></circle>
+<circle cx="1204.19" cy="569.52" r="1.1" fill="#827717"><title>USA | Test forecast | 2024M03 | 97,455</title></circle>
+<circle cx="1245.48" cy="569.60" r="1.1" fill="#827717"><title>USA | Test forecast | 2024M04 | 96,018</title></circle>
+<circle cx="1286.77" cy="565.83" r="1.1" fill="#827717"><title>USA | Test forecast | 2024M05 | 163,062</title></circle>
+<circle cx="1328.06" cy="565.74" r="1.1" fill="#827717"><title>USA | Test forecast | 2024M06 | 164,667</title></circle>
+<circle cx="1369.35" cy="562.16" r="1.1" fill="#827717"><title>USA | Test forecast | 2024M07 | 228,216</title></circle>
+</g>
+<g id="destination-42" class="series-group" data-key="Thailand::observed" data-max="674558.0" data-min="3110.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.83 171.94,574.72 213.23,574.68 254.52,574.51 295.81,574.16 337.10,573.87 378.39,573.47 419.68,573.31 460.97,573.18 502.26,573.01 543.55,572.91 584.84,571.95 626.13,569.83 667.42,566.24 708.71,559.83 750.00,556.53 791.29,558.94 832.58,557.46 873.87,551.92 915.16,555.02 956.45,558.97" fill="none" stroke="#ad1457" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.83" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M01 | 3,110</title></circle>
+<circle cx="171.94" cy="574.72" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M02 | 4,898</title></circle>
+<circle cx="213.23" cy="574.68" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M03 | 5,730</title></circle>
+<circle cx="254.52" cy="574.51" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M04 | 8,728</title></circle>
+<circle cx="295.81" cy="574.16" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M05 | 14,930</title></circle>
+<circle cx="337.10" cy="573.87" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M06 | 20,040</title></circle>
+<circle cx="378.39" cy="573.47" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M07 | 27,175</title></circle>
+<circle cx="419.68" cy="573.31" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M08 | 29,985</title></circle>
+<circle cx="460.97" cy="573.18" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M09 | 32,302</title></circle>
+<circle cx="502.26" cy="573.01" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M10 | 35,410</title></circle>
+<circle cx="543.55" cy="572.91" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M11 | 37,113</title></circle>
+<circle cx="584.84" cy="571.95" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2022M12 | 54,146</title></circle>
+<circle cx="626.13" cy="569.83" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M01 | 91,841</title></circle>
+<circle cx="667.42" cy="566.24" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M02 | 155,656</title></circle>
+<circle cx="708.71" cy="559.83" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M03 | 269,773</title></circle>
+<circle cx="750.00" cy="556.53" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M04 | 328,414</title></circle>
+<circle cx="791.29" cy="558.94" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M05 | 285,547</title></circle>
+<circle cx="832.58" cy="557.46" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M06 | 311,888</title></circle>
+<circle cx="873.87" cy="551.92" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M07 | 410,311</title></circle>
+<circle cx="915.16" cy="555.02" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M08 | 355,146</title></circle>
+<circle cx="956.45" cy="558.97" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2023M09 | 284,989</title></circle>
+<polyline class="series" points="1121.61,546.39 1162.90,537.06 1204.19,542.76 1245.48,541.50 1286.77,543.53 1328.06,545.29" fill="none" stroke="#ad1457" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="1121.61" cy="546.39" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2024M01 | 508,563</title></circle>
+<circle cx="1162.90" cy="537.06" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2024M02 | 674,558</title></circle>
+<circle cx="1204.19" cy="542.76" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2024M03 | 573,216</title></circle>
+<circle cx="1245.48" cy="541.50" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2024M04 | 595,572</title></circle>
+<circle cx="1286.77" cy="543.53" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2024M05 | 559,461</title></circle>
+<circle cx="1328.06" cy="545.29" r="1.1" fill="#ad1457"><title>Thailand | Observed | 2024M06 | 528,112</title></circle>
+</g>
+<g id="destination-43" class="series-group" data-key="Thailand::validation" data-max="40110.42074299015" data-min="21143.119467415894" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,573.71 460.97,573.81 502.26,573.73 543.55,573.63 584.84,573.42 626.13,572.99 667.42,572.74" fill="none" stroke="#ad1457" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="573.71" r="1.1" fill="#ad1457"><title>Thailand | Validation forecast | 2022M08 | 22,936</title></circle>
+<circle cx="460.97" cy="573.81" r="1.1" fill="#ad1457"><title>Thailand | Validation forecast | 2022M09 | 21,143</title></circle>
+<circle cx="502.26" cy="573.73" r="1.1" fill="#ad1457"><title>Thailand | Validation forecast | 2022M10 | 22,587</title></circle>
+<circle cx="543.55" cy="573.63" r="1.1" fill="#ad1457"><title>Thailand | Validation forecast | 2022M11 | 24,278</title></circle>
+<circle cx="584.84" cy="573.42" r="1.1" fill="#ad1457"><title>Thailand | Validation forecast | 2022M12 | 28,016</title></circle>
+<circle cx="626.13" cy="572.99" r="1.1" fill="#ad1457"><title>Thailand | Validation forecast | 2023M01 | 35,644</title></circle>
+<circle cx="667.42" cy="572.74" r="1.1" fill="#ad1457"><title>Thailand | Validation forecast | 2023M02 | 40,110</title></circle>
+</g>
+<g id="destination-44" class="series-group" data-key="Thailand::test" data-max="897702.2752308984" data-min="403335.4434278181" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,550.45 956.45,552.31 997.74,550.88 1039.03,549.19 1080.32,545.47 1121.61,537.91 1162.90,533.51 1204.19,534.12 1245.48,533.28 1286.77,533.78 1328.06,531.18 1369.35,524.50" fill="none" stroke="#ad1457" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="550.45" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2023M08 | 436,394</title></circle>
+<circle cx="956.45" cy="552.31" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2023M09 | 403,335</title></circle>
+<circle cx="997.74" cy="550.88" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2023M10 | 428,842</title></circle>
+<circle cx="1039.03" cy="549.19" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2023M11 | 458,825</title></circle>
+<circle cx="1080.32" cy="545.47" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2023M12 | 524,964</title></circle>
+<circle cx="1121.61" cy="537.91" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2024M01 | 659,344</title></circle>
+<circle cx="1162.90" cy="533.51" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2024M02 | 737,578</title></circle>
+<circle cx="1204.19" cy="534.12" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2024M03 | 726,755</title></circle>
+<circle cx="1245.48" cy="533.28" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2024M04 | 741,692</title></circle>
+<circle cx="1286.77" cy="533.78" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2024M05 | 732,712</title></circle>
+<circle cx="1328.06" cy="531.18" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2024M06 | 779,092</title></circle>
+<circle cx="1369.35" cy="524.50" r="1.1" fill="#ad1457"><title>Thailand | Test forecast | 2024M07 | 897,702</title></circle>
+</g>
+<g id="destination-45" class="series-group" data-key="Turkey::observed" data-max="43390.0" data-min="2576.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.86 171.94,574.80 213.23,574.79 254.52,574.60 295.81,574.60 337.10,574.46 378.39,574.42 419.68,574.46 460.97,574.50 502.26,574.52 543.55,574.57 584.84,574.38 626.13,574.50 667.42,574.50 708.71,574.24 750.00,574.03 791.29,573.97 832.58,573.75 873.87,573.59 915.16,573.65 956.45,573.21 997.74,573.37 1039.03,573.63 1080.32,573.59 1121.61,573.79 1162.90,573.50 1204.19,573.36 1245.48,573.06 1286.77,572.82 1328.06,572.93 1369.35,572.56" fill="none" stroke="#00838f" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.86" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M01 | 2,576</title></circle>
+<circle cx="171.94" cy="574.80" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M02 | 3,482</title></circle>
+<circle cx="213.23" cy="574.79" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M03 | 3,795</title></circle>
+<circle cx="254.52" cy="574.60" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M04 | 7,167</title></circle>
+<circle cx="295.81" cy="574.60" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M05 | 7,087</title></circle>
+<circle cx="337.10" cy="574.46" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M06 | 9,564</title></circle>
+<circle cx="378.39" cy="574.42" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M07 | 10,287</title></circle>
+<circle cx="419.68" cy="574.46" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M08 | 9,525</title></circle>
+<circle cx="460.97" cy="574.50" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M09 | 8,803</title></circle>
+<circle cx="502.26" cy="574.52" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M10 | 8,558</title></circle>
+<circle cx="543.55" cy="574.57" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M11 | 7,717</title></circle>
+<circle cx="584.84" cy="574.38" r="1.1" fill="#00838f"><title>Turkey | Observed | 2022M12 | 10,954</title></circle>
+<circle cx="626.13" cy="574.50" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M01 | 8,899</title></circle>
+<circle cx="667.42" cy="574.50" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M02 | 8,888</title></circle>
+<circle cx="708.71" cy="574.24" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M03 | 13,424</title></circle>
+<circle cx="750.00" cy="574.03" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M04 | 17,231</title></circle>
+<circle cx="791.29" cy="573.97" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M05 | 18,308</title></circle>
+<circle cx="832.58" cy="573.75" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M06 | 22,215</title></circle>
+<circle cx="873.87" cy="573.59" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M07 | 25,041</title></circle>
+<circle cx="915.16" cy="573.65" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M08 | 24,038</title></circle>
+<circle cx="956.45" cy="573.21" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M09 | 31,825</title></circle>
+<circle cx="997.74" cy="573.37" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M10 | 28,938</title></circle>
+<circle cx="1039.03" cy="573.63" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M11 | 24,271</title></circle>
+<circle cx="1080.32" cy="573.59" r="1.1" fill="#00838f"><title>Turkey | Observed | 2023M12 | 25,041</title></circle>
+<circle cx="1121.61" cy="573.79" r="1.1" fill="#00838f"><title>Turkey | Observed | 2024M01 | 21,546</title></circle>
+<circle cx="1162.90" cy="573.50" r="1.1" fill="#00838f"><title>Turkey | Observed | 2024M02 | 26,724</title></circle>
+<circle cx="1204.19" cy="573.36" r="1.1" fill="#00838f"><title>Turkey | Observed | 2024M03 | 29,181</title></circle>
+<circle cx="1245.48" cy="573.06" r="1.1" fill="#00838f"><title>Turkey | Observed | 2024M04 | 34,468</title></circle>
+<circle cx="1286.77" cy="572.82" r="1.1" fill="#00838f"><title>Turkey | Observed | 2024M05 | 38,740</title></circle>
+<circle cx="1328.06" cy="572.93" r="1.1" fill="#00838f"><title>Turkey | Observed | 2024M06 | 36,770</title></circle>
+<circle cx="1369.35" cy="572.56" r="1.1" fill="#00838f"><title>Turkey | Observed | 2024M07 | 43,390</title></circle>
+</g>
+<g id="destination-46" class="series-group" data-key="Turkey::validation" data-max="11589.179785186063" data-min="8235.484363662052" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.49 460.97,574.35 502.26,574.39 543.55,574.47 584.84,574.51 626.13,574.54 667.42,574.41" fill="none" stroke="#00838f" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.49" r="1.1" fill="#00838f"><title>Turkey | Validation forecast | 2022M08 | 9,039</title></circle>
+<circle cx="460.97" cy="574.35" r="1.1" fill="#00838f"><title>Turkey | Validation forecast | 2022M09 | 11,589</title></circle>
+<circle cx="502.26" cy="574.39" r="1.1" fill="#00838f"><title>Turkey | Validation forecast | 2022M10 | 10,853</title></circle>
+<circle cx="543.55" cy="574.47" r="1.1" fill="#00838f"><title>Turkey | Validation forecast | 2022M11 | 9,491</title></circle>
+<circle cx="584.84" cy="574.51" r="1.1" fill="#00838f"><title>Turkey | Validation forecast | 2022M12 | 8,727</title></circle>
+<circle cx="626.13" cy="574.54" r="1.1" fill="#00838f"><title>Turkey | Validation forecast | 2023M01 | 8,235</title></circle>
+<circle cx="667.42" cy="574.41" r="1.1" fill="#00838f"><title>Turkey | Validation forecast | 2023M02 | 10,551</title></circle>
+</g>
+<g id="destination-47" class="series-group" data-key="Turkey::test" data-max="41245.88448630775" data-min="20058.420205094568" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,573.73 956.45,573.38 997.74,573.49 1039.03,573.69 1080.32,573.80 1121.61,573.87 1162.90,573.56 1204.19,573.35 1245.48,573.12 1286.77,572.77 1328.06,572.76 1369.35,572.68" fill="none" stroke="#00838f" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="573.73" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2023M08 | 22,536</title></circle>
+<circle cx="956.45" cy="573.38" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2023M09 | 28,738</title></circle>
+<circle cx="997.74" cy="573.49" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2023M10 | 26,779</title></circle>
+<circle cx="1039.03" cy="573.69" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2023M11 | 23,311</title></circle>
+<circle cx="1080.32" cy="573.80" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2023M12 | 21,342</title></circle>
+<circle cx="1121.61" cy="573.87" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2024M01 | 20,058</title></circle>
+<circle cx="1162.90" cy="573.56" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2024M02 | 25,601</title></circle>
+<circle cx="1204.19" cy="573.35" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2024M03 | 29,265</title></circle>
+<circle cx="1245.48" cy="573.12" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2024M04 | 33,478</title></circle>
+<circle cx="1286.77" cy="572.77" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2024M05 | 39,688</title></circle>
+<circle cx="1328.06" cy="572.76" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2024M06 | 39,885</title></circle>
+<circle cx="1369.35" cy="572.68" r="1.1" fill="#00838f"><title>Turkey | Test forecast | 2024M07 | 41,246</title></circle>
+</g>
+<g id="destination-48" class="series-group" data-key="Australia::observed" data-max="149770.0" data-min="3550.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.79 171.94,574.57 213.23,574.71 254.52,574.80 295.81,574.76 337.10,574.63 378.39,574.30 419.68,574.53 460.97,574.58 502.26,574.60 543.55,574.49 584.84,574.22 626.13,574.18 667.42,572.73 708.71,573.49 750.00,573.20 791.29,573.19 832.58,572.90 873.87,570.55 915.16,571.69 956.45,571.68 997.74,572.58 1039.03,572.42 1080.32,571.26 1121.61,571.00 1162.90,566.58 1204.19,571.72 1245.48,571.74 1286.77,571.90 1328.06,571.87 1369.35,569.16" fill="none" stroke="#5c6bc0" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.79" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M01 | 3,740</title></circle>
+<circle cx="171.94" cy="574.57" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M02 | 7,720</title></circle>
+<circle cx="213.23" cy="574.71" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M03 | 5,130</title></circle>
+<circle cx="254.52" cy="574.80" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M04 | 3,550</title></circle>
+<circle cx="295.81" cy="574.76" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M05 | 4,250</title></circle>
+<circle cx="337.10" cy="574.63" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M06 | 6,550</title></circle>
+<circle cx="378.39" cy="574.30" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M07 | 12,390</title></circle>
+<circle cx="419.68" cy="574.53" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M08 | 8,390</title></circle>
+<circle cx="460.97" cy="574.58" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M09 | 7,480</title></circle>
+<circle cx="502.26" cy="574.60" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M10 | 7,070</title></circle>
+<circle cx="543.55" cy="574.49" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M11 | 9,100</title></circle>
+<circle cx="584.84" cy="574.22" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2022M12 | 13,880</title></circle>
+<circle cx="626.13" cy="574.18" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M01 | 14,630</title></circle>
+<circle cx="667.42" cy="572.73" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M02 | 40,430</title></circle>
+<circle cx="708.71" cy="573.49" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M03 | 26,810</title></circle>
+<circle cx="750.00" cy="573.20" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M04 | 32,000</title></circle>
+<circle cx="791.29" cy="573.19" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M05 | 32,210</title></circle>
+<circle cx="832.58" cy="572.90" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M06 | 37,330</title></circle>
+<circle cx="873.87" cy="570.55" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M07 | 79,040</title></circle>
+<circle cx="915.16" cy="571.69" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M08 | 58,790</title></circle>
+<circle cx="956.45" cy="571.68" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M09 | 59,080</title></circle>
+<circle cx="997.74" cy="572.58" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M10 | 43,060</title></circle>
+<circle cx="1039.03" cy="572.42" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M11 | 45,880</title></circle>
+<circle cx="1080.32" cy="571.26" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2023M12 | 66,530</title></circle>
+<circle cx="1121.61" cy="571.00" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2024M01 | 71,170</title></circle>
+<circle cx="1162.90" cy="566.58" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2024M02 | 149,770</title></circle>
+<circle cx="1204.19" cy="571.72" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2024M03 | 58,240</title></circle>
+<circle cx="1245.48" cy="571.74" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2024M04 | 58,020</title></circle>
+<circle cx="1286.77" cy="571.90" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2024M05 | 55,130</title></circle>
+<circle cx="1328.06" cy="571.87" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2024M06 | 55,670</title></circle>
+<circle cx="1369.35" cy="569.16" r="1.1" fill="#5c6bc0"><title>Australia | Observed | 2024M07 | 103,840</title></circle>
+</g>
+<g id="destination-49" class="series-group" data-key="Australia::validation" data-max="23882.776769387357" data-min="8909.54476976701" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.45 460.97,574.50 502.26,574.44 543.55,574.39 584.84,574.30 626.13,574.08 667.42,573.66" fill="none" stroke="#5c6bc0" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.45" r="1.1" fill="#5c6bc0"><title>Australia | Validation forecast | 2022M08 | 9,716</title></circle>
+<circle cx="460.97" cy="574.50" r="1.1" fill="#5c6bc0"><title>Australia | Validation forecast | 2022M09 | 8,910</title></circle>
+<circle cx="502.26" cy="574.44" r="1.1" fill="#5c6bc0"><title>Australia | Validation forecast | 2022M10 | 9,900</title></circle>
+<circle cx="543.55" cy="574.39" r="1.1" fill="#5c6bc0"><title>Australia | Validation forecast | 2022M11 | 10,799</title></circle>
+<circle cx="584.84" cy="574.30" r="1.1" fill="#5c6bc0"><title>Australia | Validation forecast | 2022M12 | 12,482</title></circle>
+<circle cx="626.13" cy="574.08" r="1.1" fill="#5c6bc0"><title>Australia | Validation forecast | 2023M01 | 16,268</title></circle>
+<circle cx="667.42" cy="573.66" r="1.1" fill="#5c6bc0"><title>Australia | Validation forecast | 2023M02 | 23,883</title></circle>
+</g>
+<g id="destination-50" class="series-group" data-key="Australia::test" data-max="139124.0191648885" data-min="54030.680499463655" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,571.69 956.45,571.96 997.74,571.64 1039.03,571.35 1080.32,570.81 1121.61,569.60 1162.90,567.17 1204.19,569.54 1245.48,569.95 1286.77,570.15 1328.06,570.36 1369.35,567.20" fill="none" stroke="#5c6bc0" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="571.69" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2023M08 | 58,797</title></circle>
+<circle cx="956.45" cy="571.96" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2023M09 | 54,031</title></circle>
+<circle cx="997.74" cy="571.64" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2023M10 | 59,693</title></circle>
+<circle cx="1039.03" cy="571.35" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2023M11 | 64,812</title></circle>
+<circle cx="1080.32" cy="570.81" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2023M12 | 74,407</title></circle>
+<circle cx="1121.61" cy="569.60" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2024M01 | 95,945</title></circle>
+<circle cx="1162.90" cy="567.17" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2024M02 | 139,124</title></circle>
+<circle cx="1204.19" cy="569.54" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2024M03 | 97,052</title></circle>
+<circle cx="1245.48" cy="569.95" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2024M04 | 89,691</title></circle>
+<circle cx="1286.77" cy="570.15" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2024M05 | 86,305</title></circle>
+<circle cx="1328.06" cy="570.36" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2024M06 | 82,405</title></circle>
+<circle cx="1369.35" cy="567.20" r="1.1" fill="#5c6bc0"><title>Australia | Test forecast | 2024M07 | 138,682</title></circle>
+</g>
+<g id="destination-51" class="series-group" data-key="Hawaii::observed" data-max="2068.0" data-min="358.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.96 171.94,574.98 213.23,574.91 254.52,574.97 295.81,574.94 337.10,574.94 378.39,574.95 419.68,574.95 460.97,574.96 502.26,574.98 543.55,574.96 584.84,574.88 626.13,574.93 667.42,574.98 708.71,574.93 750.00,574.96 791.29,574.92 832.58,574.94 873.87,574.94" fill="none" stroke="#00695c" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.96" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M01 | 789</title></circle>
+<circle cx="171.94" cy="574.98" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M02 | 358</title></circle>
+<circle cx="213.23" cy="574.91" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M03 | 1,560</title></circle>
+<circle cx="254.52" cy="574.97" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M04 | 588</title></circle>
+<circle cx="295.81" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M05 | 1,143</title></circle>
+<circle cx="337.10" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M06 | 1,080</title></circle>
+<circle cx="378.39" cy="574.95" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M07 | 859</title></circle>
+<circle cx="419.68" cy="574.95" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M08 | 852</title></circle>
+<circle cx="460.97" cy="574.96" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M09 | 684</title></circle>
+<circle cx="502.26" cy="574.98" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M10 | 434</title></circle>
+<circle cx="543.55" cy="574.96" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M11 | 795</title></circle>
+<circle cx="584.84" cy="574.88" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2022M12 | 2,068</title></circle>
+<circle cx="626.13" cy="574.93" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2023M01 | 1,164</title></circle>
+<circle cx="667.42" cy="574.98" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2023M02 | 421</title></circle>
+<circle cx="708.71" cy="574.93" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2023M03 | 1,187</title></circle>
+<circle cx="750.00" cy="574.96" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2023M04 | 635</title></circle>
+<circle cx="791.29" cy="574.92" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2023M05 | 1,510</title></circle>
+<circle cx="832.58" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2023M06 | 1,136</title></circle>
+<circle cx="873.87" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Observed | 2023M07 | 1,118</title></circle>
+</g>
+<g id="destination-52" class="series-group" data-key="Hawaii::validation" data-max="1651.9155080529147" data-min="664.024247626" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.94 460.97,574.94 502.26,574.94 543.55,574.96 584.84,574.95 626.13,574.93 667.42,574.91" fill="none" stroke="#00695c" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Validation forecast | 2022M08 | 1,124</title></circle>
+<circle cx="460.97" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Validation forecast | 2022M09 | 1,140</title></circle>
+<circle cx="502.26" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Validation forecast | 2022M10 | 986</title></circle>
+<circle cx="543.55" cy="574.96" r="1.1" fill="#00695c"><title>Hawaii | Validation forecast | 2022M11 | 664</title></circle>
+<circle cx="584.84" cy="574.95" r="1.1" fill="#00695c"><title>Hawaii | Validation forecast | 2022M12 | 900</title></circle>
+<circle cx="626.13" cy="574.93" r="1.1" fill="#00695c"><title>Hawaii | Validation forecast | 2023M01 | 1,283</title></circle>
+<circle cx="667.42" cy="574.91" r="1.1" fill="#00695c"><title>Hawaii | Validation forecast | 2023M02 | 1,652</title></circle>
+</g>
+<g id="destination-53" class="series-group" data-key="Hawaii::test" data-max="1643.7678714829324" data-min="669.7389074615496" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,574.94 956.45,574.93 997.74,574.94 1039.03,574.96 1080.32,574.95 1121.61,574.93 1162.90,574.91 1204.19,574.95 1245.48,574.93 1286.77,574.91 1328.06,574.92 1369.35,574.93" fill="none" stroke="#00695c" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2023M08 | 1,150</title></circle>
+<circle cx="956.45" cy="574.93" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2023M09 | 1,161</title></circle>
+<circle cx="997.74" cy="574.94" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2023M10 | 999</title></circle>
+<circle cx="1039.03" cy="574.96" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2023M11 | 670</title></circle>
+<circle cx="1080.32" cy="574.95" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2023M12 | 904</title></circle>
+<circle cx="1121.61" cy="574.93" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2024M01 | 1,283</title></circle>
+<circle cx="1162.90" cy="574.91" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2024M02 | 1,644</title></circle>
+<circle cx="1204.19" cy="574.95" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2024M03 | 854</title></circle>
+<circle cx="1245.48" cy="574.93" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2024M04 | 1,172</title></circle>
+<circle cx="1286.77" cy="574.91" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2024M05 | 1,531</title></circle>
+<circle cx="1328.06" cy="574.92" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2024M06 | 1,434</title></circle>
+<circle cx="1369.35" cy="574.93" r="1.1" fill="#00695c"><title>Hawaii | Test forecast | 2024M07 | 1,301</title></circle>
+</g>
+<g id="destination-54" class="series-group" data-key="Austria::observed" data-max="21703.0" data-min="887.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.95 171.94,574.95 213.23,574.91 254.52,574.88 295.81,574.83 337.10,574.82 378.39,574.70 419.68,574.73 460.97,574.76 502.26,574.72 543.55,574.76 584.84,574.60 626.13,574.75 667.42,574.75 708.71,574.59 750.00,574.32 791.29,574.22 832.58,573.92 873.87,573.78" fill="none" stroke="#4527a0" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.95" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M01 | 887</title></circle>
+<circle cx="171.94" cy="574.95" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M02 | 891</title></circle>
+<circle cx="213.23" cy="574.91" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M03 | 1,615</title></circle>
+<circle cx="254.52" cy="574.88" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M04 | 2,156</title></circle>
+<circle cx="295.81" cy="574.83" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M05 | 2,942</title></circle>
+<circle cx="337.10" cy="574.82" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M06 | 3,275</title></circle>
+<circle cx="378.39" cy="574.70" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M07 | 5,290</title></circle>
+<circle cx="419.68" cy="574.73" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M08 | 4,745</title></circle>
+<circle cx="460.97" cy="574.76" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M09 | 4,352</title></circle>
+<circle cx="502.26" cy="574.72" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M10 | 5,018</title></circle>
+<circle cx="543.55" cy="574.76" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M11 | 4,220</title></circle>
+<circle cx="584.84" cy="574.60" r="1.1" fill="#4527a0"><title>Austria | Observed | 2022M12 | 7,166</title></circle>
+<circle cx="626.13" cy="574.75" r="1.1" fill="#4527a0"><title>Austria | Observed | 2023M01 | 4,440</title></circle>
+<circle cx="667.42" cy="574.75" r="1.1" fill="#4527a0"><title>Austria | Observed | 2023M02 | 4,514</title></circle>
+<circle cx="708.71" cy="574.59" r="1.1" fill="#4527a0"><title>Austria | Observed | 2023M03 | 7,328</title></circle>
+<circle cx="750.00" cy="574.32" r="1.1" fill="#4527a0"><title>Austria | Observed | 2023M04 | 12,045</title></circle>
+<circle cx="791.29" cy="574.22" r="1.1" fill="#4527a0"><title>Austria | Observed | 2023M05 | 13,858</title></circle>
+<circle cx="832.58" cy="573.92" r="1.1" fill="#4527a0"><title>Austria | Observed | 2023M06 | 19,233</title></circle>
+<circle cx="873.87" cy="573.78" r="1.1" fill="#4527a0"><title>Austria | Observed | 2023M07 | 21,703</title></circle>
+</g>
+<g id="destination-55" class="series-group" data-key="Austria::validation" data-max="4700.310789734926" data-min="2497.058147208927" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.75 460.97,574.77 502.26,574.74 543.55,574.82 584.84,574.85 626.13,574.86 667.42,574.81" fill="none" stroke="#4527a0" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.75" r="1.1" fill="#4527a0"><title>Austria | Validation forecast | 2022M08 | 4,440</title></circle>
+<circle cx="460.97" cy="574.77" r="1.1" fill="#4527a0"><title>Austria | Validation forecast | 2022M09 | 4,006</title></circle>
+<circle cx="502.26" cy="574.74" r="1.1" fill="#4527a0"><title>Austria | Validation forecast | 2022M10 | 4,700</title></circle>
+<circle cx="543.55" cy="574.82" r="1.1" fill="#4527a0"><title>Austria | Validation forecast | 2022M11 | 3,152</title></circle>
+<circle cx="584.84" cy="574.85" r="1.1" fill="#4527a0"><title>Austria | Validation forecast | 2022M12 | 2,716</title></circle>
+<circle cx="626.13" cy="574.86" r="1.1" fill="#4527a0"><title>Austria | Validation forecast | 2023M01 | 2,497</title></circle>
+<circle cx="667.42" cy="574.81" r="1.1" fill="#4527a0"><title>Austria | Validation forecast | 2023M02 | 3,360</title></circle>
+</g>
+<g id="destination-56" class="series-group" data-key="Austria::test" data-max="41716.8698671822" data-min="13319.752013140189" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,573.76 956.45,573.86 997.74,573.66 1039.03,574.08 1080.32,574.20 1121.61,574.25 1162.90,574.00 1204.19,573.89 1245.48,573.59 1286.77,573.25 1328.06,573.02 1369.35,572.65" fill="none" stroke="#4527a0" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="573.76" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2023M08 | 22,130</title></circle>
+<circle cx="956.45" cy="573.86" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2023M09 | 20,207</title></circle>
+<circle cx="997.74" cy="573.66" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2023M10 | 23,748</title></circle>
+<circle cx="1039.03" cy="574.08" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2023M11 | 16,326</title></circle>
+<circle cx="1080.32" cy="574.20" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2023M12 | 14,299</title></circle>
+<circle cx="1121.61" cy="574.25" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2024M01 | 13,320</title></circle>
+<circle cx="1162.90" cy="574.00" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2024M02 | 17,690</title></circle>
+<circle cx="1204.19" cy="573.89" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2024M03 | 19,672</title></circle>
+<circle cx="1245.48" cy="573.59" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2024M04 | 25,097</title></circle>
+<circle cx="1286.77" cy="573.25" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2024M05 | 31,197</title></circle>
+<circle cx="1328.06" cy="573.02" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2024M06 | 35,215</title></circle>
+<circle cx="1369.35" cy="572.65" r="1.1" fill="#4527a0"><title>Austria | Test forecast | 2024M07 | 41,717</title></circle>
+</g>
+<g id="destination-57" class="series-group" data-key="Czech::observed" data-max="20714.0" data-min="2662.0" clip-path="url(#plot-clip)">
+<polyline class="series" points="130.65,574.85 171.94,574.84 213.23,574.80 254.52,574.68 295.81,574.72 337.10,574.61 378.39,574.42 419.68,574.41 460.97,574.55 502.26,574.60 543.55,574.55 584.84,574.46 626.13,574.56 667.42,574.64 708.71,574.37 750.00,574.27 791.29,574.25 832.58,574.08 873.87,573.83" fill="none" stroke="#9e5200" stroke-width="1.6" stroke-dasharray="" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="130.65" cy="574.85" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M01 | 2,662</title></circle>
+<circle cx="171.94" cy="574.84" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M02 | 2,905</title></circle>
+<circle cx="213.23" cy="574.80" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M03 | 3,477</title></circle>
+<circle cx="254.52" cy="574.68" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M04 | 5,633</title></circle>
+<circle cx="295.81" cy="574.72" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M05 | 4,975</title></circle>
+<circle cx="337.10" cy="574.61" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M06 | 6,960</title></circle>
+<circle cx="378.39" cy="574.42" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M07 | 10,329</title></circle>
+<circle cx="419.68" cy="574.41" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M08 | 10,473</title></circle>
+<circle cx="460.97" cy="574.55" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M09 | 7,977</title></circle>
+<circle cx="502.26" cy="574.60" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M10 | 7,180</title></circle>
+<circle cx="543.55" cy="574.55" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M11 | 8,048</title></circle>
+<circle cx="584.84" cy="574.46" r="1.1" fill="#9e5200"><title>Czech | Observed | 2022M12 | 9,546</title></circle>
+<circle cx="626.13" cy="574.56" r="1.1" fill="#9e5200"><title>Czech | Observed | 2023M01 | 7,757</title></circle>
+<circle cx="667.42" cy="574.64" r="1.1" fill="#9e5200"><title>Czech | Observed | 2023M02 | 6,484</title></circle>
+<circle cx="708.71" cy="574.37" r="1.1" fill="#9e5200"><title>Czech | Observed | 2023M03 | 11,280</title></circle>
+<circle cx="750.00" cy="574.27" r="1.1" fill="#9e5200"><title>Czech | Observed | 2023M04 | 12,910</title></circle>
+<circle cx="791.29" cy="574.25" r="1.1" fill="#9e5200"><title>Czech | Observed | 2023M05 | 13,252</title></circle>
+<circle cx="832.58" cy="574.08" r="1.1" fill="#9e5200"><title>Czech | Observed | 2023M06 | 16,406</title></circle>
+<circle cx="873.87" cy="573.83" r="1.1" fill="#9e5200"><title>Czech | Observed | 2023M07 | 20,714</title></circle>
+</g>
+<g id="destination-58" class="series-group" data-key="Czech::validation" data-max="10047.977320314874" data-min="4151.556848625315" clip-path="url(#plot-clip)">
+<polyline class="series" points="419.68,574.43 460.97,574.49 502.26,574.44 543.55,574.67 584.84,574.73 626.13,574.77 667.42,574.63" fill="none" stroke="#9e5200" stroke-width="1.6" stroke-dasharray="8 5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="419.68" cy="574.43" r="1.1" fill="#9e5200"><title>Czech | Validation forecast | 2022M08 | 10,048</title></circle>
+<circle cx="460.97" cy="574.49" r="1.1" fill="#9e5200"><title>Czech | Validation forecast | 2022M09 | 8,989</title></circle>
+<circle cx="502.26" cy="574.44" r="1.1" fill="#9e5200"><title>Czech | Validation forecast | 2022M10 | 9,891</title></circle>
+<circle cx="543.55" cy="574.67" r="1.1" fill="#9e5200"><title>Czech | Validation forecast | 2022M11 | 5,862</title></circle>
+<circle cx="584.84" cy="574.73" r="1.1" fill="#9e5200"><title>Czech | Validation forecast | 2022M12 | 4,872</title></circle>
+<circle cx="626.13" cy="574.77" r="1.1" fill="#9e5200"><title>Czech | Validation forecast | 2023M01 | 4,152</title></circle>
+<circle cx="667.42" cy="574.63" r="1.1" fill="#9e5200"><title>Czech | Validation forecast | 2023M02 | 6,558</title></circle>
+</g>
+<g id="destination-59" class="series-group" data-key="Czech::test" data-max="33551.08154028725" data-min="8782.11240973307" clip-path="url(#plot-clip)">
+<polyline class="series" points="915.16,573.71 956.45,573.87 997.74,573.77 1039.03,574.28 1080.32,574.41 1121.61,574.51 1162.90,574.23 1204.19,574.29 1245.48,574.02 1286.77,573.53 1328.06,573.29 1369.35,573.11" fill="none" stroke="#9e5200" stroke-width="1.6" stroke-dasharray="3 3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<circle cx="915.16" cy="573.71" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2023M08 | 22,850</title></circle>
+<circle cx="956.45" cy="573.87" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2023M09 | 20,104</title></circle>
+<circle cx="997.74" cy="573.77" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2023M10 | 21,793</title></circle>
+<circle cx="1039.03" cy="574.28" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2023M11 | 12,726</title></circle>
+<circle cx="1080.32" cy="574.41" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2023M12 | 10,436</title></circle>
+<circle cx="1121.61" cy="574.51" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2024M01 | 8,782</title></circle>
+<circle cx="1162.90" cy="574.23" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2024M02 | 13,742</title></circle>
+<circle cx="1204.19" cy="574.29" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2024M03 | 12,642</title></circle>
+<circle cx="1245.48" cy="574.02" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2024M04 | 17,424</title></circle>
+<circle cx="1286.77" cy="573.53" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2024M05 | 26,107</title></circle>
+<circle cx="1328.06" cy="573.29" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2024M06 | 30,446</title></circle>
+<circle cx="1369.35" cy="573.11" r="1.1" fill="#9e5200"><title>Czech | Test forecast | 2024M07 | 33,551</title></circle>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Canada" aria-pressed="true" aria-controls="destination-0 destination-1 destination-2" data-family="destination">
+<rect x="105" y="655" width="300" height="26" fill="transparent"/>
+<line x1="110" x2="133" y1="669" y2="669" stroke="#c0392b" stroke-width="2" stroke-dasharray=""/>
+<text x="141" y="674" font-size="16">Canada</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Chile" aria-pressed="true" aria-controls="destination-3 destination-4 destination-5" data-family="destination">
+<rect x="427" y="655" width="300" height="26" fill="transparent"/>
+<line x1="432" x2="455" y1="669" y2="669" stroke="#455a64" stroke-width="2" stroke-dasharray=""/>
+<text x="463" y="674" font-size="16">Chile</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Mexico" aria-pressed="true" aria-controls="destination-6 destination-7 destination-8" data-family="destination">
+<rect x="749" y="655" width="300" height="26" fill="transparent"/>
+<line x1="754" x2="777" y1="669" y2="669" stroke="#21618c" stroke-width="2" stroke-dasharray=""/>
+<text x="785" y="674" font-size="16">Mexico</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Taiwan China" aria-pressed="true" aria-controls="destination-9 destination-10 destination-11" data-family="destination">
+<rect x="1071" y="655" width="300" height="26" fill="transparent"/>
+<line x1="1076" x2="1099" y1="669" y2="669" stroke="#b03a2e" stroke-width="2" stroke-dasharray=""/>
+<text x="1107" y="674" font-size="16">Taiwan China</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Hong Kong China" aria-pressed="true" aria-controls="destination-12 destination-13 destination-14" data-family="destination">
+<rect x="105" y="683" width="300" height="26" fill="transparent"/>
+<line x1="110" x2="133" y1="697" y2="697" stroke="#148f77" stroke-width="2" stroke-dasharray=""/>
+<text x="141" y="702" font-size="16">Hong Kong China</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Japan" aria-pressed="true" aria-controls="destination-15 destination-16 destination-17" data-family="destination">
+<rect x="427" y="683" width="300" height="26" fill="transparent"/>
+<line x1="432" x2="455" y1="697" y2="697" stroke="#7d3c98" stroke-width="2" stroke-dasharray=""/>
+<text x="463" y="702" font-size="16">Japan</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="South Korea" aria-pressed="true" aria-controls="destination-18 destination-19 destination-20" data-family="destination">
+<rect x="749" y="683" width="300" height="26" fill="transparent"/>
+<line x1="754" x2="777" y1="697" y2="697" stroke="#b9770e" stroke-width="2" stroke-dasharray=""/>
+<text x="785" y="702" font-size="16">South Korea</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Macao China" aria-pressed="true" aria-controls="destination-21 destination-22 destination-23" data-family="destination">
+<rect x="1071" y="683" width="300" height="26" fill="transparent"/>
+<line x1="1076" x2="1099" y1="697" y2="697" stroke="#34495e" stroke-width="2" stroke-dasharray=""/>
+<text x="1107" y="702" font-size="16">Macao China</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Maldives" aria-pressed="true" aria-controls="destination-24 destination-25 destination-26" data-family="destination">
+<rect x="105" y="711" width="300" height="26" fill="transparent"/>
+<line x1="110" x2="133" y1="725" y2="725" stroke="#d35400" stroke-width="2" stroke-dasharray=""/>
+<text x="141" y="730" font-size="16">Maldives</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Cambodia" aria-pressed="true" aria-controls="destination-27 destination-28 destination-29" data-family="destination">
+<rect x="427" y="711" width="300" height="26" fill="transparent"/>
+<line x1="432" x2="455" y1="725" y2="725" stroke="#2874a6" stroke-width="2" stroke-dasharray=""/>
+<text x="463" y="730" font-size="16">Cambodia</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Indonesia" aria-pressed="true" aria-controls="destination-30 destination-31 destination-32" data-family="destination">
+<rect x="749" y="711" width="300" height="26" fill="transparent"/>
+<line x1="754" x2="777" y1="725" y2="725" stroke="#a9326f" stroke-width="2" stroke-dasharray=""/>
+<text x="785" y="730" font-size="16">Indonesia</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Singapore" aria-pressed="true" aria-controls="destination-33 destination-34 destination-35" data-family="destination">
+<rect x="1071" y="711" width="300" height="26" fill="transparent"/>
+<line x1="1076" x2="1099" y1="725" y2="725" stroke="#558b2f" stroke-width="2" stroke-dasharray=""/>
+<text x="1107" y="730" font-size="16">Singapore</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="New Zealand" aria-pressed="true" aria-controls="destination-36 destination-37 destination-38" data-family="destination">
+<rect x="105" y="739" width="300" height="26" fill="transparent"/>
+<line x1="110" x2="133" y1="753" y2="753" stroke="#6c5b4c" stroke-width="2" stroke-dasharray=""/>
+<text x="141" y="758" font-size="16">New Zealand</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="USA" aria-pressed="true" aria-controls="destination-39 destination-40 destination-41" data-family="destination">
+<rect x="427" y="739" width="300" height="26" fill="transparent"/>
+<line x1="432" x2="455" y1="753" y2="753" stroke="#827717" stroke-width="2" stroke-dasharray=""/>
+<text x="463" y="758" font-size="16">USA</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Thailand" aria-pressed="true" aria-controls="destination-42 destination-43 destination-44" data-family="destination">
+<rect x="749" y="739" width="300" height="26" fill="transparent"/>
+<line x1="754" x2="777" y1="753" y2="753" stroke="#ad1457" stroke-width="2" stroke-dasharray=""/>
+<text x="785" y="758" font-size="16">Thailand</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Turkey" aria-pressed="true" aria-controls="destination-45 destination-46 destination-47" data-family="destination">
+<rect x="1071" y="739" width="300" height="26" fill="transparent"/>
+<line x1="1076" x2="1099" y1="753" y2="753" stroke="#00838f" stroke-width="2" stroke-dasharray=""/>
+<text x="1107" y="758" font-size="16">Turkey</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Australia" aria-pressed="true" aria-controls="destination-48 destination-49 destination-50" data-family="destination">
+<rect x="105" y="767" width="300" height="26" fill="transparent"/>
+<line x1="110" x2="133" y1="781" y2="781" stroke="#5c6bc0" stroke-width="2" stroke-dasharray=""/>
+<text x="141" y="786" font-size="16">Australia</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Hawaii" aria-pressed="true" aria-controls="destination-51 destination-52 destination-53" data-family="destination">
+<rect x="427" y="767" width="300" height="26" fill="transparent"/>
+<line x1="432" x2="455" y1="781" y2="781" stroke="#00695c" stroke-width="2" stroke-dasharray=""/>
+<text x="463" y="786" font-size="16">Hawaii</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Austria" aria-pressed="true" aria-controls="destination-54 destination-55 destination-56" data-family="destination">
+<rect x="749" y="767" width="300" height="26" fill="transparent"/>
+<line x1="754" x2="777" y1="781" y2="781" stroke="#4527a0" stroke-width="2" stroke-dasharray=""/>
+<text x="785" y="786" font-size="16">Austria</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Czech" aria-pressed="true" aria-controls="destination-57 destination-58 destination-59" data-family="destination">
+<rect x="1071" y="767" width="300" height="26" fill="transparent"/>
+<line x1="1076" x2="1099" y1="781" y2="781" stroke="#9e5200" stroke-width="2" stroke-dasharray=""/>
+<text x="1107" y="786" font-size="16">Czech</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Observed" aria-pressed="true" aria-controls="destination-0 destination-3 destination-6 destination-9 destination-12 destination-15 destination-18 destination-21 destination-24 destination-27 destination-30 destination-33 destination-36 destination-39 destination-42 destination-45 destination-48 destination-51 destination-54 destination-57" data-family="kind">
+<rect x="105" y="795" width="300" height="26" fill="transparent"/>
+<line x1="110" x2="133" y1="809" y2="809" stroke="#545b63" stroke-width="2" stroke-dasharray=""/>
+<text x="141" y="814" font-size="16">Observed</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Validation forecast" aria-pressed="true" aria-controls="destination-1 destination-4 destination-7 destination-10 destination-13 destination-16 destination-19 destination-22 destination-25 destination-28 destination-31 destination-34 destination-37 destination-40 destination-43 destination-46 destination-49 destination-52 destination-55 destination-58" data-family="kind">
+<rect x="427" y="795" width="300" height="26" fill="transparent"/>
+<line x1="432" x2="455" y1="809" y2="809" stroke="#545b63" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="463" y="814" font-size="16">Validation forecast</text>
+</g>
+<g class="legend-item" tabindex="0" role="button" aria-label="Test forecast" aria-pressed="true" aria-controls="destination-2 destination-5 destination-8 destination-11 destination-14 destination-17 destination-20 destination-23 destination-26 destination-29 destination-32 destination-35 destination-38 destination-41 destination-44 destination-47 destination-50 destination-53 destination-56 destination-59" data-family="kind">
+<rect x="749" y="795" width="300" height="26" fill="transparent"/>
+<line x1="754" x2="777" y1="809" y2="809" stroke="#545b63" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="785" y="814" font-size="16">Test forecast</text>
+</g>
+</svg></main><script>
+(() => {
+const geometry = {"left": 110, "right": 1390, "top": 125, "bottom": 575, "start": 24264, "months": 31, "ymax": 8000000, "ymin": 0, "zeroBased": true, "autoScaleY": true};
+
+const legendItems = [...document.querySelectorAll('.legend-item')];
+function updateVisibility() {
+  document.querySelectorAll('.series-group').forEach(group => {
+    const hidden = legendItems.some(item => item.getAttribute('aria-controls').split(' ').includes(group.id)
+      && item.getAttribute('aria-pressed') !== 'true');
+    group.classList.toggle('is-hidden', hidden);
+  });
+  if (geometry.autoScaleY) {fitVisibleY();schedule();}
+}
+document.querySelectorAll('.legend-item').forEach(item => {
+  const toggle = () => {
+    const visible = item.getAttribute('aria-pressed') === 'true';
+    item.setAttribute('aria-pressed', String(!visible));
+    updateVisibility();
+  };
+  item.addEventListener('click', toggle);
+  item.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggle();
+    }
+  });
+  if (item.dataset.family) item.addEventListener('dblclick', event => {
+    event.stopPropagation();
+    const peers=legendItems.filter(other=>other.dataset.family===item.dataset.family);
+    const isolated=peers.every(other=>other===item || other.getAttribute('aria-pressed')==='false');
+    peers.forEach(other=>other.setAttribute('aria-pressed',String(isolated || other===item)));
+    updateVisibility();
+  });
+});
+
+const svg = document.querySelector('svg');
+const {left, right, top, bottom, start, months, ymax, ymin} = geometry;
+const full = {x0:left, x1:right, y0:top, y1:bottom};
+let view = {...full};
+let drag = null;
+let pending = false;
+const xTicks = svg.querySelector('.x-ticks');
+const yGrid = svg.querySelector('.y-grid');
+const originalX = xTicks.innerHTML, originalY = yGrid.innerHTML;
+const bands = [...svg.querySelectorAll('.partition-band')].map(el => ({
+  el, x:Number(el.getAttribute('x')), width:Number(el.getAttribute('width'))
+}));
+const boundaries = [...svg.querySelectorAll('.split-boundary')].map(el => ({
+  el, x:Number(el.getAttribute('x1'))
+}));
+const references = [...svg.querySelectorAll('.reference-line')].map(el => ({el, y:Number(el.getAttribute('y1'))}));
+const points = [...svg.querySelectorAll('.series-group circle')].map(el => ({
+  el, x:Number(el.getAttribute('cx')), y:Number(el.getAttribute('cy'))
+}));
+const lines = [...svg.querySelectorAll('polyline.series')];
+function fitVisibleY() {
+  const visible=[...svg.querySelectorAll('.series-group:not(.is-hidden)')];
+  const maxima=visible.map(el=>Number(el.dataset.max));
+  const maximum=Math.max(0,...maxima);
+  const minimum=geometry.zeroBased ? 0 : Math.min(0,...visible.map(el=>Number(el.dataset.min)));
+  if(maximum===minimum){view.y0=top;view.y1=bottom;return;}
+  const raw=(maximum-minimum)/5,power=10**Math.floor(Math.log10(raw));
+  const step=[1,2,2.5,5,10].map(n=>n*power).find(n=>n>=raw);
+  const bound=Math.ceil(maximum/step)*step,lower=Math.floor(minimum/step)*step;
+  view.y0=Math.max(top,bottom-(bound-ymin)/(ymax-ymin)*(bottom-top));
+  view.y1=Math.min(bottom,bottom-(lower-ymin)/(ymax-ymin)*(bottom-top));
+}
+const sx = value => left + (value-view.x0)/(view.x1-view.x0)*(right-left);
+const sy = value => top + (value-view.y0)/(view.y1-view.y0)*(bottom-top);
+function position(event) {
+  return new DOMPoint(event.clientX, event.clientY).matrixTransform(svg.getScreenCTM().inverse());
+}
+const inside = p => p.x>=left && p.x<=right && p.y>=top && p.y<=bottom;
+function element(tag, attributes, text) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  Object.entries(attributes).forEach(([key,value]) => el.setAttribute(key,value));
+  if (text !== undefined) el.textContent = text;
+  return el;
+}
+function render() {
+  pending = false;
+  const ax = (right-left)/(view.x1-view.x0), ay = (bottom-top)/(view.y1-view.y0);
+  lines.forEach(el => el.setAttribute('transform',
+    `matrix(${ax} 0 0 ${ay} ${left-ax*view.x0} ${top-ay*view.y0})`));
+  points.forEach(({el,x,y}) => {el.setAttribute('cx',sx(x));el.setAttribute('cy',sy(y));});
+  bands.forEach(({el,x,width}) => {
+    const a=Math.max(left,Math.min(right,sx(x))), b=Math.max(left,Math.min(right,sx(x+width)));
+    el.setAttribute('x',a);el.setAttribute('width',Math.max(0,b-a));
+  });
+  boundaries.forEach(({el,x}) => {
+    const xx=sx(x);el.setAttribute('x1',xx);el.setAttribute('x2',xx);
+    el.style.display=xx<left || xx>right ? 'none' : '';
+  });
+  references.forEach(({el,y}) => {
+    const yy=sy(y);el.setAttribute('y1',yy);el.setAttribute('y2',yy);
+    el.style.display=yy<top || yy>bottom ? 'none' : '';
+  });
+  if (view.x0===left && view.x1===right && view.y0===top && view.y1===bottom) {
+    xTicks.innerHTML=originalX;yGrid.innerHTML=originalY;
+    return;
+  }
+  xTicks.replaceChildren();yGrid.replaceChildren();
+  const lo=start-.5+(view.x0-left)/(right-left)*months;
+  const hi=start-.5+(view.x1-left)/(right-left)*months;
+  const stride=[1,2,3,6,12,24,36,60,120].find(n=>n>=(hi-lo)/8) || 120;
+  for(let m=Math.ceil(lo/stride)*stride;m<=hi;m+=stride) {
+    const xx=sx(left+(m-start+.5)/months*(right-left));
+    const label=String(Math.floor(m/12))+'-'+String(m%12+1).padStart(2,'0');
+    xTicks.append(element('line',{x1:xx,x2:xx,y1:bottom,y2:bottom+6,stroke:'#333'}),
+      element('text',{x:xx,y:bottom+27,'text-anchor':'middle',class:'tick'},label));
+  }
+  const min=ymin+(ymax-ymin)*(bottom-view.y1)/(bottom-top), max=ymin+(ymax-ymin)*(bottom-view.y0)/(bottom-top);
+  const raw=(max-min)/5, power=10**Math.floor(Math.log10(raw));
+  const step=[1,2,2.5,5,10].map(n=>n*power).find(n=>n>=raw);
+  for(let v=Math.ceil(min/step)*step;v<=max+step*1e-9;v+=step) {
+    const yy=sy(bottom-(v-ymin)/(ymax-ymin)*(bottom-top));
+    yGrid.append(element('line',{x1:left,x2:right,y1:yy,y2:yy,stroke:'#d9dfe4','stroke-width':'.7'}),
+      element('text',{x:left-14,y:yy+5,'text-anchor':'end',class:'tick'},
+        v.toLocaleString('en-US',{notation:'compact',maximumFractionDigits:2})));
+  }
+}
+function schedule() {if(!pending){pending=true;requestAnimationFrame(render);}}
+function bounded(a,b,min,max) {
+  const span=b-a;
+  if(span>=max-min)return [min,max];
+  const lo=Math.max(min,Math.min(max-span,a));return [lo,lo+span];
+}
+svg.addEventListener('wheel',event=>{
+  const p=position(event);if(!inside(p))return;
+  event.preventDefault();
+  const factor=Math.exp(Math.max(-500,Math.min(500,event.deltaY))*0.002);
+  const cx=view.x0+(p.x-left)/(right-left)*(view.x1-view.x0);
+  const cy=view.y0+(p.y-top)/(bottom-top)*(view.y1-view.y0);
+  const wx=Math.max((right-left)/60,Math.min(right-left,(view.x1-view.x0)*factor));
+  const wy=Math.max((bottom-top)/(geometry.autoScaleY ? 1000000 : 60),Math.min(bottom-top,(view.y1-view.y0)*factor));
+  const x0=cx-(p.x-left)/(right-left)*wx, y0=cy-(p.y-top)/(bottom-top)*wy;
+  [view.x0,view.x1]=bounded(x0,x0+wx,left,right);
+  [view.y0,view.y1]=bounded(y0,y0+wy,top,bottom);
+  schedule();
+},{passive:false});
+svg.addEventListener('pointerdown',event=>{
+  const p=position(event);if(!inside(p)||event.button!==0)return;
+  drag={p,view:{...view}};svg.setPointerCapture(event.pointerId);svg.style.cursor='grabbing';
+  event.preventDefault();
+});
+svg.addEventListener('pointermove',event=>{
+  if(!drag)return;
+  const p=position(event), old=drag.view;
+  const dx=(p.x-drag.p.x)/(right-left)*(old.x1-old.x0);
+  const dy=(p.y-drag.p.y)/(bottom-top)*(old.y1-old.y0);
+  [view.x0,view.x1]=bounded(old.x0-dx,old.x1-dx,left,right);
+  [view.y0,view.y1]=bounded(old.y0-dy,old.y1-dy,top,bottom);
+  schedule();
+});
+function stopDrag(){drag=null;svg.style.cursor='';}
+svg.addEventListener('pointerup',stopDrag);
+svg.addEventListener('pointercancel',stopDrag);
+svg.addEventListener('lostpointercapture',stopDrag);
+svg.addEventListener('dblclick',event=>{
+  if(!inside(position(event)))return;
+  event.preventDefault();view={...full};if(geometry.autoScaleY)fitVisibleY();schedule();
+});
+})();
+</script></body></html>

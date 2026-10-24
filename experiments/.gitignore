@@ -1,3 +1,10 @@
 __pycache__/
 *.py[cod]
 .deps/
+**/*.png
+**/outputs/**/*.csv
+**/metrics/**/*.csv
+**/outputs/**/*.json
+**/metrics/**/*.json
+visual/*manifest.json
+**/*.log
