@@ -19,3 +19,4 @@ python validate_submission.py A2-Group-NAME-Forecast.csv A2-Group-NAME-Intervals
 ```
 
 本仓库中的说明文档供中文阅读；需要提交的 Notebook、报告、预测文件和各类已填写模板仍须使用英文。代码、CSV 列名、文件名及规定的输出格式保持原样。
+
