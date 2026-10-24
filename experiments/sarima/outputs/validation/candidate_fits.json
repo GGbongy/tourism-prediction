@@ -1,0 +1,6494 @@
+[
+  {
+    "destination": "Canada",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.025532565304066664,
+      "ar.L1": 0.8869700876197831,
+      "ar.S.L12": 0.7269423607174429,
+      "sigma2": 0.071585404635687
+    },
+    "aic": 68.60112692963665,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.15367189999960829
+  },
+  {
+    "destination": "Canada",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.030108682770281503,
+      "ar.S.L12": 0.7289752107624241,
+      "sigma2": 0.07584232919101334
+    },
+    "aic": 78.76529894492212,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04397969999990892
+  },
+  {
+    "destination": "Canada",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.030221934289474093,
+      "ar.S.L12": 0.7289758607305269,
+      "sigma2": 0.07584207227983471
+    },
+    "aic": 78.76485486328241,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04525389999616891
+  },
+  {
+    "destination": "Canada",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.893831104799702,
+      "ma.L1": -0.9999450064827821,
+      "ar.S.L12": 0.7312773790017866,
+      "sigma2": 0.07181479324841145
+    },
+    "aic": 68.15865841446745,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.2836667999945348
+  },
+  {
+    "destination": "Canada",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": false
+      },
+      {
+        "optimizer": "powell",
+        "maxiter": 100,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.03127078055740029,
+      "ma.S.L12": -0.3312937765812027,
+      "sigma2": 0.0819358652533022
+    },
+    "aic": 86.03421552163202,
+    "warnings": [
+      "Maximum Likelihood optimization failed to converge. Check mle_retvals",
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.3554036999994423
+  },
+  {
+    "destination": "Canada",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.030542816182470747,
+      "ma.S.L12": -0.33150630891058075,
+      "sigma2": 0.08193382857345757
+    },
+    "aic": 86.0385152496909,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07812209999246988
+  },
+  {
+    "destination": "Canada",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.914123505363159,
+      "ma.L1": -0.9999781454138311,
+      "ma.S.L12": -0.3163741849500782,
+      "sigma2": 0.07838288464210925
+    },
+    "aic": 80.45993302305294,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.6936660000064876
+  },
+  {
+    "destination": "Canada",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 24056.072874493926,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.00032305683221878494,
+      "ma.L1": -0.030228002576497368,
+      "ar.S.L12": 0.7289822212460803,
+      "sigma2": 0.07584190471852925
+    },
+    "aic": 80.76438690373848,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07208830000308808
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.053443867717529715,
+      "ar.L1": 0.9116818103815093,
+      "ar.S.L12": 0.27799174127335363,
+      "sigma2": 0.05982971236484245
+    },
+    "aic": 17.774423534211095,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07853420000174083
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.021769579150149536,
+      "ar.S.L12": 0.2521004844689379,
+      "sigma2": 0.062485519520994445
+    },
+    "aic": 19.654039579031718,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.030127399993943982
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.022910582769180645,
+      "ar.S.L12": 0.2515575131967708,
+      "sigma2": 0.06248494241613197
+    },
+    "aic": 19.651727817444364,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.029035699990345165
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.25278186026040306,
+      "ma.L1": 0.2773246394802362,
+      "ar.S.L12": 0.25005690090094124,
+      "sigma2": 0.06249143270891013
+    },
+    "aic": 21.638397677473503,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03180240000074264
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.002703508401722463,
+      "ma.S.L12": -0.9824712863318033,
+      "sigma2": 0.05301972163771657
+    },
+    "aic": 26.252282790848877,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.17001100000925362
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.0035826473006622924,
+      "ma.S.L12": -0.9839645364699898,
+      "sigma2": 0.05288064450460641
+    },
+    "aic": 26.25243010231605,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1569630000012694
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.03510638729672765,
+      "ma.L1": 0.038219834684992356,
+      "ma.S.L12": -0.9628742956527488,
+      "sigma2": 0.05397855972844984
+    },
+    "aic": 28.25387282474345,
+    "warnings": [
+      "Non-invertible starting MA parameters found. Using zeros as starting parameters.",
+      "Non-stationary starting autoregressive parameters found. Using zeros as starting parameters.",
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.169933500001207
+  },
+  {
+    "destination": "Chile",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1577.4017857142858,
+    "history_months": 127,
+    "missing_history_months": 15,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -0.0005740239513340891,
+      "ma.L1": 0.02292184063347765,
+      "ar.S.L12": 0.2514834990613392,
+      "sigma2": 0.062485550839294704
+    },
+    "aic": 21.651065750347737,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.05368490000546444
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.03186725324546657,
+      "ar.L1": 0.8622212777910422,
+      "ar.S.L12": 0.7504278512300316,
+      "sigma2": 0.10605037877208476
+    },
+    "aic": 144.91756290488087,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.09731189999729395
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.07073516065959762,
+      "ar.S.L12": 0.7451009938944941,
+      "sigma2": 0.11341028735125898
+    },
+    "aic": 154.55767679540278,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03789620001043659
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.10941130087011516,
+      "ar.S.L12": 0.7392973046840036,
+      "sigma2": 0.11321992883521526
+    },
+    "aic": 153.9818653481845,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03992739999375772
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.8707704406133547,
+      "ma.L1": -0.9999148159268229,
+      "ar.S.L12": 0.7561035153793731,
+      "sigma2": 0.10643645464594553
+    },
+    "aic": 144.19153204608435,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.18337299999257084
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.12302622849120338,
+      "ma.S.L12": -0.2769826762734865,
+      "sigma2": 0.12649046386468543
+    },
+    "aic": 159.49590188259833,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06237360001250636
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.08060711843920117,
+      "ma.S.L12": -0.26220531098801364,
+      "sigma2": 0.1269973831990031
+    },
+    "aic": 160.1744997671228,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04896210000151768
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.8827736324523329,
+      "ma.L1": 0.9988974706389405,
+      "ma.S.L12": -0.19923188211327825,
+      "sigma2": 0.12039379725666094
+    },
+    "aic": 154.0048996956914,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.46198459999868646
+  },
+  {
+    "destination": "Mexico",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2005M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 5224.521327014218,
+    "history_months": 211,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0032861254525090883,
+      "ma.L1": -0.10974765838663224,
+      "ar.S.L12": 0.7391897100533698,
+      "sigma2": 0.11320371546749981
+    },
+    "aic": 155.94837751510613,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07795310000074096
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.03263914661432725,
+      "ar.L1": 0.9398371606013016,
+      "ar.S.L12": 0.331073386500878,
+      "sigma2": 0.035222167395183565
+    },
+    "aic": -73.99377819319673,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12264519999735057
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.19420674135297936,
+      "ar.S.L12": 0.31756732108334085,
+      "sigma2": 0.0349216724992674
+    },
+    "aic": -79.4941113392741,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.031770700006745756
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.22182981249533448,
+      "ar.S.L12": 0.30430128141484236,
+      "sigma2": 0.03472376696301117
+    },
+    "aic": -80.55028787602258,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03463259999989532
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.09364674569400117,
+      "ma.L1": -0.30878509742068444,
+      "ar.S.L12": 0.2986305094149285,
+      "sigma2": 0.034707023290732136
+    },
+    "aic": -78.67331332829107,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07028619998891372
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.23878166452673416,
+      "ma.S.L12": -0.7206975149239473,
+      "sigma2": 0.036060734281956476
+    },
+    "aic": -60.75030446488498,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.11149460000160616
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.2140837337037982,
+      "ma.S.L12": -0.7153992451096086,
+      "sigma2": 0.03634225087677676
+    },
+    "aic": -59.73777599649769,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10661869999603368
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.055637592511239536,
+      "ma.L1": -0.28937837929181287,
+      "ma.S.L12": -0.7232953923290061,
+      "sigma2": 0.03602704954383692
+    },
+    "aic": -58.794568248461246,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.16847970000526402
+  },
+  {
+    "destination": "Taiwan China",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2008M07",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 177507.55029585797,
+    "history_months": 169,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -0.0002249680966156718,
+      "ma.L1": -0.22182218028139963,
+      "ar.S.L12": 0.3042676974187065,
+      "sigma2": 0.034722999306446074
+    },
+    "aic": -78.5506969643259,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10323189999326132
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0225596269467072,
+      "ar.L1": 0.9417393058093877,
+      "ar.S.L12": 0.537679211845052,
+      "sigma2": 0.029753687216478954
+    },
+    "aic": -176.67292536632112,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.22126260001095943
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.32381176375619003,
+      "ar.S.L12": 0.545148437219713,
+      "sigma2": 0.02741002333032743
+    },
+    "aic": -203.6696723372056,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.051601300001493655
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.3025921123570644,
+      "ar.S.L12": 0.5185134318626747,
+      "sigma2": 0.027586902974392667
+    },
+    "aic": -202.35166616726323,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07551470000180416
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.21440677438346045,
+      "ma.L1": -0.12327667944077812,
+      "ar.S.L12": 0.5357348123817124,
+      "sigma2": 0.027355233690539257
+    },
+    "aic": -202.40737039631728,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07695500001136679
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.28163018431596426,
+      "ma.S.L12": -0.7041369383392041,
+      "sigma2": 0.024605883884659382
+    },
+    "aic": -219.74414271748287,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.17357889999402687
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.3031469245267473,
+      "ma.S.L12": -0.6892859419786566,
+      "sigma2": 0.024540899390175907
+    },
+    "aic": -220.92799236940988,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.16680589999305084
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.2053023211204605,
+      "ma.L1": -0.10902870048967529,
+      "ma.S.L12": -0.6942063608434419,
+      "sigma2": 0.02447868523412426
+    },
+    "aic": -219.45374897081896,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.29971910000313073
+  },
+  {
+    "destination": "Hong Kong China",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1836954.48409894,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -0.0001380825037330848,
+      "ma.L1": -0.30257973002345684,
+      "ar.S.L12": 0.5185195866445029,
+      "sigma2": 0.02758616833038004
+    },
+    "aic": -200.35206972258047,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.09978910000063479
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.03546989879994229,
+      "ar.L1": 0.9424188875880979,
+      "ar.S.L12": 0.3081462713208698,
+      "sigma2": 0.13177700643818094
+    },
+    "aic": 260.772815581653,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1482590999949025
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.10318245845481941,
+      "ar.S.L12": 0.2996164306201779,
+      "sigma2": 0.1343407617710421
+    },
+    "aic": 261.2817876949614,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04438789999403525
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.1090212919653167,
+      "ar.S.L12": 0.2979777092260076,
+      "sigma2": 0.13427606864968014
+    },
+    "aic": 261.11859897820545,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.05890049999288749
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.942247971852587,
+      "ma.L1": -0.9926301985785587,
+      "ar.S.L12": 0.30812430841691424,
+      "sigma2": 0.13273425419732277
+    },
+    "aic": 260.2513362220835,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1103364999871701
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.0905279706364164,
+      "ma.S.L12": -0.808903343897872,
+      "sigma2": 0.1341620663086407
+    },
+    "aic": 262.5385667192773,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.18031719999271445
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.08765196834902596,
+      "ma.S.L12": -0.8083718516084583,
+      "sigma2": 0.1342012394630681
+    },
+    "aic": 262.595710694225,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.17647849999775644
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.7277175470521803,
+      "ma.L1": 0.6615136850896174,
+      "ma.S.L12": -0.8048843290874897,
+      "sigma2": 0.13410463599827274
+    },
+    "aic": 264.1730956098576,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.44992420000198763
+  },
+  {
+    "destination": "Japan",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1997M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 172655.85016286644,
+    "history_months": 307,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -4.924017210824789e-05,
+      "ma.L1": -0.10902090159077277,
+      "ar.S.L12": 0.2979770046854989,
+      "sigma2": 0.1342761155740389
+    },
+    "aic": 263.11859276408364,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.08645030000479892
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.03243746217126165,
+      "ar.L1": 0.9550123703665975,
+      "ar.S.L12": 0.17408437519720876,
+      "sigma2": 0.07825679760348066
+    },
+    "aic": 96.60537878350254,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.19809610000811517
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.2251771777130438,
+      "ar.S.L12": 0.18777738386400641,
+      "sigma2": 0.07605703875039337
+    },
+    "aic": 83.40426138285436,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04707639999105595
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.30037259561400753,
+      "ar.S.L12": 0.2092985156368515,
+      "sigma2": 0.07444262727919802
+    },
+    "aic": 77.24685074792698,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06440949998795986
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.12845140493438068,
+      "ma.L1": 0.4103883745028242,
+      "ar.S.L12": 0.2114255403319153,
+      "sigma2": 0.07423969059872056
+    },
+    "aic": 78.45318207651059,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06499840000469703
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.34057490019672404,
+      "ma.S.L12": -0.8488266860190121,
+      "sigma2": 0.07211340606351328
+    },
+    "aic": 80.18668104622503,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.17386580001038965
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.24280670687640288,
+      "ma.S.L12": -0.8676271495485837,
+      "sigma2": 0.0739974563690019
+    },
+    "aic": 88.84917766186595,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.18579209999006707
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.14221185670952255,
+      "ma.L1": 0.45774973676430725,
+      "ma.S.L12": -0.8459684302309639,
+      "sigma2": 0.07188308164927194
+    },
+    "aic": 81.06600271273481,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.4380187000060687
+  },
+  {
+    "destination": "South Korea",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 188756.97288135593,
+    "history_months": 295,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 9.515041010781046e-05,
+      "ma.L1": 0.30037118739420265,
+      "ar.S.L12": 0.20929745745546197,
+      "sigma2": 0.07444258856003064
+    },
+    "aic": 79.24682664578802,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06485860000248067
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.039132300147227864,
+      "ar.L1": 0.9268581897775321,
+      "ar.S.L12": 0.3880059365658858,
+      "sigma2": 0.033067454649911704
+    },
+    "aic": -149.42457547118434,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.24863220000406727
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.2672649468854341,
+      "ar.S.L12": 0.3297502235156195,
+      "sigma2": 0.03192434395944106
+    },
+    "aic": -163.56478369336654,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0539810999907786
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.25835727304314315,
+      "ar.S.L12": 0.31574227121880344,
+      "sigma2": 0.0319868513129426
+    },
+    "aic": -163.13962623478352,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.05768990000069607
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.16379367992690624,
+      "ma.L1": -0.11548303034629491,
+      "ar.S.L12": 0.32018514477568133,
+      "sigma2": 0.03187224664913141
+    },
+    "aic": -162.10336188619928,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0888585999928182
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.2696179931363205,
+      "ma.S.L12": -0.8429710093843981,
+      "sigma2": 0.03030777509660257
+    },
+    "aic": -156.82399010074892,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.24394060000486206
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.2995335004962718,
+      "ma.S.L12": -0.8334181468846008,
+      "sigma2": 0.030124775098694538
+    },
+    "aic": -159.08172138322243,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.22912519999954384
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.26085541036965776,
+      "ma.L1": -0.04283971861266309,
+      "ma.S.L12": -0.8349044215277722,
+      "sigma2": 0.030109085863680607
+    },
+    "aic": -157.161581607328,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.43321230000583455
+  },
+  {
+    "destination": "Macao China",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1999M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 1073200.632508834,
+    "history_months": 283,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -0.000520496056341839,
+      "ma.L1": -0.25831609330743666,
+      "ar.S.L12": 0.3157983114919703,
+      "sigma2": 0.03198635101584344
+    },
+    "aic": -161.14405572981758,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12853760000143666
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.07033750510279327,
+      "ar.L1": 0.8253040918795395,
+      "ar.S.L12": 0.5443186123280517,
+      "sigma2": 0.15431756595882973
+    },
+    "aic": 298.1460481475969,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1549135999957798
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.4192973736705861,
+      "ar.S.L12": 0.5937134670472985,
+      "sigma2": 0.14060569289721242
+    },
+    "aic": 268.2766944933975,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04422589999740012
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.5648188042865495,
+      "ar.S.L12": 0.5723819472989792,
+      "sigma2": 0.13147392917975448
+    },
+    "aic": 248.00797010346028,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.036827300005825236
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.06413970326373783,
+      "ma.L1": -0.609872814249121,
+      "ar.S.L12": 0.5612101950268618,
+      "sigma2": 0.1314528651165379
+    },
+    "aic": 249.6950934415063,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06956740000168793
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.5360754659207062,
+      "ma.S.L12": -0.5574564421432351,
+      "sigma2": 0.12881991927974468
+    },
+    "aic": 232.13925807158597,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1288868999981787
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.4011893275049354,
+      "ma.S.L12": -0.5536617938398516,
+      "sigma2": 0.1364473376508961
+    },
+    "aic": 248.33292576226302,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10803669999586418
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.08465177744441946,
+      "ma.L1": -0.5979827789822869,
+      "ma.S.L12": -0.5697779940973845,
+      "sigma2": 0.12849579468421254
+    },
+    "aic": 233.63444654178284,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.19642069999827072
+  },
+  {
+    "destination": "Maldives",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1998M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 10565.695205479453,
+    "history_months": 295,
+    "missing_history_months": 3,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0002774480537868475,
+      "ma.L1": -0.5648114025742598,
+      "ar.S.L12": 0.5723909186965251,
+      "sigma2": 0.131472085501862
+    },
+    "aic": 250.00693204198552,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0810600999975577
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.016962565219695813,
+      "ar.L1": 0.9665652358664321,
+      "ar.S.L12": 0.37198892331380806,
+      "sigma2": 0.06620301212173173
+    },
+    "aic": 41.95575391832597,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12556850000692066
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.0440541170614301,
+      "ar.S.L12": 0.3771489890004327,
+      "sigma2": 0.06727237106411607
+    },
+    "aic": 40.34785659220003,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03507329999411013
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.040251012107592674,
+      "ar.S.L12": 0.37612714769375666,
+      "sigma2": 0.0672863648728111
+    },
+    "aic": 40.38548262147698,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03733379999175668
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.8065241979980288,
+      "ma.L1": -0.7385329519970278,
+      "ar.S.L12": 0.38666588343694,
+      "sigma2": 0.06647849241113167
+    },
+    "aic": 39.73860263735011,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0790145999926608
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.003995871273176965,
+      "ma.S.L12": -0.7320964792021039,
+      "sigma2": 0.0716450001217727
+    },
+    "aic": 60.03050162543052,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.39396729999862146
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.004644199828840795,
+      "ma.S.L12": -0.7321876154369646,
+      "sigma2": 0.07164328928513501
+    },
+    "aic": 60.029849070124044,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.174495700004627
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.8752896050107251,
+      "ma.L1": -0.8054633569380399,
+      "ma.S.L12": -0.7175703721817269,
+      "sigma2": 0.07045070776623613
+    },
+    "aic": 57.620814463086575,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.26744049999979325
+  },
+  {
+    "destination": "Cambodia",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2003M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 42220.33191489361,
+    "history_months": 235,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0008178206691647224,
+      "ma.L1": 0.04024532562058809,
+      "ar.S.L12": 0.376123770073964,
+      "sigma2": 0.06728563192397247
+    },
+    "aic": 42.383170801698896,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10810080000374
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.06796974920120315,
+      "ar.L1": 0.8817771010471178,
+      "ar.S.L12": 0.33898176571440036,
+      "sigma2": 0.08434306758068517
+    },
+    "aic": 53.10432591677478,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12357690000499133
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.11672043635181541,
+      "ar.S.L12": 0.32932038389074625,
+      "sigma2": 0.0885967522352518
+    },
+    "aic": 54.615774745761165,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.026356600006693043
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.18832435082044224,
+      "ar.S.L12": 0.3293965395393266,
+      "sigma2": 0.08787412062862668
+    },
+    "aic": 53.705333371655044,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03505419999419246
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.5514412052397237,
+      "ma.L1": -0.7543402334688027,
+      "ar.S.L12": 0.3085135596040646,
+      "sigma2": 0.08484733491712748
+    },
+    "aic": 51.60342512081194,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06235059999744408
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.17371950880416526,
+      "ma.S.L12": -0.7535841751372603,
+      "sigma2": 0.09553446711019711
+    },
+    "aic": 65.9860662998659,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1059979999990901
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.11839568838712358,
+      "ma.S.L12": -0.7515397705606215,
+      "sigma2": 0.09625152924266986
+    },
+    "aic": 66.6470720265151,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1095915000041714
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.5090102900423382,
+      "ma.L1": -0.6888214768661909,
+      "ma.S.L12": -0.7573593943373146,
+      "sigma2": 0.09324989675326267
+    },
+    "aic": 65.7358968605467,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.35925890000362415
+  },
+  {
+    "destination": "Indonesia",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2013M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 94221.77391304348,
+    "history_months": 115,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -0.0014674470917140291,
+      "ma.L1": -0.18851106501226422,
+      "ar.S.L12": 0.32923037300245284,
+      "sigma2": 0.08787206742492476
+    },
+    "aic": 55.700709725448505,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0771870000025956
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.06122318706600117,
+      "ar.L1": 0.8610681068912243,
+      "ar.S.L12": 0.5102988829045703,
+      "sigma2": 0.08088926640921676
+    },
+    "aic": 92.98963978921711,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12915580000844784
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.20799401387495958,
+      "ar.S.L12": 0.5114358385134583,
+      "sigma2": 0.08319901740187727
+    },
+    "aic": 96.11694792971792,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04099839999980759
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.29999648536293727,
+      "ar.S.L12": 0.49593852550151096,
+      "sigma2": 0.08164963114322647
+    },
+    "aic": 91.29966331889568,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04122539999661967
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.32181370551395405,
+      "ma.L1": -0.594060418805197,
+      "ar.S.L12": 0.46922289547584667,
+      "sigma2": 0.08054823014910269
+    },
+    "aic": 89.5796133822262,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.061942000000271946
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.2856410160389464,
+      "ma.S.L12": -0.7155845863661856,
+      "sigma2": 0.07640632774301465
+    },
+    "aic": 76.9904381786003,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.33235909999348223
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.20279373061003222,
+      "ma.S.L12": -0.7101154567196525,
+      "sigma2": 0.07779416598025603
+    },
+    "aic": 80.97073905881291,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.2249139999912586
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.3141036839102972,
+      "ma.L1": -0.5730091155872313,
+      "ma.S.L12": -0.7368496692502299,
+      "sigma2": 0.07513661616252533
+    },
+    "aic": 75.87551507755543,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.23213180000311695
+  },
+  {
+    "destination": "Singapore",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 128163.16599190283,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -0.0004362409146243761,
+      "ma.L1": -0.30001862801234874,
+      "ar.S.L12": 0.4959239902438827,
+      "sigma2": 0.08164910411930976
+    },
+    "aic": 93.29841551579354,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07322540000313893
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.12433398244528518,
+      "ar.L1": 0.8190601500348637,
+      "ar.S.L12": 0.2743489107414626,
+      "sigma2": 0.16168915209844872
+    },
+    "aic": 261.0089997445237,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.16974710000795312
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.4197127041228902,
+      "ar.S.L12": 0.3458672654621913,
+      "sigma2": 0.14844279782461192
+    },
+    "aic": 236.58607580216514,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03350230000796728
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.4947150197847922,
+      "ar.S.L12": 0.3875057244606723,
+      "sigma2": 0.146854090470625
+    },
+    "aic": 234.45051714213915,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0312872999929823
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.12278347792236728,
+      "ma.L1": -0.36349446523759193,
+      "ar.S.L12": 0.3814669370225277,
+      "sigma2": 0.14691533104596682
+    },
+    "aic": 236.45235072969098,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06536680000135675
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.4814859732535429,
+      "ma.S.L12": -0.8163479964324333,
+      "sigma2": 0.13698830473955415
+    },
+    "aic": 218.34636276988493,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.2342821000056574
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.4035698735315546,
+      "ma.S.L12": -0.8432446557516501,
+      "sigma2": 0.138191790901801
+    },
+    "aic": 222.02113236563147,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.15992299999925308
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.19145668171579625,
+      "ma.L1": -0.6544715974162162,
+      "ma.S.L12": -0.8249218972462516,
+      "sigma2": 0.1361706977315932
+    },
+    "aic": 219.53455759482037,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.2898815999942599
+  },
+  {
+    "destination": "New Zealand",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2002M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 15453.089068825911,
+    "history_months": 247,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": -0.000689016128674785,
+      "ma.L1": -0.49474755276244636,
+      "ar.S.L12": 0.3874888732008083,
+      "sigma2": 0.14685144999803246
+    },
+    "aic": 236.4472840872519,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07454250000591855
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.03322013731019254,
+      "ar.L1": 0.8440958556018606,
+      "ar.S.L12": 0.7447436951230377,
+      "sigma2": 0.09287955334147753
+    },
+    "aic": 144.21287612994067,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12324389998684637
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.24383121394103258,
+      "ar.S.L12": 0.7555643293894659,
+      "sigma2": 0.09472880379008279
+    },
+    "aic": 146.1299636015802,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0398021000000881
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.3613613993844825,
+      "ar.S.L12": 0.7550180076223022,
+      "sigma2": 0.0916099076160687
+    },
+    "aic": 137.146471750527,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04716439999174327
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.21594513700625106,
+      "ma.L1": -0.5374382623027762,
+      "ar.S.L12": 0.7415527639441618,
+      "sigma2": 0.09092911427711758
+    },
+    "aic": 136.5848460410544,
+    "warnings": [
+      "Non-invertible starting MA parameters found. Using zeros as starting parameters.",
+      "Non-stationary starting autoregressive parameters found. Using zeros as starting parameters.",
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06265310000162572
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.34731629172571626,
+      "ma.S.L12": -0.41766103926333054,
+      "sigma2": 0.09030007443838807
+    },
+    "aic": 120.21839519629337,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10197129999869503
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.22224726195277317,
+      "ma.S.L12": -0.4254964720707063,
+      "sigma2": 0.09306976787439011
+    },
+    "aic": 128.0301876336988,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1350040999968769
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.2770654913576309,
+      "ma.L1": -0.5793813931681152,
+      "ma.S.L12": -0.4457584376266762,
+      "sigma2": 0.08884983387983618
+    },
+    "aic": 118.41174781159123,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1611030999920331
+  },
+  {
+    "destination": "USA",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2000M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 95695.25830258302,
+    "history_months": 271,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0006640493451843432,
+      "ma.L1": -0.3613791857472665,
+      "ar.S.L12": 0.7550201765340415,
+      "sigma2": 0.09160842930968612
+    },
+    "aic": 139.14236501674048,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10069849999854341
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.03130162552372476,
+      "ar.L1": 0.9474658530579783,
+      "ar.S.L12": 0.31943307271584903,
+      "sigma2": 0.09907959410628624
+    },
+    "aic": 185.139987048646,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.14940769999520853
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.04068400817415159,
+      "ar.S.L12": 0.3054981787048245,
+      "sigma2": 0.10164640622685354
+    },
+    "aic": 188.3256891312507,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.043138499997439794
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.04991460446205118,
+      "ar.S.L12": 0.30593307139081993,
+      "sigma2": 0.10161462529591468
+    },
+    "aic": 188.20953512880104,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04418099999020342
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.8459910710642965,
+      "ma.L1": -0.9196744291445957,
+      "ar.S.L12": 0.30634743135789194,
+      "sigma2": 0.10000953625025055
+    },
+    "aic": 184.7494290084948,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.13478690000192728
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.03329401627285122,
+      "ma.S.L12": -0.7999012668725899,
+      "sigma2": 0.10177141999193648
+    },
+    "aic": 192.96111890662868,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.14494290000584442
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.028180042188524997,
+      "ma.S.L12": -0.8000591582828017,
+      "sigma2": 0.10178127677028084
+    },
+    "aic": 193.00461738600671,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.11741940000501927
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.6970300427609356,
+      "ma.L1": -0.7782462444214797,
+      "ma.S.L12": -0.8036205396609233,
+      "sigma2": 0.10067068238217283
+    },
+    "aic": 191.5979317404438,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.4273302999936277
+  },
+  {
+    "destination": "Thailand",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1995M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 230557.68307692307,
+    "history_months": 331,
+    "missing_history_months": 6,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.00016816694026363367,
+      "ma.L1": -0.04991507921923129,
+      "ar.S.L12": 0.305930431186229,
+      "sigma2": 0.10161390491252262
+    },
+    "aic": 190.2094260511459,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12261520000174642
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.02792021710930338,
+      "ar.L1": 0.9608645478088917,
+      "ar.S.L12": 0.2537690921791208,
+      "sigma2": 0.07304197025263218
+    },
+    "aic": 82.26669273778586,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.15045999998983461
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.1740600302913696,
+      "ar.S.L12": 0.2475660571421435,
+      "sigma2": 0.07229484148617883
+    },
+    "aic": 73.85779897246746,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.03048770000168588
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.14619212820604968,
+      "ar.S.L12": 0.24553257959750235,
+      "sigma2": 0.07268091200142321
+    },
+    "aic": 75.51952863527768,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.05683879999560304
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.5433791738535395,
+      "ma.L1": -0.37478467362836027,
+      "ar.S.L12": 0.2574732884211673,
+      "sigma2": 0.07165046086751198
+    },
+    "aic": 73.09122911520159,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07435660000192001
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.14085208613856728,
+      "ma.S.L12": -0.8546795360452091,
+      "sigma2": 0.07203438979920036
+    },
+    "aic": 85.18217092414183,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.2182628000009572
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.16333624057425128,
+      "ma.S.L12": -0.8537446896518398,
+      "sigma2": 0.07175960716460236
+    },
+    "aic": 83.94887832620628,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.16007870000612456
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.5724034789227095,
+      "ma.L1": -0.4157079557455768,
+      "ma.S.L12": -0.8496688215229755,
+      "sigma2": 0.07119158723995844
+    },
+    "aic": 83.24731839908088,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.42185740001150407
+  },
+  {
+    "destination": "Turkey",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1996M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 8676.451410658306,
+    "history_months": 319,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.003257253050380934,
+      "ma.L1": 0.1461063912234018,
+      "ar.S.L12": 0.24550567955692876,
+      "sigma2": 0.07266998751711937
+    },
+    "aic": 77.48321590528994,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.15265849999559578
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.09457638391545109,
+      "ar.L1": 0.777607047562432,
+      "ar.S.L12": 0.543509374948951,
+      "sigma2": 0.2401431681590652
+    },
+    "aic": 581.9690045392381,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.19611859999713488
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.4610584607413022,
+      "ar.S.L12": 0.5858457346266931,
+      "sigma2": 0.21458203775458226
+    },
+    "aic": 533.4014061914904,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.05632030000560917
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.5841254517351153,
+      "ar.S.L12": 0.5628794941522646,
+      "sigma2": 0.2002986341384873
+    },
+    "aic": 505.4113559292006,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.040923400010797195
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.03624768198684558,
+      "ma.L1": -0.5603187235998894,
+      "ar.S.L12": 0.5696867524301277,
+      "sigma2": 0.20015345400752968
+    },
+    "aic": 507.2575559796031,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06319980000262149
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.5760830172872015,
+      "ma.S.L12": -0.677914085779492,
+      "sigma2": 0.19028718500013328
+    },
+    "aic": 473.4575195157164,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.18276170000899583
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.440562788880356,
+      "ma.S.L12": -0.6590372628514046,
+      "sigma2": 0.2051167233487049
+    },
+    "aic": 501.98751815532256,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1300576999929035
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.0037476658846301507,
+      "ma.L1": -0.5784409346204336,
+      "ma.S.L12": -0.6785640154416952,
+      "sigma2": 0.19027722386663903
+    },
+    "aic": 475.455687893345,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.2575088000012329
+  },
+  {
+    "destination": "Australia",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 32118.138957816376,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0005564637144562785,
+      "ma.L1": -0.5841396099494105,
+      "ar.S.L12": 0.5628751692479957,
+      "sigma2": 0.20029593967245166
+    },
+    "aic": 507.40751549542915,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.12082389999704901
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.1428893160241609,
+      "ar.L1": 0.7311900894209992,
+      "ar.S.L12": 0.4421846992059304,
+      "sigma2": 0.19507795035793227
+    },
+    "aic": 496.42464645796645,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.22754199999326374
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.4611855571807338,
+      "ar.S.L12": 0.43527319622040755,
+      "sigma2": 0.17697275694176956
+    },
+    "aic": 453.4094077578228,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04510920000029728
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.7571949582537334,
+      "ar.S.L12": 0.4227619168480795,
+      "sigma2": 0.13903091692299083
+    },
+    "aic": 356.85146388746057,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.042075300007127225
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.04607901403234425,
+      "ma.L1": -0.7388453255449184,
+      "ar.S.L12": 0.432446761896012,
+      "sigma2": 0.1388264540777945
+    },
+    "aic": 358.3916411962846,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.08322359999874607
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": -0.7245344758052404,
+      "ma.S.L12": -0.6326777516550616,
+      "sigma2": 0.13948148178323688
+    },
+    "aic": 351.4575694314643,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1925682000000961
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.4605809226504407,
+      "ma.S.L12": -0.6475131171872567,
+      "sigma2": 0.16969068668159576
+    },
+    "aic": 427.7493091671512,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.14000390000001062
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": -0.03649432542545086,
+      "ma.L1": -0.708449138881157,
+      "ma.S.L12": -0.6258186549790214,
+      "sigma2": 0.1394502287367187
+    },
+    "aic": 353.1957947205485,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.4324297999992268
+  },
+  {
+    "destination": "Hawaii",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "1989M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 4663.501240694789,
+    "history_months": 403,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 7.533475818255747e-05,
+      "ma.L1": -0.7571920278320461,
+      "ar.S.L12": 0.4227726488401246,
+      "sigma2": 0.13903048322348935
+    },
+    "aic": 358.8511397597577,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.116858699999284
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0160756810054004,
+      "ar.L1": 0.9323096663547146,
+      "ar.S.L12": 0.6873443701041769,
+      "sigma2": 0.054259244922030034
+    },
+    "aic": 0.8398433163463892,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.11725890000525396
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.0158222680150839,
+      "ar.S.L12": 0.684112392966365,
+      "sigma2": 0.056171262167737226
+    },
+    "aic": 4.044918066439564,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04988259999663569
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.009615689973451554,
+      "ar.S.L12": 0.6848538761566122,
+      "sigma2": 0.05617103650782129
+    },
+    "aic": 4.066868182310543,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04849169999943115
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.66172555376011,
+      "ma.L1": -0.5426545553555441,
+      "ar.S.L12": 0.6800714069417034,
+      "sigma2": 0.054810766436896065
+    },
+    "aic": 0.3270999465761548,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07608590000018012
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.01414030234279475,
+      "ma.S.L12": -0.419335888604547,
+      "sigma2": 0.05919110528358483
+    },
+    "aic": 10.704713794131564,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10764720001316164
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.023071745528928777,
+      "ma.S.L12": -0.4211412205350925,
+      "sigma2": 0.05917318432989
+    },
+    "aic": 10.661060623494535,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.10089100000914186
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.6569105542568079,
+      "ma.L1": -0.5358445749315376,
+      "ma.S.L12": -0.4275325750281658,
+      "sigma2": 0.05768390167828528
+    },
+    "aic": 7.207908233254287,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1922255999961635
+  },
+  {
+    "destination": "Austria",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2003M05",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 31362.112554112555,
+    "history_months": 231,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0013623156466985142,
+      "ma.L1": 0.00958965033730588,
+      "ar.S.L12": 0.6848686393631913,
+      "sigma2": 0.0561688319217294
+    },
+    "aic": 6.057653194553083,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.07016899999871384
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "ar1_sar1",
+    "order": [
+      1,
+      0,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.01989238955470999,
+      "ar.L1": 0.9274662398769115,
+      "ar.S.L12": 0.6513359096980407,
+      "sigma2": 0.054156295022863045
+    },
+    "aic": 7.303979536336034,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.0712568999879295
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "ar1_d1_sar1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.05271869803427926,
+      "ar.S.L12": 0.6463344083019165,
+      "sigma2": 0.05618117974400933
+    },
+    "aic": 7.295041158480428,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.02429610000399407
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "ma1_d1_sar1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.03647464890910925,
+      "ar.S.L12": 0.6485799317275444,
+      "sigma2": 0.05620226435068914
+    },
+    "aic": 7.400872817715392,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.02447010000469163
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "arma11_d1_sar1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.6344568392476129,
+      "ma.L1": -0.5136606298671371,
+      "ar.S.L12": 0.6423395710855676,
+      "sigma2": 0.055013084556892855
+    },
+    "aic": 6.576851179472489,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.06609860000025947
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "ma1_d1_sma1_D1",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ma.L1": 0.04298306716824505,
+      "ma.S.L12": -0.38553661016056673,
+      "sigma2": 0.06427570570090978
+    },
+    "aic": 18.5737107420233,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1582127000001492
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "ar1_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.062017052935379846,
+      "ma.S.L12": -0.39214312803686674,
+      "sigma2": 0.06416167359094932
+    },
+    "aic": 18.444480949891247,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.09082769999804441
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "arma11_d1_sma1_D1",
+    "order": [
+      1,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1,
+      12
+    ],
+    "trend": "n",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "ar.L1": 0.6456307025494407,
+      "ma.L1": -0.5208990466890888,
+      "ma.S.L12": -0.39796173296369375,
+      "sigma2": 0.0626727607775313
+    },
+    "aic": 17.864915452445565,
+    "warnings": [
+      "Non-invertible starting MA parameters found. Using zeros as starting parameters.",
+      "Non-stationary starting autoregressive parameters found. Using zeros as starting parameters.",
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.1748797000036575
+  },
+  {
+    "destination": "Czech",
+    "candidate_id": "ma1_d1_sar1_drift",
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      0,
+      12
+    ],
+    "trend": "c",
+    "fit_start": "2012M01",
+    "fit_cutoff": "2022M07",
+    "normalization_factor": 36360.708661417324,
+    "history_months": 127,
+    "missing_history_months": 0,
+    "attempts": [
+      {
+        "optimizer": "lbfgs",
+        "maxiter": 200,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "finite_forecast": true,
+    "params": {
+      "intercept": 0.0008650587111723818,
+      "ma.L1": 0.03646237495484299,
+      "ar.S.L12": 0.6485850356850562,
+      "sigma2": 0.05620131737865726
+    },
+    "aic": 9.398736903989722,
+    "warnings": [
+      "Setting the shape on a NumPy array has been deprecated in NumPy 2.5.\nAs an alternative, you can create a new view using np.reshape (with copy=False if needed)."
+    ],
+    "fit_seconds": 0.04543510000803508
+  }
+]

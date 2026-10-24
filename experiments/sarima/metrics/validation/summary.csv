@@ -1,0 +1,3 @@
+aggregation,n_predictions,n_actual,n_scored,n_missing_prediction,n_missing_actual,mase_valid_n,mape_valid_n,mae,mase,mape_percent
+micro,140,140,140,0,0,140,140,34131.685482442015,0.6856796199770622,37.22259697892939
+macro_destination,140,140,140,0,0,140,140,34131.685482442015,0.6856796199770622,37.22259697892939

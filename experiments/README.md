@@ -13,10 +13,17 @@ test results must always be written to separate files in separate subdirectories
 Update the method README when regenerating results. Visualizations should read
 these saved results rather than recomputing the method.
 
+For parameterized methods, report every tested configuration on validation and
+test separately, including per-destination metrics, configuration summaries,
+per-horizon metrics, raw predictions, and fitting diagnostics. List all results
+in the method README, including unavailable or failed combinations. Keep the
+validation-selected configuration distinct from exploratory test comparisons.
+
 | Directory | Contents | Run from repository root |
 | --- | --- | --- |
 | [lag-1](lag-1/README.md) | Recursive last-observation point baseline; MAE, MASE, MAPE. | `python experiments/lag-1/run.py` |
 | [lag-12](lag-12/README.md) | Seasonal naive point baseline; MAE, MASE, MAPE. | `python experiments/lag-12/run.py` |
+| [sarima](sarima/README.md) | Monthly SARIMA selected per destination using validation MAE; separate validation/test reports and baseline comparisons. | `python experiments/sarima/run.py` |
 | [visual](visual/README.md) | HTML figures, visualization code, and figure index. | See its README. |
 | `_shared/` | Shared baseline implementation and temporal-leakage/metric checks. | `python -m unittest discover -s experiments/_shared -p "test_*.py"` |
 | `data/` | Public-history CSV cache shared by method experiments. | Use `--history PATH` to select a different source. |

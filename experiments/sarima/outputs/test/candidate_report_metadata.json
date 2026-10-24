@@ -1,0 +1,33 @@
+{
+  "history_sha256": "8884485b0f5f772bd78f412c56f688251f38c6377b663363503a3fedd613cb1e",
+  "report_implementation_sha256": "94d4e7a4578b45fe4ae7c0f56a43ba23a10a9fd19b94264be8a59b6612795c00",
+  "reused_fitting_implementation_sha256": "5b727e0a3cc972c9a26d008b483614e3ffd7a9c35994734a003d98c54bcd8808",
+  "selected_configs_sha256": "3d642621d27d48f4273eb0981f8b2db551259fd681576a6f631f1eafc3395153",
+  "generated_at_utc": "2026-10-24T12:05:47.624663+00:00",
+  "selected_validation_fit_reused_count": 160,
+  "selected_test_fit_reused_count": 20,
+  "additional_test_fit_count": 140,
+  "actual_sha256": "fd7f94fb5b784492f86659251a23f981365dd836e71c9974875d95d13d13a7a1",
+  "split": "test",
+  "fit_cutoff": "2023M07",
+  "target_months": [
+    "2023M08",
+    "2023M09",
+    "2023M10",
+    "2023M11",
+    "2023M12",
+    "2024M01",
+    "2024M02",
+    "2024M03",
+    "2024M04",
+    "2024M05",
+    "2024M06",
+    "2024M07"
+  ],
+  "candidate_count": 8,
+  "destination_count": 20,
+  "fit_records": 160,
+  "prediction_rows": 1920,
+  "test_results_used_to_change_selected_configs": false,
+  "purpose": "All-parameter exploratory reporting; original validation selection retained."
+}
